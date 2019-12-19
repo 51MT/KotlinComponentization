@@ -44,7 +44,7 @@ open class OkgoHttpUtils {
             val loggingInterceptor = HttpLoggingInterceptor("OkGo")
             loggingInterceptor.setPrintLevel(HttpLoggingInterceptor.Level.BODY)        //log打印级别，决定了log显示的详细程度
             loggingInterceptor.setColorLevel(Level.INFO)                               //log颜色级别，决定了log在控制台显示的颜色
-            if (MainApplication.isLog) {
+            if (Constants.isLog) {
                 builder.addInterceptor(loggingInterceptor)                                 //添加OkGo默认debug日志（上线时去掉）
             }
             //超时时间设置，默认60秒

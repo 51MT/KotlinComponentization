@@ -34,7 +34,8 @@ abstract class BaseFragment : SupportFragment(), EasyPermissions.PermissionCallb
         return inflater.inflate(getLayoutId(), null)
     }
 
-    override fun onAttach(context: Context?) {
+
+    override fun onAttach(context: Context) {
         super.onAttach(context)
         mActivity = context as Activity
         mContext = context

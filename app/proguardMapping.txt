@@ -343,9 +343,9 @@ androidx.appcompat.app.AlertDialog$Builder -> a.a.a.k$a:
     902:905:androidx.appcompat.app.AlertDialog$Builder setView(android.view.View) -> b
     1006:1008:androidx.appcompat.app.AlertDialog show() -> c
 androidx.appcompat.app.AppCompatActivity -> androidx.appcompat.app.AppCompatActivity:
-    int mThemeId -> n
-    android.content.res.Resources mResources -> o
-    androidx.appcompat.app.AppCompatDelegate mDelegate -> m
+    int mThemeId -> o
+    android.content.res.Resources mResources -> p
+    androidx.appcompat.app.AppCompatDelegate mDelegate -> n
     62:66:void <init>() -> <init>
     257:257:void onSupportActionModeStarted(androidx.appcompat.view.ActionMode) -> a
     282:282:androidx.appcompat.view.ActionMode onWindowStartingSupportActionMode(androidx.appcompat.view.ActionMode$Callback) -> a
@@ -363,10 +363,9 @@ androidx.appcompat.app.AppCompatActivity -> androidx.appcompat.app.AppCompatActi
     135:135:android.view.MenuInflater getMenuInflater() -> getMenuInflater
     540:543:android.content.res.Resources getResources() -> getResources
     245:246:void invalidateOptionsMenu() -> invalidateOptionsMenu
-    240:241:void supportInvalidateOptionsMenu() -> l
-    519:522:androidx.appcompat.app.AppCompatDelegate getDelegate() -> m
-    110:110:androidx.appcompat.app.ActionBar getSupportActionBar() -> n
-    478:478:void onSupportContentChanged() -> o
+    240:241:void supportInvalidateOptionsMenu() -> m
+    519:522:androidx.appcompat.app.AppCompatDelegate getDelegate() -> n
+    110:110:androidx.appcompat.app.ActionBar getSupportActionBar() -> o
     160:168:void onConfigurationChanged(android.content.res.Configuration) -> onConfigurationChanged
     470:471:void onContentChanged() -> onContentChanged
     71:86:void onCreate(android.os.Bundle) -> onCreate
@@ -382,7 +381,8 @@ androidx.appcompat.app.AppCompatActivity -> androidx.appcompat.app.AppCompatActi
     184:186:void onStop() -> onStop
     216:218:void onTitleChanged(java.lang.CharSequence,int) -> onTitleChanged
     577:582:void openOptionsMenu() -> openOptionsMenu
-    393:416:boolean onSupportNavigateUp() -> p
+    478:478:void onSupportContentChanged() -> p
+    393:416:boolean onSupportNavigateUp() -> q
     140:141:void setContentView(int) -> setContentView
     145:146:void setContentView(android.view.View) -> setContentView
     150:151:void setContentView(android.view.View,android.view.ViewGroup$LayoutParams) -> setContentView
@@ -7644,17 +7644,19 @@ androidx.fragment.app.Fragment$SavedState$1 -> a.i.a.f:
     366:366:java.lang.Object[] newArray(int) -> newArray
     379:379:androidx.fragment.app.Fragment$SavedState[] newArray(int) -> newArray
 androidx.fragment.app.FragmentActivity -> androidx.fragment.app.FragmentActivity:
-    androidx.fragment.app.FragmentController mFragments -> c
-    boolean mStartedIntentSenderFromFragment -> i
-    android.os.Handler mHandler -> b
-    androidx.lifecycle.ViewModelStore mViewModelStore -> d
-    boolean mStartedActivityFromFragment -> j
-    int mNextCandidateRequestIndex -> k
-    boolean mCreated -> e
-    boolean mResumed -> f
-    boolean mStopped -> g
-    boolean mRequestedPermissionsFromFragment -> h
-    androidx.collection.SparseArrayCompat mPendingFragmentActivityResults -> l
+    int mNextCandidateRequestIndex -> l
+    android.os.Handler mHandler -> c
+    boolean mRequestedPermissionsFromFragment -> i
+    androidx.fragment.app.FragmentController mFragments -> d
+    boolean mStartedIntentSenderFromFragment -> j
+    org.aspectj.lang.JoinPoint$StaticPart ajc$tjp_0 -> b
+    androidx.lifecycle.ViewModelStore mViewModelStore -> e
+    boolean mStartedActivityFromFragment -> k
+    boolean mCreated -> f
+    boolean mResumed -> g
+    androidx.collection.SparseArrayCompat mPendingFragmentActivityResults -> m
+    boolean mStopped -> h
+    1:1:void <clinit>() -> <clinit>
     68:957:void <init>() -> <init>
     324:324:androidx.lifecycle.Lifecycle getLifecycle() -> a
     405:405:android.view.View dispatchFragmentsOnCreateView(android.view.View,java.lang.String,android.content.Context,android.util.AttributeSet) -> a
@@ -7668,11 +7670,12 @@ androidx.fragment.app.FragmentActivity -> androidx.fragment.app.FragmentActivity
     722:722:void onAttachFragment(androidx.fragment.app.Fragment) -> b
     805:806:void checkForValidRequestCode(int) -> b
     693:707:void dump(java.lang.String,java.io.FileDescriptor,java.io.PrintWriter,java.lang.String[]) -> dump
-    729:729:androidx.fragment.app.FragmentManager getSupportFragmentManager() -> h
-    1051:1052:void markFragmentsCreated() -> i
-    538:539:void onResumeFragments() -> j
-    653:653:java.lang.Object onRetainCustomNonConfigurationInstance() -> k
-    678:679:void supportInvalidateOptionsMenu() -> l
+    1:1:void ajc$preClinit() -> h
+    729:729:androidx.fragment.app.FragmentManager getSupportFragmentManager() -> i
+    1051:1052:void markFragmentsCreated() -> j
+    538:539:void onResumeFragments() -> k
+    653:653:java.lang.Object onRetainCustomNonConfigurationInstance() -> l
+    678:679:void supportInvalidateOptionsMenu() -> m
     145:173:void onActivityResult(int,int,android.content.Intent) -> onActivityResult
     181:193:void onBackPressed() -> onBackPressed
     284:287:void onConfigurationChanged(android.content.res.Configuration) -> onConfigurationChanged
@@ -7785,6 +7788,20 @@ androidx.fragment.app.FragmentManager -> a.i.a.k:
     178:178:androidx.fragment.app.FragmentTransaction openTransaction() -> openTransaction
 androidx.fragment.app.FragmentManager$BackStackEntry -> a.i.a.k$a:
 androidx.fragment.app.FragmentManager$FragmentLifecycleCallbacks -> a.i.a.k$b:
+    466:466:void <init>() -> <init>
+    524:524:void onFragmentActivityCreated(androidx.fragment.app.FragmentManager,androidx.fragment.app.Fragment,android.os.Bundle) -> onFragmentActivityCreated
+    488:488:void onFragmentAttached(androidx.fragment.app.FragmentManager,androidx.fragment.app.Fragment,android.content.Context) -> onFragmentAttached
+    601:601:void onFragmentDestroyed(androidx.fragment.app.FragmentManager,androidx.fragment.app.Fragment) -> onFragmentDestroyed
+    610:610:void onFragmentDetached(androidx.fragment.app.FragmentManager,androidx.fragment.app.Fragment) -> onFragmentDetached
+    563:563:void onFragmentPaused(androidx.fragment.app.FragmentManager,androidx.fragment.app.Fragment) -> onFragmentPaused
+    477:477:void onFragmentPreAttached(androidx.fragment.app.FragmentManager,androidx.fragment.app.Fragment,android.content.Context) -> onFragmentPreAttached
+    500:500:void onFragmentPreCreated(androidx.fragment.app.FragmentManager,androidx.fragment.app.Fragment,android.os.Bundle) -> onFragmentPreCreated
+    554:554:void onFragmentResumed(androidx.fragment.app.FragmentManager,androidx.fragment.app.Fragment) -> onFragmentResumed
+    583:583:void onFragmentSaveInstanceState(androidx.fragment.app.FragmentManager,androidx.fragment.app.Fragment,android.os.Bundle) -> onFragmentSaveInstanceState
+    545:545:void onFragmentStarted(androidx.fragment.app.FragmentManager,androidx.fragment.app.Fragment) -> onFragmentStarted
+    572:572:void onFragmentStopped(androidx.fragment.app.FragmentManager,androidx.fragment.app.Fragment) -> onFragmentStopped
+    536:536:void onFragmentViewCreated(androidx.fragment.app.FragmentManager,androidx.fragment.app.Fragment,android.view.View,android.os.Bundle) -> onFragmentViewCreated
+    592:592:void onFragmentViewDestroyed(androidx.fragment.app.FragmentManager,androidx.fragment.app.Fragment) -> onFragmentViewDestroyed
 androidx.fragment.app.FragmentManager$OnBackStackChangedListener -> a.i.a.k$c:
 androidx.fragment.app.FragmentManagerImpl -> androidx.fragment.app.FragmentManagerImpl:
     664:1132:void <clinit>() -> <clinit>
@@ -13456,14 +13473,14 @@ com.bumptech.glide.util.pool.StateVerifier$DefaultStateVerifier -> b.a.a.i.a.g$a
     52:53:void setRecycled(boolean) -> a
     45:46:void throwIfRecycled() -> b
 com.leifu.mvpkotlin.base.BaseMvpActivity -> com.leifu.mvpkotlin.base.BaseMvpActivity:
-    com.wiseco.wisecotech.views.MultipleStatusView mLayoutStatusView -> r
-    com.leifu.mvpkotlin.base.IBasePresenter mPresenter -> q
+    com.leifu.mvpkotlin.base.IBasePresenter mPresenter -> r
+    com.wiseco.wisecotech.views.MultipleStatusView mLayoutStatusView -> s
     12:12:void <init>() -> <init>
     21:24:void initView(android.os.Bundle) -> a
     35:37:void onDestroy() -> onDestroy
-    27:29:void initListener() -> r
-    com.leifu.mvpkotlin.base.IBasePresenter createPresenter() -> t
-    void startNetwork() -> u
+    27:29:void initListener() -> s
+    com.leifu.mvpkotlin.base.IBasePresenter createPresenter() -> u
+    void startNetwork() -> v
 com.leifu.mvpkotlin.base.BaseMvpActivity$initListener$1 -> b.b.a.a.a:
     com.leifu.mvpkotlin.base.BaseMvpActivity this$0 -> a
     28:28:void onClick(android.view.View) -> onClick
@@ -13476,9 +13493,9 @@ com.leifu.mvpkotlin.base.BaseMvpFragment -> b.b.a.a.b:
     com.leifu.mvpkotlin.base.IBasePresenter createPresenter() -> sa
 com.leifu.mvpkotlin.base.BaseRxPresenter -> b.b.a.a.c:
     java.lang.String CANCEL_TAG -> a
-    8:11:void <init>() -> <init>
-    13:14:void attachView(com.leifu.mvpkotlin.base.IBaseView) -> a
-    17:19:void detachView() -> a
+    8:10:void <init>() -> <init>
+    12:13:void attachView(com.leifu.mvpkotlin.base.IBaseView) -> a
+    16:18:void detachView() -> a
 com.leifu.mvpkotlin.base.IBasePresenter -> b.b.a.a.d:
 com.leifu.mvpkotlin.base.IBaseView -> b.b.a.a.e:
 com.lzy.okgo.OkGo -> b.c.a.b:
@@ -13677,10 +13694,1764 @@ com.lzy.okgo.utils.OkLogger -> b.c.a.d.c:
     30:32:void <clinit>() -> <clinit>
     48:49:void v(java.lang.String,java.lang.String) -> a
     84:85:void printStackTrace(java.lang.Throwable) -> a
-com.squareup.leakcanary.RefWatcher -> b.d.a.a:
-    9:9:void <clinit>() -> <clinit>
-    11:12:void <init>() -> <init>
-    15:15:void watch(java.lang.Object) -> a
+com.orhanobut.logger.AndroidLogAdapter -> b.d.a.a:
+    com.orhanobut.logger.FormatStrategy formatStrategy -> a
+    29:31:void <init>(com.orhanobut.logger.FormatStrategy) -> <init>
+    38:39:void log(int,java.lang.String,java.lang.String) -> a
+com.orhanobut.logger.FormatStrategy -> b.d.a.b:
+com.orhanobut.logger.LogAdapter -> b.d.a.c:
+    boolean isLoggable(int,java.lang.String) -> a
+com.orhanobut.logger.LogStrategy -> b.d.a.d:
+com.orhanobut.logger.LogcatLogStrategy -> b.d.a.e:
+    14:14:void <init>() -> <init>
+    19:26:void log(int,java.lang.String,java.lang.String) -> a
+com.orhanobut.logger.Logger -> b.d.a.f:
+    com.orhanobut.logger.Printer printer -> a
+    22:22:void <clinit>() -> <clinit>
+    24:26:void <init>() -> <init>
+    33:34:void addLogAdapter(com.orhanobut.logger.LogAdapter) -> a
+    57:58:void d(java.lang.String,java.lang.Object[]) -> a
+com.orhanobut.logger.LoggerPrinter -> b.d.a.g:
+    java.util.List logAdapters -> b
+    java.lang.ThreadLocal localTag -> a
+    31:43:void <init>() -> <init>
+    131:130:void log(int,java.lang.String,java.lang.String,java.lang.Throwable) -> a
+    153:154:void addAdapter(com.orhanobut.logger.LogAdapter) -> a
+    163:162:void log(int,java.lang.Throwable,java.lang.String,java.lang.Object[]) -> a
+    174:179:java.lang.String getTag() -> a
+    183:183:java.lang.String createMessage(java.lang.String,java.lang.Object[]) -> a
+    53:54:void d(java.lang.String,java.lang.Object[]) -> b
+com.orhanobut.logger.PrettyFormatStrategy -> b.d.a.i:
+    int methodOffset -> b
+    boolean showThreadInfo -> c
+    java.lang.String tag -> e
+    int methodCount -> a
+    com.orhanobut.logger.LogStrategy logStrategy -> d
+    26:26:void <init>(com.orhanobut.logger.PrettyFormatStrategy$Builder,com.orhanobut.logger.PrettyFormatStrategy$1) -> <init>
+    59:67:void <init>(com.orhanobut.logger.PrettyFormatStrategy$Builder) -> <init>
+    70:70:com.orhanobut.logger.PrettyFormatStrategy$Builder newBuilder() -> a
+    74:101:void log(int,java.lang.String,java.lang.String) -> a
+    109:144:void logHeaderContent(int,java.lang.String,int) -> a
+    147:148:void logBottomBorder(int,java.lang.String) -> a
+    183:192:int getStackOffset(java.lang.StackTraceElement[]) -> a
+    196:199:java.lang.String formatTag(java.lang.String) -> a
+    151:152:void logDivider(int,java.lang.String) -> b
+    164:167:void logChunk(int,java.lang.String,java.lang.String) -> b
+    170:173:java.lang.String getSimpleClassName(java.lang.String) -> b
+    104:105:void logTopBorder(int,java.lang.String) -> c
+    155:161:void logContent(int,java.lang.String,java.lang.String) -> c
+com.orhanobut.logger.PrettyFormatStrategy$1 -> b.d.a.h:
+com.orhanobut.logger.PrettyFormatStrategy$Builder -> b.d.a.i$a:
+    int methodOffset -> b
+    boolean showThreadInfo -> c
+    java.lang.String tag -> e
+    int methodCount -> a
+    com.orhanobut.logger.LogStrategy logStrategy -> d
+    202:202:void <init>(com.orhanobut.logger.PrettyFormatStrategy$1) -> <init>
+    209:210:void <init>() -> <init>
+    213:214:com.orhanobut.logger.PrettyFormatStrategy$Builder methodCount(int) -> a
+    223:224:com.orhanobut.logger.PrettyFormatStrategy$Builder showThreadInfo(boolean) -> a
+    233:234:com.orhanobut.logger.PrettyFormatStrategy$Builder tag(java.lang.String) -> a
+    238:241:com.orhanobut.logger.PrettyFormatStrategy build() -> a
+    218:219:com.orhanobut.logger.PrettyFormatStrategy$Builder methodOffset(int) -> b
+com.orhanobut.logger.Printer -> b.d.a.j:
+com.orhanobut.logger.Utils -> b.d.a.k:
+    34:34:boolean isEmpty(java.lang.CharSequence) -> a
+    50:64:boolean equals(java.lang.CharSequence,java.lang.CharSequence) -> a
+    74:92:java.lang.String getStackTraceString(java.lang.Throwable) -> a
+    152:153:java.lang.Object checkNotNull(java.lang.Object) -> a
+com.squareup.haha.guava.base.Joiner -> com.squareup.haha.guava.base.Joiner:
+    66:66:void <init>(com.squareup.haha.guava.base.Joiner,byte) -> <init>
+    83:85:void <init>(java.lang.String) -> <init>
+    87:89:void <init>(com.squareup.haha.guava.base.Joiner) -> <init>
+    152:154:java.lang.StringBuilder appendTo(java.lang.StringBuilder,java.util.Iterator) -> appendTo
+    3362:3365:java.lang.String badPositionIndex(int,int,java.lang.String) -> badPositionIndex
+    3110:3111:void checkArgument(boolean) -> checkArgument
+    3295:3313:int checkElementIndex(int,int) -> checkElementIndex
+    3212:3213:java.lang.Object checkNotNull(java.lang.Object) -> checkNotNull
+    3339:3356:int checkPositionIndex(int,int) -> checkPositionIndex
+    3385:3386:void checkPositionIndexes(int,int,int) -> checkPositionIndexes
+    4049:4176:void checkRemove(boolean) -> checkRemove
+    3057:3057:boolean equal(java.lang.Object,java.lang.Object) -> equal
+    5354:5368:boolean equalsImpl(java.util.Set,java.lang.Object) -> equalsImpl
+    3413:3441:java.lang.String format(java.lang.String,java.lang.Object[]) -> format
+    6105:6105:int hash(java.lang.Object) -> hash
+    5539:5543:boolean removeAllImpl(java.util.Set,java.util.Iterator) -> removeAllImpl
+    5547:5561:boolean removeAllImpl(java.util.Set,java.util.Collection) -> removeAllImpl
+    4752:4759:java.util.List reverse(java.util.List) -> reverse
+    433:434:java.lang.CharSequence toString(java.lang.Object) -> toString
+    218:219:com.squareup.haha.guava.base.Joiner useForNull(java.lang.String) -> useForNull
+com.squareup.haha.guava.base.Joiner$1 -> com.squareup.haha.guava.base.Joiner$1:
+    219:219:void <init>(com.squareup.haha.guava.base.Joiner,com.squareup.haha.guava.base.Joiner,java.lang.String) -> <init>
+    221:221:java.lang.CharSequence toString(java.lang.Object) -> toString
+    225:225:com.squareup.haha.guava.base.Joiner useForNull(java.lang.String) -> useForNull
+com.squareup.haha.guava.base.Joiner$MapJoiner -> com.squareup.haha.guava.base.Joiner$MapJoiner:
+    299:299:void <init>(com.squareup.haha.guava.base.Joiner,java.lang.String,byte) -> <init>
+    303:306:void <init>(com.squareup.haha.guava.base.Joiner,java.lang.String) -> <init>
+com.squareup.haha.guava.base.Predicates -> com.squareup.haha.guava.base.Predicates:
+    346:346:void <clinit>() -> <clinit>
+    231:231:com.squareup.haha.guava.base.Predicate in(java.util.Collection) -> in
+com.squareup.haha.guava.base.Predicates$InPredicate -> com.squareup.haha.guava.base.Predicates$InPredicate:
+    503:503:void <init>(java.util.Collection,byte) -> <init>
+    506:508:void <init>(java.util.Collection) -> <init>
+    513:515:boolean apply(java.lang.Object) -> apply
+    522:526:boolean equals(java.lang.Object) -> equals
+    530:530:int hashCode() -> hashCode
+    534:534:java.lang.String toString() -> toString
+com.squareup.haha.guava.collect.AbstractIndexedListIterator -> com.squareup.haha.guava.collect.AbstractIndexedListIterator:
+    68:72:void <init>(int,int) -> <init>
+    76:76:boolean hasNext() -> hasNext
+    94:94:boolean hasPrevious() -> hasPrevious
+    81:82:java.lang.Object next() -> next
+    89:89:int nextIndex() -> nextIndex
+    99:100:java.lang.Object previous() -> previous
+    107:107:int previousIndex() -> previousIndex
+com.squareup.haha.guava.collect.AbstractListMultimap -> com.squareup.haha.guava.collect.AbstractListMultimap:
+    46:47:void <init>(java.util.Map) -> <init>
+    110:110:java.util.Map asMap() -> asMap
+    36:36:java.util.Collection createCollection() -> createCollection
+    121:121:boolean equals(java.lang.Object) -> equals
+    36:36:java.util.Collection get(java.lang.Object) -> get
+    66:66:java.util.List get(java.lang.Object) -> get
+    100:100:boolean put(java.lang.Object,java.lang.Object) -> put
+com.squareup.haha.guava.collect.AbstractMapBasedMultimap -> com.squareup.haha.guava.collect.AbstractMapBasedMultimap:
+    122:125:void <init>(java.util.Map) -> <init>
+    91:91:java.util.Map access$000(com.squareup.haha.guava.collect.AbstractMapBasedMultimap) -> access$000
+    91:91:java.util.Iterator access$100(com.squareup.haha.guava.collect.AbstractMapBasedMultimap,java.util.Collection) -> access$100
+    91:91:int access$208(com.squareup.haha.guava.collect.AbstractMapBasedMultimap) -> access$208
+    91:91:int access$210(com.squareup.haha.guava.collect.AbstractMapBasedMultimap) -> access$210
+    91:91:int access$212(com.squareup.haha.guava.collect.AbstractMapBasedMultimap,int) -> access$212
+    91:91:int access$220(com.squareup.haha.guava.collect.AbstractMapBasedMultimap,int) -> access$220
+    91:91:java.util.List access$300(com.squareup.haha.guava.collect.AbstractMapBasedMultimap,java.lang.Object,java.util.List,com.squareup.haha.guava.collect.AbstractMapBasedMultimap$WrappedCollection) -> access$300
+    91:91:int access$400(com.squareup.haha.guava.collect.AbstractMapBasedMultimap,java.lang.Object) -> access$400
+    288:293:void clear() -> clear
+    1226:1226:java.util.Map createAsMap() -> createAsMap
+    915:915:java.util.Set createKeySet() -> createKeySet
+    1201:1201:java.util.Collection entries() -> entries
+    1214:1214:java.util.Iterator entryIterator() -> entryIterator
+    304:308:java.util.Collection get(java.lang.Object) -> get
+    192:206:boolean put(java.lang.Object,java.lang.Object) -> put
+    180:180:int size() -> size
+    1175:1175:java.util.Iterator valueIterator() -> valueIterator
+    1170:1170:java.util.Collection values() -> values
+    319:326:java.util.Collection wrapCollection(java.lang.Object,java.util.Collection) -> wrapCollection
+    332:332:java.util.List wrapList(java.lang.Object,java.util.List,com.squareup.haha.guava.collect.AbstractMapBasedMultimap$WrappedCollection) -> wrapList
+com.squareup.haha.guava.collect.AbstractMapBasedMultimap$1 -> com.squareup.haha.guava.collect.AbstractMapBasedMultimap$1:
+    1175:1175:void <init>(com.squareup.haha.guava.collect.AbstractMapBasedMultimap) -> <init>
+    1178:1178:java.lang.Object output(java.lang.Object,java.lang.Object) -> output
+com.squareup.haha.guava.collect.AbstractMapBasedMultimap$2 -> com.squareup.haha.guava.collect.AbstractMapBasedMultimap$2:
+    1214:1214:void <init>(com.squareup.haha.guava.collect.AbstractMapBasedMultimap) -> <init>
+    1214:1214:java.lang.Object output(java.lang.Object,java.lang.Object) -> output
+com.squareup.haha.guava.collect.AbstractMapBasedMultimap$AsMap -> com.squareup.haha.guava.collect.AbstractMapBasedMultimap$AsMap:
+    1237:1239:void <init>(com.squareup.haha.guava.collect.AbstractMapBasedMultimap,java.util.Map) -> <init>
+    1298:1303:void clear() -> clear
+    1249:1249:boolean containsKey(java.lang.Object) -> containsKey
+    1243:1243:java.util.Set createEntrySet() -> createEntrySet
+    1285:1285:boolean equals(java.lang.Object) -> equals
+    1230:1230:java.lang.Object get(java.lang.Object) -> get
+    1289:1289:int hashCode() -> hashCode
+    1263:1263:java.util.Set keySet() -> keySet
+    1230:1230:java.lang.Object remove(java.lang.Object) -> remove
+    1268:1268:int size() -> size
+    1293:1293:java.lang.String toString() -> toString
+com.squareup.haha.guava.collect.AbstractMapBasedMultimap$AsMap$AsMapEntries -> com.squareup.haha.guava.collect.AbstractMapBasedMultimap$AsMap$AsMapEntries:
+    1310:1310:void <init>(com.squareup.haha.guava.collect.AbstractMapBasedMultimap$AsMap) -> <init>
+    1323:1323:boolean contains(java.lang.Object) -> contains
+    1317:1317:java.util.Iterator iterator() -> iterator
+    1313:1313:java.util.Map map() -> map
+    1327:1332:boolean remove(java.lang.Object) -> remove
+com.squareup.haha.guava.collect.AbstractMapBasedMultimap$AsMap$AsMapIterator -> com.squareup.haha.guava.collect.AbstractMapBasedMultimap$AsMap$AsMapIterator:
+    1337:1338:void <init>(com.squareup.haha.guava.collect.AbstractMapBasedMultimap$AsMap) -> <init>
+    1344:1344:boolean hasNext() -> hasNext
+    1337:1337:java.lang.Object next() -> next
+    1356:1359:void remove() -> remove
+com.squareup.haha.guava.collect.AbstractMapBasedMultimap$Itr -> com.squareup.haha.guava.collect.AbstractMapBasedMultimap$Itr:
+    1128:1133:void <init>(com.squareup.haha.guava.collect.AbstractMapBasedMultimap) -> <init>
+    1139:1139:boolean hasNext() -> hasNext
+    1144:1150:java.lang.Object next() -> next
+    1155:1160:void remove() -> remove
+com.squareup.haha.guava.collect.AbstractMapBasedMultimap$KeySet -> com.squareup.haha.guava.collect.AbstractMapBasedMultimap$KeySet:
+    920:922:void <init>(com.squareup.haha.guava.collect.AbstractMapBasedMultimap,java.util.Map) -> <init>
+    965:966:void clear() -> clear
+    969:969:boolean containsAll(java.util.Collection) -> containsAll
+    973:973:boolean equals(java.lang.Object) -> equals
+    977:977:int hashCode() -> hashCode
+    925:927:java.util.Iterator iterator() -> iterator
+    953:960:boolean remove(java.lang.Object) -> remove
+com.squareup.haha.guava.collect.AbstractMapBasedMultimap$KeySet$1 -> com.squareup.haha.guava.collect.AbstractMapBasedMultimap$KeySet$1:
+    927:927:void <init>(com.squareup.haha.guava.collect.AbstractMapBasedMultimap$KeySet,java.util.Iterator) -> <init>
+    932:932:boolean hasNext() -> hasNext
+    936:937:java.lang.Object next() -> next
+    941:946:void remove() -> remove
+com.squareup.haha.guava.collect.AbstractMapBasedMultimap$RandomAccessWrappedList -> com.squareup.haha.guava.collect.AbstractMapBasedMultimap$RandomAccessWrappedList:
+    907:908:void <init>(com.squareup.haha.guava.collect.AbstractMapBasedMultimap,java.lang.Object,java.util.List,com.squareup.haha.guava.collect.AbstractMapBasedMultimap$WrappedCollection) -> <init>
+com.squareup.haha.guava.collect.AbstractMapBasedMultimap$SortedAsMap -> com.squareup.haha.guava.collect.AbstractMapBasedMultimap$SortedAsMap:
+    1365:1367:void <init>(com.squareup.haha.guava.collect.AbstractMapBasedMultimap,java.util.SortedMap) -> <init>
+    1375:1375:java.util.Comparator comparator() -> comparator
+    1363:1363:java.util.Set createKeySet() -> createKeySet
+    1414:1414:java.util.SortedSet createKeySet() -> createKeySet
+    1380:1380:java.lang.Object firstKey() -> firstKey
+    1390:1390:java.util.SortedMap headMap(java.lang.Object) -> headMap
+    1363:1363:java.util.Set keySet() -> keySet
+    1385:1385:java.lang.Object lastKey() -> lastKey
+    1395:1395:java.util.SortedMap subMap(java.lang.Object,java.lang.Object) -> subMap
+    1400:1400:java.util.SortedMap tailMap(java.lang.Object) -> tailMap
+com.squareup.haha.guava.collect.AbstractMapBasedMultimap$SortedKeySet -> com.squareup.haha.guava.collect.AbstractMapBasedMultimap$SortedKeySet:
+    983:985:void <init>(com.squareup.haha.guava.collect.AbstractMapBasedMultimap,java.util.SortedMap) -> <init>
+    993:993:java.util.Comparator comparator() -> comparator
+    998:998:java.lang.Object first() -> first
+    1003:1003:java.util.SortedSet headSet(java.lang.Object) -> headSet
+    1008:1008:java.lang.Object last() -> last
+    988:988:java.util.SortedMap sortedMap() -> sortedMap
+    1013:1013:java.util.SortedSet subSet(java.lang.Object,java.lang.Object) -> subSet
+    1018:1018:java.util.SortedSet tailSet(java.lang.Object) -> tailSet
+com.squareup.haha.guava.collect.AbstractMapBasedMultimap$WrappedCollection -> com.squareup.haha.guava.collect.AbstractMapBasedMultimap$WrappedCollection:
+    361:367:void <init>(com.squareup.haha.guava.collect.AbstractMapBasedMultimap,java.lang.Object,java.util.Collection,com.squareup.haha.guava.collect.AbstractMapBasedMultimap$WrappedCollection) -> <init>
+    503:512:boolean add(java.lang.Object) -> add
+    522:534:boolean addAll(java.util.Collection) -> addAll
+    414:419:void addToMap() -> addToMap
+    548:555:void clear() -> clear
+    538:539:boolean contains(java.lang.Object) -> contains
+    543:544:boolean containsAll(java.util.Collection) -> containsAll
+    427:431:boolean equals(java.lang.Object) -> equals
+    435:436:int hashCode() -> hashCode
+    449:450:java.util.Iterator iterator() -> iterator
+    377:388:void refreshIfEmpty() -> refreshIfEmpty
+    558:564:boolean remove(java.lang.Object) -> remove
+    568:578:boolean removeAll(java.util.Collection) -> removeAll
+    395:400:void removeIfEmpty() -> removeIfEmpty
+    582:590:boolean retainAll(java.util.Collection) -> retainAll
+    422:423:int size() -> size
+    440:441:java.lang.String toString() -> toString
+com.squareup.haha.guava.collect.AbstractMapBasedMultimap$WrappedCollection$WrappedIterator -> com.squareup.haha.guava.collect.AbstractMapBasedMultimap$WrappedCollection$WrappedIterator:
+    458:460:void <init>(com.squareup.haha.guava.collect.AbstractMapBasedMultimap$WrappedCollection) -> <init>
+    462:464:void <init>(com.squareup.haha.guava.collect.AbstractMapBasedMultimap$WrappedCollection,java.util.Iterator) -> <init>
+    479:480:boolean hasNext() -> hasNext
+    485:486:java.lang.Object next() -> next
+    491:494:void remove() -> remove
+    471:473:void validateIterator() -> validateIterator
+com.squareup.haha.guava.collect.AbstractMapBasedMultimap$WrappedList -> com.squareup.haha.guava.collect.AbstractMapBasedMultimap$WrappedList:
+    760:762:void <init>(com.squareup.haha.guava.collect.AbstractMapBasedMultimap,java.lang.Object,java.util.List,com.squareup.haha.guava.collect.AbstractMapBasedMultimap$WrappedCollection) -> <init>
+    799:806:void add(int,java.lang.Object) -> add
+    770:782:boolean addAll(int,java.util.Collection) -> addAll
+    787:788:java.lang.Object get(int) -> get
+    765:765:java.util.List getListDelegate() -> getListDelegate
+    819:820:int indexOf(java.lang.Object) -> indexOf
+    825:826:int lastIndexOf(java.lang.Object) -> lastIndexOf
+    831:832:java.util.ListIterator listIterator() -> listIterator
+    837:838:java.util.ListIterator listIterator(int) -> listIterator
+    810:814:java.lang.Object remove(int) -> remove
+    793:794:java.lang.Object set(int,java.lang.Object) -> set
+    843:844:java.util.List subList(int,int) -> subList
+com.squareup.haha.guava.collect.AbstractMapBasedMultimap$WrappedList$WrappedListIterator -> com.squareup.haha.guava.collect.AbstractMapBasedMultimap$WrappedList$WrappedListIterator:
+    852:852:void <init>(com.squareup.haha.guava.collect.AbstractMapBasedMultimap$WrappedList) -> <init>
+    854:856:void <init>(com.squareup.haha.guava.collect.AbstractMapBasedMultimap$WrappedList,int) -> <init>
+    889:895:void add(java.lang.Object) -> add
+    859:859:java.util.ListIterator getDelegateListIterator() -> getDelegateListIterator
+    864:864:boolean hasPrevious() -> hasPrevious
+    874:874:int nextIndex() -> nextIndex
+    869:869:java.lang.Object previous() -> previous
+    879:879:int previousIndex() -> previousIndex
+    884:885:void set(java.lang.Object) -> set
+com.squareup.haha.guava.collect.AbstractMapBasedMultimap$WrappedSet -> com.squareup.haha.guava.collect.AbstractMapBasedMultimap$WrappedSet:
+    602:604:void <init>(com.squareup.haha.guava.collect.AbstractMapBasedMultimap,java.lang.Object,java.util.Set) -> <init>
+    608:622:boolean removeAll(java.util.Collection) -> removeAll
+com.squareup.haha.guava.collect.AbstractMapBasedMultimap$WrappedSortedSet -> com.squareup.haha.guava.collect.AbstractMapBasedMultimap$WrappedSortedSet:
+    632:634:void <init>(com.squareup.haha.guava.collect.AbstractMapBasedMultimap,java.lang.Object,java.util.SortedSet,com.squareup.haha.guava.collect.AbstractMapBasedMultimap$WrappedCollection) -> <init>
+    642:642:java.util.Comparator comparator() -> comparator
+    647:648:java.lang.Object first() -> first
+    637:637:java.util.SortedSet getSortedSetDelegate() -> getSortedSetDelegate
+    659:660:java.util.SortedSet headSet(java.lang.Object) -> headSet
+    653:654:java.lang.Object last() -> last
+    667:668:java.util.SortedSet subSet(java.lang.Object,java.lang.Object) -> subSet
+    675:676:java.util.SortedSet tailSet(java.lang.Object) -> tailSet
+com.squareup.haha.guava.collect.AbstractMapEntry -> com.squareup.haha.guava.collect.AbstractMapEntry:
+    33:33:void <init>() -> <init>
+    47:52:boolean equals(java.lang.Object) -> equals
+    56:58:int hashCode() -> hashCode
+    43:43:java.lang.Object setValue(java.lang.Object) -> setValue
+    65:65:java.lang.String toString() -> toString
+com.squareup.haha.guava.collect.AbstractMultimap -> com.squareup.haha.guava.collect.AbstractMultimap:
+    38:181:void <init>() -> <init>
+    207:208:java.util.Map asMap() -> asMap
+    57:58:boolean containsEntry(java.lang.Object,java.lang.Object) -> containsEntry
+    46:52:boolean containsValue(java.lang.Object) -> containsValue
+    154:154:java.util.Set createKeySet() -> createKeySet
+    107:108:java.util.Collection entries() -> entries
+    216:216:boolean equals(java.lang.Object) -> equals
+    228:228:int hashCode() -> hashCode
+    149:150:java.util.Set keySet() -> keySet
+    69:69:boolean put(java.lang.Object,java.lang.Object) -> put
+    63:64:boolean remove(java.lang.Object,java.lang.Object) -> remove
+    239:239:java.lang.String toString() -> toString
+    200:200:java.util.Iterator valueIterator() -> valueIterator
+    173:174:java.util.Collection values() -> values
+com.squareup.haha.guava.collect.AbstractMultimap$Entries -> com.squareup.haha.guava.collect.AbstractMultimap$Entries:
+    119:119:void <init>(com.squareup.haha.guava.collect.AbstractMultimap) -> <init>
+    119:119:void <init>(com.squareup.haha.guava.collect.AbstractMultimap,byte) -> <init>
+    127:127:java.util.Iterator iterator() -> iterator
+    122:122:com.squareup.haha.guava.collect.Multimap multimap() -> multimap
+com.squareup.haha.guava.collect.AbstractMultimap$EntrySet -> com.squareup.haha.guava.collect.AbstractMultimap$EntrySet:
+    131:131:void <init>(com.squareup.haha.guava.collect.AbstractMultimap) -> <init>
+    131:131:void <init>(com.squareup.haha.guava.collect.AbstractMultimap,byte) -> <init>
+    139:139:boolean equals(java.lang.Object) -> equals
+    134:134:int hashCode() -> hashCode
+com.squareup.haha.guava.collect.AbstractMultimap$Values -> com.squareup.haha.guava.collect.AbstractMultimap$Values:
+    181:181:void <init>(com.squareup.haha.guava.collect.AbstractMultimap) -> <init>
+    195:196:void clear() -> clear
+    191:191:boolean contains(java.lang.Object) -> contains
+    183:183:java.util.Iterator iterator() -> iterator
+    187:187:int size() -> size
+com.squareup.haha.guava.collect.ArrayListMultimap -> com.squareup.haha.guava.collect.ArrayListMultimap:
+    107:109:void <init>() -> <init>
+    66:66:java.util.Map asMap() -> asMap
+    66:66:void clear() -> clear
+    66:66:boolean containsEntry(java.lang.Object,java.lang.Object) -> containsEntry
+    66:66:boolean containsValue(java.lang.Object) -> containsValue
+    78:78:com.squareup.haha.guava.collect.ArrayListMultimap create() -> create
+    66:66:java.util.Collection createCollection() -> createCollection
+    130:130:java.util.List createCollection() -> createCollection
+    66:66:java.util.Collection entries() -> entries
+    66:66:boolean equals(java.lang.Object) -> equals
+    66:66:java.util.List get(java.lang.Object) -> get
+    66:66:int hashCode() -> hashCode
+    66:66:java.util.Set keySet() -> keySet
+    66:66:boolean put(java.lang.Object,java.lang.Object) -> put
+    66:66:boolean remove(java.lang.Object,java.lang.Object) -> remove
+    66:66:int size() -> size
+    66:66:java.lang.String toString() -> toString
+    66:66:java.util.Collection values() -> values
+com.squareup.haha.guava.collect.Collections2 -> com.squareup.haha.guava.collect.Collections2:
+    323:323:void <clinit>() -> <clinit>
+    108:112:boolean safeContains(java.util.Collection,java.lang.Object) -> safeContains
+com.squareup.haha.guava.collect.FluentIterable -> com.squareup.haha.guava.collect.FluentIterable:
+    77:79:void <init>() -> <init>
+    118:118:java.lang.String toString() -> toString
+com.squareup.haha.guava.collect.ImmutableAsList -> com.squareup.haha.guava.collect.ImmutableAsList:
+    35:62:void <init>() -> <init>
+    41:41:boolean contains(java.lang.Object) -> contains
+    51:51:boolean isEmpty() -> isEmpty
+    56:56:boolean isPartialView() -> isPartialView
+    46:46:int size() -> size
+com.squareup.haha.guava.collect.ImmutableCollection -> com.squareup.haha.guava.collect.ImmutableCollection:
+    50:50:void <init>() -> <init>
+    96:96:boolean add(java.lang.Object) -> add
+    120:120:boolean addAll(java.util.Collection) -> addAll
+    171:172:com.squareup.haha.guava.collect.ImmutableList asList() -> asList
+    156:156:void clear() -> clear
+    84:84:boolean contains(java.lang.Object) -> contains
+    199:202:int copyIntoArray(java.lang.Object[],int) -> copyIntoArray
+    45:45:java.util.Iterator iterator() -> iterator
+    108:108:boolean remove(java.lang.Object) -> remove
+    132:132:boolean removeAll(java.util.Collection) -> removeAll
+    144:144:boolean retainAll(java.util.Collection) -> retainAll
+    60:66:java.lang.Object[] toArray() -> toArray
+    71:79:java.lang.Object[] toArray(java.lang.Object[]) -> toArray
+com.squareup.haha.guava.collect.ImmutableEntry -> com.squareup.haha.guava.collect.ImmutableEntry:
+    34:37:void <init>(java.lang.Object,java.lang.Object) -> <init>
+    40:40:java.lang.Object getKey() -> getKey
+    44:44:java.lang.Object getValue() -> getValue
+    48:48:java.lang.Object setValue(java.lang.Object) -> setValue
+com.squareup.haha.guava.collect.ImmutableList -> com.squareup.haha.guava.collect.ImmutableList:
+    66:66:void <clinit>() -> <clinit>
+    335:335:void <init>() -> <init>
+    467:467:void add(int,java.lang.Object) -> add
+    443:443:boolean addAll(int,java.util.Collection) -> addAll
+    312:2322:com.squareup.haha.guava.collect.ImmutableList asImmutableList(java.lang.Object[]) -> asImmutableList
+    488:488:com.squareup.haha.guava.collect.ImmutableList asList() -> asList
+    368:368:boolean contains(java.lang.Object) -> contains
+    494:498:int copyIntoArray(java.lang.Object[],int) -> copyIntoArray
+    251:258:com.squareup.haha.guava.collect.ImmutableList copyOf(java.util.Collection) -> copyOf
+    567:567:boolean equals(java.lang.Object) -> equals
+    571:579:int hashCode() -> hashCode
+    358:358:int indexOf(java.lang.Object) -> indexOf
+    61:61:java.util.Iterator iterator() -> iterator
+    340:340:com.squareup.haha.guava.collect.UnmodifiableIterator iterator() -> iterator
+    363:363:int lastIndexOf(java.lang.Object) -> lastIndexOf
+    61:61:java.util.ListIterator listIterator() -> listIterator
+    61:61:java.util.ListIterator listIterator(int) -> listIterator
+    348:348:com.squareup.haha.guava.collect.UnmodifiableListIterator listIterator(int) -> listIterator
+    77:77:com.squareup.haha.guava.collect.ImmutableList of() -> of
+    89:89:com.squareup.haha.guava.collect.ImmutableList of(java.lang.Object) -> of
+    98:98:com.squareup.haha.guava.collect.ImmutableList of(java.lang.Object,java.lang.Object) -> of
+    479:479:java.lang.Object remove(int) -> remove
+    510:510:com.squareup.haha.guava.collect.ImmutableList reverse() -> reverse
+    455:455:java.lang.Object set(int,java.lang.Object) -> set
+    61:61:java.util.List subList(int,int) -> subList
+    381:385:com.squareup.haha.guava.collect.ImmutableList subList(int,int) -> subList
+    399:399:com.squareup.haha.guava.collect.ImmutableList subListUnchecked(int,int) -> subListUnchecked
+com.squareup.haha.guava.collect.ImmutableList$1 -> com.squareup.haha.guava.collect.ImmutableList$1:
+    348:348:void <init>(com.squareup.haha.guava.collect.ImmutableList,int,int) -> <init>
+    351:351:java.lang.Object get(int) -> get
+com.squareup.haha.guava.collect.ImmutableList$ReverseImmutableList -> com.squareup.haha.guava.collect.ImmutableList$ReverseImmutableList:
+    516:518:void <init>(com.squareup.haha.guava.collect.ImmutableList) -> <init>
+    533:533:boolean contains(java.lang.Object) -> contains
+    553:554:java.lang.Object get(int) -> get
+    537:538:int indexOf(java.lang.Object) -> indexOf
+    562:562:boolean isPartialView() -> isPartialView
+    513:513:java.util.Iterator iterator() -> iterator
+    542:543:int lastIndexOf(java.lang.Object) -> lastIndexOf
+    513:513:java.util.ListIterator listIterator() -> listIterator
+    513:513:java.util.ListIterator listIterator(int) -> listIterator
+    529:529:com.squareup.haha.guava.collect.ImmutableList reverse() -> reverse
+    521:521:int reverseIndex(int) -> reverseIndex
+    558:558:int size() -> size
+    513:513:java.util.List subList(int,int) -> subList
+    547:548:com.squareup.haha.guava.collect.ImmutableList subList(int,int) -> subList
+com.squareup.haha.guava.collect.ImmutableList$SubList -> com.squareup.haha.guava.collect.ImmutableList$SubList:
+    406:409:void <init>(com.squareup.haha.guava.collect.ImmutableList,int,int) -> <init>
+    418:419:java.lang.Object get(int) -> get
+    430:430:boolean isPartialView() -> isPartialView
+    402:402:java.util.Iterator iterator() -> iterator
+    402:402:java.util.ListIterator listIterator() -> listIterator
+    402:402:java.util.ListIterator listIterator(int) -> listIterator
+    413:413:int size() -> size
+    402:402:java.util.List subList(int,int) -> subList
+    424:425:com.squareup.haha.guava.collect.ImmutableList subList(int,int) -> subList
+com.squareup.haha.guava.collect.Iterables -> com.squareup.haha.guava.collect.Iterables:
+    60:60:java.util.Iterator access$100(java.lang.Iterable) -> access$100
+    435:435:java.lang.Iterable concat(java.lang.Iterable,java.lang.Iterable) -> concat
+    278:278:java.lang.String toString(java.lang.Iterable) -> toString
+com.squareup.haha.guava.collect.Iterables$2 -> com.squareup.haha.guava.collect.Iterables$2:
+    495:495:void <init>(java.lang.Iterable) -> <init>
+    498:498:java.util.Iterator iterator() -> iterator
+com.squareup.haha.guava.collect.Iterables$3 -> com.squareup.haha.guava.collect.Iterables$3:
+    509:509:void <init>(java.util.Iterator) -> <init>
+    509:509:java.lang.Object transform(java.lang.Object) -> transform
+com.squareup.haha.guava.collect.Iterators -> com.squareup.haha.guava.collect.Iterators:
+    72:122:void <clinit>() -> <clinit>
+    1005:1010:void clear(java.util.Iterator) -> clear
+    526:527:java.util.Iterator concat(java.util.Iterator) -> concat
+    264:274:boolean elementsEqual(java.util.Iterator,java.util.Iterator) -> elementsEqual
+    1119:107:com.squareup.haha.guava.collect.UnmodifiableIterator emptyIterator() -> emptyIterator
+    146:146:java.util.Iterator emptyModifiableIterator() -> emptyModifiableIterator
+    1038:1053:com.squareup.haha.guava.collect.UnmodifiableListIterator forArray(java.lang.Object[],int,int,int) -> forArray
+    211:211:boolean removeAll(java.util.Iterator,java.util.Collection) -> removeAll
+    1068:1068:com.squareup.haha.guava.collect.UnmodifiableIterator singletonIterator(java.lang.Object) -> singletonIterator
+    283:283:java.lang.String toString(java.util.Iterator) -> toString
+    790:791:java.util.Iterator transform(java.util.Iterator,com.squareup.haha.guava.base.Function) -> transform
+com.squareup.haha.guava.collect.Iterators$1 -> com.squareup.haha.guava.collect.Iterators$1:
+    73:73:void <init>() -> <init>
+    76:76:boolean hasNext() -> hasNext
+    84:84:boolean hasPrevious() -> hasPrevious
+    80:80:java.lang.Object next() -> next
+    92:92:int nextIndex() -> nextIndex
+    88:88:java.lang.Object previous() -> previous
+    96:96:int previousIndex() -> previousIndex
+com.squareup.haha.guava.collect.Iterators$11 -> com.squareup.haha.guava.collect.Iterators$11:
+    1053:1053:void <init>(int,int,java.lang.Object[],int) -> <init>
+    1055:1055:java.lang.Object get(int) -> get
+com.squareup.haha.guava.collect.Iterators$12 -> com.squareup.haha.guava.collect.Iterators$12:
+    1068:1068:void <init>(java.lang.Object) -> <init>
+    1072:1072:boolean hasNext() -> hasNext
+    1076:1077:java.lang.Object next() -> next
+com.squareup.haha.guava.collect.Iterators$2 -> com.squareup.haha.guava.collect.Iterators$2:
+    123:123:void <init>() -> <init>
+    125:125:boolean hasNext() -> hasNext
+    129:129:java.lang.Object next() -> next
+    133:134:void remove() -> remove
+com.squareup.haha.guava.collect.Iterators$5 -> com.squareup.haha.guava.collect.Iterators$5:
+    527:528:void <init>(java.util.Iterator) -> <init>
+    542:545:boolean hasNext() -> hasNext
+    549:550:java.lang.Object next() -> next
+    557:560:void remove() -> remove
+com.squareup.haha.guava.collect.Iterators$8 -> com.squareup.haha.guava.collect.Iterators$8:
+    791:791:void <init>(java.util.Iterator,com.squareup.haha.guava.base.Function) -> <init>
+    794:794:java.lang.Object transform(java.lang.Object) -> transform
+com.squareup.haha.guava.collect.Lists$RandomAccessReverseList -> com.squareup.haha.guava.collect.Lists$RandomAccessReverseList:
+    886:887:void <init>(java.util.List) -> <init>
+com.squareup.haha.guava.collect.Lists$ReverseList -> com.squareup.haha.guava.collect.Lists$ReverseList:
+    766:768:void <init>(java.util.List) -> <init>
+    763:763:int access$000(com.squareup.haha.guava.collect.Lists$ReverseList,int) -> access$000
+    787:788:void add(int,java.lang.Object) -> add
+    791:792:void clear() -> clear
+    807:807:java.lang.Object get(int) -> get
+    821:821:java.util.Iterator iterator() -> iterator
+    825:827:java.util.ListIterator listIterator(int) -> listIterator
+    795:795:java.lang.Object remove(int) -> remove
+    799:800:void removeRange(int,int) -> removeRange
+    775:777:int reverseIndex(int) -> reverseIndex
+    781:783:int reversePosition(int) -> reversePosition
+    803:803:java.lang.Object set(int,java.lang.Object) -> set
+    811:811:int size() -> size
+    815:816:java.util.List subList(int,int) -> subList
+com.squareup.haha.guava.collect.Lists$ReverseList$1 -> com.squareup.haha.guava.collect.Lists$ReverseList$1:
+    827:827:void <init>(com.squareup.haha.guava.collect.Lists$ReverseList,java.util.ListIterator) -> <init>
+    832:835:void add(java.lang.Object) -> add
+    838:838:boolean hasNext() -> hasNext
+    842:842:boolean hasPrevious() -> hasPrevious
+    846:847:java.lang.Object next() -> next
+    854:854:int nextIndex() -> nextIndex
+    858:859:java.lang.Object previous() -> previous
+    866:866:int previousIndex() -> previousIndex
+    870:873:void remove() -> remove
+    876:1161:void set(java.lang.Object) -> set
+com.squareup.haha.guava.collect.Maps -> com.squareup.haha.guava.collect.Maps:
+    3453:3453:void <clinit>() -> <clinit>
+    204:211:int capacity(int) -> capacity
+    1207:1207:java.util.Map$Entry immutableEntry(java.lang.Object,java.lang.Object) -> immutableEntry
+    113:113:java.util.Iterator keyIterator(java.util.Iterator) -> keyIterator
+    177:177:java.util.HashMap newHashMap() -> newHashMap
+    3361:3365:boolean safeContainsKey(java.util.Map,java.lang.Object) -> safeContainsKey
+    3346:3350:java.lang.Object safeGet(java.util.Map,java.lang.Object) -> safeGet
+    3376:3380:java.lang.Object safeRemove(java.util.Map,java.lang.Object) -> safeRemove
+    117:117:java.util.Iterator valueIterator(java.util.Iterator) -> valueIterator
+com.squareup.haha.guava.collect.Maps$EntryFunction -> com.squareup.haha.guava.collect.Maps$EntryFunction:
+    86:85:void <clinit>() -> <clinit>
+    85:85:void <init>(java.lang.String,int) -> <init>
+    85:85:void <init>(java.lang.String,int,byte) -> <init>
+com.squareup.haha.guava.collect.Maps$EntryFunction$1 -> com.squareup.haha.guava.collect.Maps$EntryFunction$1:
+    86:86:void <init>(java.lang.String,int) -> <init>
+    86:86:java.lang.Object apply(java.lang.Object) -> apply
+com.squareup.haha.guava.collect.Maps$EntryFunction$2 -> com.squareup.haha.guava.collect.Maps$EntryFunction$2:
+    93:93:void <init>(java.lang.String,int) -> <init>
+    93:93:java.lang.Object apply(java.lang.Object) -> apply
+com.squareup.haha.guava.collect.Maps$EntrySet -> com.squareup.haha.guava.collect.Maps$EntrySet:
+    3727:3727:void <init>() -> <init>
+    3736:3737:void clear() -> clear
+    3740:3747:boolean contains(java.lang.Object) -> contains
+    3751:3751:boolean isEmpty() -> isEmpty
+    3755:3759:boolean remove(java.lang.Object) -> remove
+    3764:3767:boolean removeAll(java.util.Collection) -> removeAll
+    3773:3783:boolean retainAll(java.util.Collection) -> retainAll
+    3732:3732:int size() -> size
+com.squareup.haha.guava.collect.Maps$ImprovedAbstractMap -> com.squareup.haha.guava.collect.Maps$ImprovedAbstractMap:
+    3303:3303:void <init>() -> <init>
+    3326:3326:java.util.Set createKeySet() -> createKeySet
+    3314:3315:java.util.Set entrySet() -> entrySet
+    3321:3322:java.util.Set keySet() -> keySet
+    3332:3333:java.util.Collection values() -> values
+com.squareup.haha.guava.collect.Maps$KeySet -> com.squareup.haha.guava.collect.Maps$KeySet:
+    3479:3481:void <init>(java.util.Map) -> <init>
+    3512:3513:void clear() -> clear
+    3500:3500:boolean contains(java.lang.Object) -> contains
+    3496:3496:boolean isEmpty() -> isEmpty
+    3488:3488:java.util.Iterator iterator() -> iterator
+    3504:3508:boolean remove(java.lang.Object) -> remove
+    3492:3492:int size() -> size
+com.squareup.haha.guava.collect.Maps$Values -> com.squareup.haha.guava.collect.Maps$Values:
+    3656:3658:void <init>(java.util.Map) -> <init>
+    3723:3724:void clear() -> clear
+    3719:3719:boolean contains(java.lang.Object) -> contains
+    3715:3715:boolean isEmpty() -> isEmpty
+    3665:3665:java.util.Iterator iterator() -> iterator
+    3670:3678:boolean remove(java.lang.Object) -> remove
+    3684:3692:boolean removeAll(java.util.Collection) -> removeAll
+    3698:3706:boolean retainAll(java.util.Collection) -> retainAll
+    3711:3711:int size() -> size
+com.squareup.haha.guava.collect.Multimaps$Entries -> com.squareup.haha.guava.collect.Multimaps$Entries:
+    1639:1639:void <init>() -> <init>
+    1664:1665:void clear() -> clear
+    1648:1652:boolean contains(java.lang.Object) -> contains
+    1656:1660:boolean remove(java.lang.Object) -> remove
+    1644:1644:int size() -> size
+com.squareup.haha.guava.collect.ObjectArrays -> com.squareup.haha.guava.collect.ObjectArrays:
+    37:37:void <clinit>() -> <clinit>
+    112:115:java.lang.Object[] arraysCopyOf(java.lang.Object[],int) -> arraysCopyOf
+    226:226:java.lang.Object[] checkElementsNotNull(java.lang.Object[]) -> checkElementsNotNull
+    61:61:java.lang.Object[] newArray(java.lang.Object[],int) -> newArray
+com.squareup.haha.guava.collect.RegularImmutableAsList -> com.squareup.haha.guava.collect.RegularImmutableAsList:
+    34:37:void <init>(com.squareup.haha.guava.collect.ImmutableCollection,com.squareup.haha.guava.collect.ImmutableList) -> <init>
+    40:41:void <init>(com.squareup.haha.guava.collect.ImmutableCollection,java.lang.Object[]) -> <init>
+    61:61:int copyIntoArray(java.lang.Object[],int) -> copyIntoArray
+    45:45:com.squareup.haha.guava.collect.ImmutableCollection delegateCollection() -> delegateCollection
+    66:66:java.lang.Object get(int) -> get
+    28:28:java.util.ListIterator listIterator(int) -> listIterator
+    55:55:com.squareup.haha.guava.collect.UnmodifiableListIterator listIterator(int) -> listIterator
+com.squareup.haha.guava.collect.RegularImmutableList -> com.squareup.haha.guava.collect.RegularImmutableList:
+    36:40:void <init>(java.lang.Object[],int,int) -> <init>
+    43:44:void <init>(java.lang.Object[]) -> <init>
+    57:58:int copyIntoArray(java.lang.Object[],int) -> copyIntoArray
+    65:66:java.lang.Object get(int) -> get
+    71:79:int indexOf(java.lang.Object) -> indexOf
+    52:52:boolean isPartialView() -> isPartialView
+    84:92:int lastIndexOf(java.lang.Object) -> lastIndexOf
+    29:29:java.util.ListIterator listIterator(int) -> listIterator
+    106:106:com.squareup.haha.guava.collect.UnmodifiableListIterator listIterator(int) -> listIterator
+    48:48:int size() -> size
+    97:97:com.squareup.haha.guava.collect.ImmutableList subListUnchecked(int,int) -> subListUnchecked
+com.squareup.haha.guava.collect.Sets$ImprovedAbstractSet -> com.squareup.haha.guava.collect.Sets$ImprovedAbstractSet:
+    71:71:void <init>() -> <init>
+    74:74:boolean removeAll(java.util.Collection) -> removeAll
+    79:79:boolean retainAll(java.util.Collection) -> retainAll
+com.squareup.haha.guava.collect.SingletonImmutableList -> com.squareup.haha.guava.collect.SingletonImmutableList:
+    39:41:void <init>(java.lang.Object) -> <init>
+    76:76:boolean contains(java.lang.Object) -> contains
+    115:116:int copyIntoArray(java.lang.Object[],int) -> copyIntoArray
+    80:87:boolean equals(java.lang.Object) -> equals
+    45:46:java.lang.Object get(int) -> get
+    93:93:int hashCode() -> hashCode
+    50:50:int indexOf(java.lang.Object) -> indexOf
+    106:106:boolean isEmpty() -> isEmpty
+    110:110:boolean isPartialView() -> isPartialView
+    33:33:java.util.Iterator iterator() -> iterator
+    54:54:com.squareup.haha.guava.collect.UnmodifiableIterator iterator() -> iterator
+    58:58:int lastIndexOf(java.lang.Object) -> lastIndexOf
+    72:72:com.squareup.haha.guava.collect.ImmutableList reverse() -> reverse
+    63:63:int size() -> size
+    33:33:java.util.List subList(int,int) -> subList
+    67:68:com.squareup.haha.guava.collect.ImmutableList subList(int,int) -> subList
+    97:98:java.lang.String toString() -> toString
+com.squareup.haha.guava.collect.TransformedIterator -> com.squareup.haha.guava.collect.TransformedIterator:
+    35:37:void <init>(java.util.Iterator) -> <init>
+    43:43:boolean hasNext() -> hasNext
+    48:48:java.lang.Object next() -> next
+    53:54:void remove() -> remove
+com.squareup.haha.guava.collect.UnmodifiableIterator -> com.squareup.haha.guava.collect.UnmodifiableIterator:
+    32:32:void <init>() -> <init>
+    43:43:void remove() -> remove
+com.squareup.haha.guava.collect.UnmodifiableListIterator -> com.squareup.haha.guava.collect.UnmodifiableListIterator:
+    34:34:void <init>() -> <init>
+    43:43:void add(java.lang.Object) -> add
+    53:53:void set(java.lang.Object) -> set
+com.squareup.haha.perflib.ArrayInstance -> com.squareup.haha.perflib.ArrayInstance:
+    25:25:void <clinit>() -> <clinit>
+    35:39:void <init>(long,com.squareup.haha.perflib.StackTrace,com.squareup.haha.perflib.Type,int,long) -> <init>
+    80:92:void accept(com.squareup.haha.perflib.Visitor) -> accept
+    64:69:char[] asCharArray(int,int) -> asCharArray
+    54:59:byte[] asRawByteArray(int,int) -> asRawByteArray
+    105:105:com.squareup.haha.perflib.Type getArrayType() -> getArrayType
+    96:100:com.squareup.haha.perflib.ClassObj getClassObj() -> getClassObj
+    75:75:int getSize() -> getSize
+    43:49:java.lang.Object[] getValues() -> getValues
+    109:113:java.lang.String toString() -> toString
+com.squareup.haha.perflib.ClassInstance -> com.squareup.haha.perflib.ClassInstance:
+    31:33:void <init>(long,com.squareup.haha.perflib.StackTrace,long) -> <init>
+    64:74:void accept(com.squareup.haha.perflib.Visitor) -> accept
+    38:44:java.util.List getFields(java.lang.String) -> getFields
+    78:78:boolean getIsSoftReference() -> getIsSoftReference
+    49:59:java.util.List getValues() -> getValues
+    82:82:java.lang.String toString() -> toString
+com.squareup.haha.perflib.ClassInstance$FieldValue -> com.squareup.haha.perflib.ClassInstance$FieldValue:
+    89:92:void <init>(com.squareup.haha.perflib.Field,java.lang.Object) -> <init>
+    95:95:com.squareup.haha.perflib.Field getField() -> getField
+    99:99:java.lang.Object getValue() -> getValue
+com.squareup.haha.perflib.ClassObj -> com.squareup.haha.perflib.ClassObj:
+    58:61:void <init>(long,com.squareup.haha.perflib.StackTrace,java.lang.String,long) -> <init>
+    193:204:void accept(com.squareup.haha.perflib.Visitor) -> accept
+    84:95:void addInstance(int,com.squareup.haha.perflib.Instance) -> addInstance
+    64:65:void addSubclass(com.squareup.haha.perflib.ClassObj) -> addSubclass
+    26:26:int compareTo(java.lang.Object) -> compareTo
+    208:217:int compareTo(com.squareup.haha.perflib.ClassObj) -> compareTo
+    168:184:void dump() -> dump
+    73:76:void dumpSubclasses() -> dumpSubclasses
+    222:226:boolean equals(java.lang.Object) -> equals
+    106:112:int getAllFieldsCount() -> getAllFieldsCount
+    245:245:com.squareup.haha.perflib.Instance getClassLoader() -> getClassLoader
+    188:188:java.lang.String getClassName() -> getClassName
+    291:304:java.util.List getDescendantClasses() -> getDescendantClasses
+    116:116:com.squareup.haha.perflib.Field[] getFields() -> getFields
+    259:260:java.util.List getHeapInstances(int) -> getHeapInstances
+    264:265:int getHeapInstancesCount(int) -> getHeapInstancesCount
+    269:273:int getInstanceCount() -> getInstanceCount
+    132:132:int getInstanceSize() -> getInstanceSize
+    249:254:java.util.List getInstancesList() -> getInstancesList
+    146:146:boolean getIsSoftReference() -> getIsSoftReference
+    286:286:java.lang.String getReferenceClassName() -> getReferenceClassName
+    136:137:int getShallowSize(int) -> getShallowSize
+    277:281:int getShallowSize() -> getShallowSize
+    236:236:java.lang.Object getStaticField(com.squareup.haha.perflib.Type,java.lang.String) -> getStaticField
+    151:164:java.util.Map getStaticFieldValues() -> getStaticFieldValues
+    69:69:java.util.Set getSubclasses() -> getSubclasses
+    240:240:com.squareup.haha.perflib.ClassObj getSuperClassObj() -> getSuperClassObj
+    231:231:int hashCode() -> hashCode
+    102:103:void setClassLoaderId(long) -> setClassLoaderId
+    120:121:void setFields(com.squareup.haha.perflib.Field[]) -> setFields
+    128:129:void setInstanceSize(int) -> setInstanceSize
+    141:142:void setIsSoftReference() -> setIsSoftReference
+    124:125:void setStaticFields(com.squareup.haha.perflib.Field[]) -> setStaticFields
+    98:99:void setSuperClassId(long) -> setSuperClassId
+    80:80:java.lang.String toString() -> toString
+com.squareup.haha.perflib.ClassObj$HeapData -> com.squareup.haha.perflib.ClassObj$HeapData:
+    27:30:void <init>() -> <init>
+com.squareup.haha.perflib.Field -> com.squareup.haha.perflib.Field:
+    33:36:void <init>(com.squareup.haha.perflib.Type,java.lang.String) -> <init>
+    50:60:boolean equals(java.lang.Object) -> equals
+    45:45:java.lang.String getName() -> getName
+    40:40:com.squareup.haha.perflib.Type getType() -> getType
+    65:65:int hashCode() -> hashCode
+com.squareup.haha.perflib.HahaSpy -> com.squareup.haha.perflib.HahaSpy:
+    32:33:void <init>() -> <init>
+    21:29:com.squareup.haha.perflib.Instance allocatingThread(com.squareup.haha.perflib.Instance) -> allocatingThread
+com.squareup.haha.perflib.Heap -> com.squareup.haha.perflib.Heap:
+    64:67:void <init>(int,java.lang.String) -> <init>
+    127:129:void addClass(long,com.squareup.haha.perflib.ClassObj) -> addClass
+    119:120:void addInstance(long,com.squareup.haha.perflib.Instance) -> addInstance
+    106:108:void addRoot(com.squareup.haha.perflib.RootObj) -> addRoot
+    79:80:void addStackFrame(com.squareup.haha.perflib.StackFrame) -> addStackFrame
+    87:88:void addStackTrace(com.squareup.haha.perflib.StackTrace) -> addStackTrace
+    111:112:void addThread(com.squareup.haha.perflib.ThreadObj,int) -> addThread
+    148:156:void dumpInstanceCounts() -> dumpInstanceCounts
+    171:185:void dumpSizes() -> dumpSizes
+    159:168:void dumpSubclasses() -> dumpSubclasses
+    132:132:com.squareup.haha.perflib.ClassObj getClass(long) -> getClass
+    136:140:com.squareup.haha.perflib.ClassObj getClass(java.lang.String) -> getClass
+    144:144:java.util.Collection getClasses(java.lang.String) -> getClasses
+    189:189:java.util.Collection getClasses() -> getClasses
+    70:70:int getId() -> getId
+    123:123:com.squareup.haha.perflib.Instance getInstance(long) -> getInstance
+    194:202:java.util.Collection getInstances() -> getInstances
+    206:206:int getInstancesCount() -> getInstancesCount
+    75:75:java.lang.String getName() -> getName
+    83:83:com.squareup.haha.perflib.StackFrame getStackFrame(long) -> getStackFrame
+    91:91:com.squareup.haha.perflib.StackTrace getStackTrace(int) -> getStackTrace
+    96:102:com.squareup.haha.perflib.StackTrace getStackTraceAtDepth(int,int) -> getStackTraceAtDepth
+    115:115:com.squareup.haha.perflib.ThreadObj getThread(int) -> getThread
+com.squareup.haha.perflib.Heap$1 -> com.squareup.haha.perflib.Heap$1:
+    195:195:void <init>(com.squareup.haha.perflib.Heap,java.util.ArrayList) -> <init>
+    195:195:boolean execute(java.lang.Object) -> execute
+    198:199:boolean execute(com.squareup.haha.perflib.Instance) -> execute
+com.squareup.haha.perflib.HprofParser -> com.squareup.haha.perflib.HprofParser:
+    139:141:void <init>(com.squareup.haha.perflib.io.HprofBuffer) -> <init>
+    454:459:int loadBasicObj(com.squareup.haha.perflib.RootType) -> loadBasicObj
+    265:271:void loadClass() -> loadClass
+    486:550:int loadClassDump() -> loadClassDump
+    303:413:void loadHeapDump(long) -> loadHeapDump
+    554:566:int loadInstanceDump() -> loadInstanceDump
+    429:438:int loadJavaFrame() -> loadJavaFrame
+    416:425:int loadJniLocal() -> loadJniLocal
+    601:610:int loadJniMonitor() -> loadJniMonitor
+    442:450:int loadNativeStack() -> loadNativeStack
+    570:582:int loadObjectArrayDump() -> loadObjectArrayDump
+    586:597:int loadPrimitiveArrayDump() -> loadPrimitiveArrayDump
+    274:285:void loadStackFrame() -> loadStackFrame
+    288:300:void loadStackTrace() -> loadStackTrace
+    258:262:void loadString(int) -> loadString
+    463:471:int loadThreadBlock() -> loadThreadBlock
+    475:482:int loadThreadObject() -> loadThreadObject
+    145:208:com.squareup.haha.perflib.Snapshot parse() -> parse
+    222:224:long readId() -> readId
+    213:217:java.lang.String readNullTerminatedString() -> readNullTerminatedString
+    238:242:java.lang.String readUTF8(int) -> readUTF8
+    246:246:int readUnsignedByte() -> readUnsignedByte
+    254:254:long readUnsignedInt() -> readUnsignedInt
+    250:250:int readUnsignedShort() -> readUnsignedShort
+    623:624:void skipFully(long) -> skipFully
+    614:619:int skipValue() -> skipValue
+com.squareup.haha.perflib.Instance -> com.squareup.haha.perflib.Instance:
+    29:29:void <clinit>() -> <clinit>
+    72:75:void <init>(long,com.squareup.haha.perflib.StackTrace) -> <init>
+    190:199:void addReference(com.squareup.haha.perflib.Field,com.squareup.haha.perflib.Instance) -> addReference
+    163:164:void addRetainedSize(int,long) -> addRetainedSize
+    270:270:com.squareup.haha.perflib.io.HprofBuffer getBuffer() -> getBuffer
+    92:92:com.squareup.haha.perflib.ClassObj getClassObj() -> getClassObj
+    96:98:int getCompositeSize() -> getCompositeSize
+    136:136:int getDistanceToGcRoot() -> getDistanceToGcRoot
+    203:203:java.util.ArrayList getHardReferences() -> getHardReferences
+    115:115:com.squareup.haha.perflib.Heap getHeap() -> getHeap
+    78:78:long getId() -> getId
+    128:128:com.squareup.haha.perflib.Instance getImmediateDominator() -> getImmediateDominator
+    217:217:boolean getIsSoftReference() -> getIsSoftReference
+    140:140:com.squareup.haha.perflib.Instance getNextInstanceToGcRoot() -> getNextInstanceToGcRoot
+    167:167:long getRetainedSize(int) -> getRetainedSize
+    103:103:int getSize() -> getSize
+    208:208:java.util.ArrayList getSoftReferences() -> getSoftReferences
+    119:119:int getTopologicalOrder() -> getTopologicalOrder
+    171:179:long getTotalRetainedSize() -> getTotalRetainedSize
+    82:82:long getUniqueId() -> getUniqueId
+    248:250:long readId() -> readId
+    262:262:int readUnsignedByte() -> readUnsignedByte
+    266:266:int readUnsignedShort() -> readUnsignedShort
+    222:225:java.lang.Object readValue(com.squareup.haha.perflib.Type) -> readValue
+    153:160:void resetRetainedSize() -> resetRetainedSize
+    88:89:void setClassId(long) -> setClassId
+    144:146:void setDistanceToGcRoot(int) -> setDistanceToGcRoot
+    111:112:void setHeap(com.squareup.haha.perflib.Heap) -> setHeap
+    132:133:void setImmediateDominator(com.squareup.haha.perflib.Instance) -> setImmediateDominator
+    149:150:void setNextInstanceToGcRoot(com.squareup.haha.perflib.Instance) -> setNextInstanceToGcRoot
+    107:108:void setSize(int) -> setSize
+    123:124:void setTopologicalOrder(int) -> setTopologicalOrder
+com.squareup.haha.perflib.Instance$1 -> com.squareup.haha.perflib.Instance$1:
+    222:222:void <clinit>() -> <clinit>
+com.squareup.haha.perflib.Instance$CompositeSizeVisitor -> com.squareup.haha.perflib.Instance$CompositeSizeVisitor:
+    274:276:void <init>() -> <init>
+    280:281:void defaultAction(com.squareup.haha.perflib.Instance) -> defaultAction
+    284:284:int getCompositeSize() -> getCompositeSize
+com.squareup.haha.perflib.Main -> com.squareup.haha.perflib.Main:
+    26:26:void <init>() -> <init>
+    30:45:void main(java.lang.String[]) -> main
+    68:79:void testAllClassesQuery(com.squareup.haha.perflib.Snapshot) -> testAllClassesQuery
+    48:65:void testClassesQuery(com.squareup.haha.perflib.Snapshot) -> testClassesQuery
+    88:93:void testFindAllInstancesOf(com.squareup.haha.perflib.Snapshot) -> testFindAllInstancesOf
+    82:85:void testFindInstancesOf(com.squareup.haha.perflib.Snapshot) -> testFindInstancesOf
+com.squareup.haha.perflib.NonRecursiveVisitor -> com.squareup.haha.perflib.NonRecursiveVisitor:
+    29:34:void <init>() -> <init>
+    37:37:void defaultAction(com.squareup.haha.perflib.Instance) -> defaultAction
+    65:79:void doVisit(java.lang.Iterable) -> doVisit
+    46:47:void visitArrayInstance(com.squareup.haha.perflib.ArrayInstance) -> visitArrayInstance
+    51:52:void visitClassInstance(com.squareup.haha.perflib.ClassInstance) -> visitClassInstance
+    56:57:void visitClassObj(com.squareup.haha.perflib.ClassObj) -> visitClassObj
+    61:62:void visitLater(com.squareup.haha.perflib.Instance,com.squareup.haha.perflib.Instance) -> visitLater
+    41:42:void visitRootObj(com.squareup.haha.perflib.RootObj) -> visitRootObj
+com.squareup.haha.perflib.Queries -> com.squareup.haha.perflib.Queries:
+    24:24:void <init>() -> <init>
+    64:64:java.util.Map allClasses(com.squareup.haha.perflib.Snapshot) -> allClasses
+    172:175:com.squareup.haha.perflib.Instance[] allInstancesOf(com.squareup.haha.perflib.Snapshot,java.lang.String) -> allInstancesOf
+    70:117:java.util.Map classes(com.squareup.haha.perflib.Snapshot,java.lang.String[]) -> classes
+    130:138:java.util.Collection commonClasses(com.squareup.haha.perflib.Snapshot,com.squareup.haha.perflib.Snapshot) -> commonClasses
+    147:147:com.squareup.haha.perflib.ClassObj findClass(com.squareup.haha.perflib.Snapshot,java.lang.String) -> findClass
+    213:215:com.squareup.haha.perflib.Instance findObject(com.squareup.haha.perflib.Snapshot,java.lang.String) -> findObject
+    220:226:java.util.Collection getRoots(com.squareup.haha.perflib.Snapshot) -> getRoots
+    156:159:com.squareup.haha.perflib.Instance[] instancesOf(com.squareup.haha.perflib.Snapshot,java.lang.String) -> instancesOf
+    231:257:com.squareup.haha.perflib.Instance[] newInstances(com.squareup.haha.perflib.Snapshot,com.squareup.haha.perflib.Snapshot) -> newInstances
+    198:205:java.util.ArrayList traverseSubclasses(com.squareup.haha.perflib.ClassObj) -> traverseSubclasses
+com.squareup.haha.perflib.RootObj -> com.squareup.haha.perflib.RootObj:
+    32:33:void <init>(com.squareup.haha.perflib.RootType) -> <init>
+    36:37:void <init>(com.squareup.haha.perflib.RootType,long) -> <init>
+    40:43:void <init>(com.squareup.haha.perflib.RootType,long,int,com.squareup.haha.perflib.StackTrace) -> <init>
+    63:68:void accept(com.squareup.haha.perflib.Visitor) -> accept
+    48:58:java.lang.String getClassName(com.squareup.haha.perflib.Snapshot) -> getClassName
+    76:79:com.squareup.haha.perflib.Instance getReferredInstance() -> getReferredInstance
+    84:84:com.squareup.haha.perflib.RootType getRootType() -> getRootType
+    71:71:java.lang.String toString() -> toString
+com.squareup.haha.perflib.RootType -> com.squareup.haha.perflib.RootType:
+    20:19:void <clinit>() -> <clinit>
+    42:45:void <init>(java.lang.String,int,int,java.lang.String) -> <init>
+    52:52:java.lang.String getName() -> getName
+    48:48:int getType() -> getType
+    19:19:com.squareup.haha.perflib.RootType valueOf(java.lang.String) -> valueOf
+    19:19:com.squareup.haha.perflib.RootType[] values() -> values
+com.squareup.haha.perflib.Snapshot -> com.squareup.haha.perflib.Snapshot:
+    37:42:void <clinit>() -> <clinit>
+    66:69:void <init>(com.squareup.haha.perflib.io.HprofBuffer) -> <init>
+    191:193:void addClass(long,com.squareup.haha.perflib.ClassObj) -> addClass
+    186:188:void addInstance(long,com.squareup.haha.perflib.Instance) -> addInstance
+    149:151:void addRoot(com.squareup.haha.perflib.RootObj) -> addRoot
+    129:130:void addStackFrame(com.squareup.haha.perflib.StackFrame) -> addStackFrame
+    137:138:void addStackTrace(com.squareup.haha.perflib.StackTrace) -> addStackTrace
+    154:155:void addThread(com.squareup.haha.perflib.ThreadObj,int) -> addThread
+    310:318:void computeDominators() -> computeDominators
+    336:341:void dumpInstanceCounts() -> dumpInstanceCounts
+    344:349:void dumpSizes() -> dumpSizes
+    352:357:void dumpSubclasses() -> dumpSubclasses
+    300:305:java.util.List findAllDescendantClasses(java.lang.String) -> findAllDescendantClasses
+    213:221:com.squareup.haha.perflib.ClassObj findClass(long) -> findClass
+    233:241:com.squareup.haha.perflib.ClassObj findClass(java.lang.String) -> findClass
+    252:259:java.util.Collection findClasses(java.lang.String) -> findClasses
+    198:207:com.squareup.haha.perflib.Instance findInstance(long) -> findInstance
+    125:125:java.util.Collection getGCRoots() -> getGCRoots
+    98:103:com.squareup.haha.perflib.Heap getHeap(int) -> getHeap
+    109:114:com.squareup.haha.perflib.Heap getHeap(java.lang.String) -> getHeap
+    92:92:int getHeapIndex(com.squareup.haha.perflib.Heap) -> getHeapIndex
+    119:119:java.util.Collection getHeaps() -> getHeaps
+    182:182:long getIdSizeMask() -> getIdSizeMask
+    322:328:java.util.List getReachableInstances() -> getReachableInstances
+    133:133:com.squareup.haha.perflib.StackFrame getStackFrame(long) -> getStackFrame
+    141:141:com.squareup.haha.perflib.StackTrace getStackTrace(int) -> getStackTrace
+    145:145:com.squareup.haha.perflib.StackTrace getStackTraceAtDepth(int,int) -> getStackTraceAtDepth
+    158:158:com.squareup.haha.perflib.ThreadObj getThread(int) -> getThread
+    332:332:com.squareup.haha.guava.collect.ImmutableList getTopologicalOrdering() -> getTopologicalOrdering
+    178:178:int getTypeSize(com.squareup.haha.perflib.Type) -> getTypeSize
+    263:288:void resolveClasses() -> resolveClasses
+    291:296:void resolveReferences() -> resolveReferences
+    78:88:com.squareup.haha.perflib.Heap setHeapTo(int,java.lang.String) -> setHeapTo
+    162:175:void setIdSize(int) -> setIdSize
+    73:73:com.squareup.haha.perflib.Heap setToDefaultHeap() -> setToDefaultHeap
+com.squareup.haha.perflib.StackFrame -> com.squareup.haha.perflib.StackFrame:
+    44:51:void <init>(long,java.lang.String,java.lang.String,java.lang.String,int,int) -> <init>
+    55:63:java.lang.String lineNumberString() -> lineNumberString
+    72:72:java.lang.String toString() -> toString
+com.squareup.haha.perflib.StackTrace -> com.squareup.haha.perflib.StackTrace:
+    41:43:void <init>() -> <init>
+    45:49:void <init>(int,int,com.squareup.haha.perflib.StackFrame[]) -> <init>
+    67:72:void dump() -> dump
+    53:63:com.squareup.haha.perflib.StackTrace fromDepth(int) -> fromDepth
+com.squareup.haha.perflib.ThreadObj -> com.squareup.haha.perflib.ThreadObj:
+    25:28:void <init>(long,int) -> <init>
+com.squareup.haha.perflib.Type -> com.squareup.haha.perflib.Type:
+    24:44:void <clinit>() -> <clinit>
+    46:49:void <init>(java.lang.String,int,int,int) -> <init>
+    64:65:java.lang.String getClassNameOfPrimitiveArray(com.squareup.haha.perflib.Type) -> getClassNameOfPrimitiveArray
+    56:56:int getSize() -> getSize
+    52:52:com.squareup.haha.perflib.Type getType(int) -> getType
+    60:60:int getTypeId() -> getTypeId
+    23:23:com.squareup.haha.perflib.Type valueOf(java.lang.String) -> valueOf
+    23:23:com.squareup.haha.perflib.Type[] values() -> values
+com.squareup.haha.perflib.Type$1 -> com.squareup.haha.perflib.Type$1:
+    64:64:void <clinit>() -> <clinit>
+com.squareup.haha.perflib.Value -> com.squareup.haha.perflib.Value:
+    28:30:void <init>(com.squareup.haha.perflib.Instance) -> <init>
+    33:33:java.lang.Object getValue() -> getValue
+    37:42:void setValue(java.lang.Object) -> setValue
+com.squareup.haha.perflib.analysis.Dominators -> com.squareup.haha.perflib.analysis.Dominators:
+    45:58:void <init>(com.squareup.haha.perflib.Snapshot,com.squareup.haha.guava.collect.ImmutableList) -> <init>
+    63:102:void computeDominators() -> computeDominators
+    109:125:void computeRetainedSizes() -> computeRetainedSizes
+com.squareup.haha.perflib.analysis.ShortestDistanceVisitor -> com.squareup.haha.perflib.analysis.ShortestDistanceVisitor:
+    25:33:void <init>() -> <init>
+    54:64:void doVisit(java.lang.Iterable) -> doVisit
+    37:46:void visitLater(com.squareup.haha.perflib.Instance,com.squareup.haha.perflib.Instance) -> visitLater
+com.squareup.haha.perflib.analysis.ShortestDistanceVisitor$1 -> com.squareup.haha.perflib.analysis.ShortestDistanceVisitor$1:
+    26:26:void <init>(com.squareup.haha.perflib.analysis.ShortestDistanceVisitor) -> <init>
+    26:26:int compare(java.lang.Object,java.lang.Object) -> compare
+    29:29:int compare(com.squareup.haha.perflib.Instance,com.squareup.haha.perflib.Instance) -> compare
+com.squareup.haha.perflib.analysis.TopologicalSort -> com.squareup.haha.perflib.analysis.TopologicalSort:
+    31:61:void <init>() -> <init>
+    35:50:com.squareup.haha.guava.collect.ImmutableList compute(java.lang.Iterable) -> compute
+com.squareup.haha.perflib.analysis.TopologicalSort$TopologicalSortVisitor -> com.squareup.haha.perflib.analysis.TopologicalSort$TopologicalSortVisitor:
+    61:66:void <init>() -> <init>
+    61:61:void <init>(com.squareup.haha.perflib.analysis.TopologicalSort$1) -> <init>
+    82:96:void doVisit(java.lang.Iterable) -> doVisit
+    99:99:com.squareup.haha.guava.collect.ImmutableList getOrderedInstances() -> getOrderedInstances
+    70:73:void visitLater(com.squareup.haha.perflib.Instance,com.squareup.haha.perflib.Instance) -> visitLater
+com.squareup.haha.perflib.io.HprofBuffer -> com.squareup.haha.perflib.io.HprofBuffer:
+    21:21:void <clinit>() -> <clinit>
+com.squareup.haha.perflib.io.MemoryMappedFileBuffer -> com.squareup.haha.perflib.io.MemoryMappedFileBuffer:
+    30:30:void <clinit>() -> <clinit>
+    50:69:void <init>(java.io.File,int,int) -> <init>
+    82:83:void <init>(java.io.File) -> <init>
+    91:97:void dispose() -> dispose
+    214:214:int getIndex() -> getIndex
+    218:218:int getOffset() -> getOffset
+    205:205:boolean hasRemaining() -> hasRemaining
+    200:200:long position() -> position
+    108:120:void read(byte[]) -> read
+    101:103:byte readByte() -> readByte
+    153:155:char readChar() -> readChar
+    188:190:double readDouble() -> readDouble
+    181:183:float readFloat() -> readFloat
+    167:169:int readInt() -> readInt
+    174:176:long readLong() -> readLong
+    160:162:short readShort() -> readShort
+    124:149:void readSubSequence(byte[],int,int) -> readSubSequence
+    210:210:long remaining() -> remaining
+    195:196:void setPosition(long) -> setPosition
+com.squareup.haha.trove.PrimeFinder -> com.squareup.haha.trove.PrimeFinder:
+    81:139:void <clinit>() -> <clinit>
+    150:156:int nextPrime(int) -> nextPrime
+com.squareup.haha.trove.SerializationProcedure -> com.squareup.haha.trove.SerializationProcedure:
+    75:77:void <init>(java.io.ObjectOutputStream) -> <init>
+    104:107:boolean execute(long) -> execute
+    126:129:boolean execute(java.lang.Object) -> execute
+    137:141:boolean execute(java.lang.Object,java.lang.Object) -> execute
+    197:201:boolean execute(int,java.lang.Object) -> execute
+    257:261:boolean execute(long,java.lang.Object) -> execute
+com.squareup.haha.trove.THash -> com.squareup.haha.trove.THash:
+    75:76:void <init>() -> <init>
+    86:87:void <init>(int) -> <init>
+    99:102:void <init>(int,float) -> <init>
+    289:289:int calculateGrownCapacity() -> calculateGrownCapacity
+    231:234:void clear() -> clear
+    107:109:java.lang.Object clone() -> clone
+    171:173:void compact() -> compact
+    202:206:void compactIfNecessary() -> compactIfNecessary
+    264:267:void computeMaxSize(int) -> computeMaxSize
+    145:150:void ensureCapacity(int) -> ensureCapacity
+    119:119:boolean isEmpty() -> isEmpty
+    274:286:void postInsertHook(boolean) -> postInsertHook
+    195:199:void removeAt(int) -> removeAt
+    244:246:int setUp(int) -> setUp
+    128:128:int size() -> size
+    217:218:void startCompactingOnRemove(boolean) -> startCompactingOnRemove
+    209:210:void stopCompactingOnRemove() -> stopCompactingOnRemove
+    185:186:void trimToSize() -> trimToSize
+com.squareup.haha.trove.THashIterator -> com.squareup.haha.trove.THashIterator:
+    53:55:void <init>(com.squareup.haha.trove.TObjectHash) -> <init>
+    68:69:java.lang.Object next() -> next
+    83:84:int nextIndex() -> nextIndex
+com.squareup.haha.trove.THashMap -> com.squareup.haha.trove.THashMap:
+    45:46:void <init>() -> <init>
+    54:55:void <init>(com.squareup.haha.trove.TObjectHashingStrategy) -> <init>
+    65:66:void <init>(int) -> <init>
+    77:78:void <init>(int,com.squareup.haha.trove.TObjectHashingStrategy) -> <init>
+    89:90:void <init>(int,float) -> <init>
+    102:103:void <init>(int,float,com.squareup.haha.trove.TObjectHashingStrategy) -> <init>
+    112:114:void <init>(java.util.Map) -> <init>
+    124:126:void <init>(java.util.Map,com.squareup.haha.trove.TObjectHashingStrategy) -> <init>
+    377:387:void clear() -> clear
+    35:35:com.squareup.haha.trove.TObjectHash clone() -> clone
+    35:35:java.lang.Object clone() -> clone
+    133:135:com.squareup.haha.trove.THashMap clone() -> clone
+    486:486:boolean containsKey(java.lang.Object) -> containsKey
+    455:475:boolean containsValue(java.lang.Object) -> containsValue
+    444:444:java.util.Set entrySet() -> entrySet
+    189:196:boolean equals(java.lang.Object) -> equals
+    276:285:boolean forEachEntry(com.squareup.haha.trove.TObjectObjectProcedure) -> forEachEntry
+    244:244:boolean forEachKey(com.squareup.haha.trove.TObjectProcedure) -> forEachKey
+    255:264:boolean forEachValue(com.squareup.haha.trove.TObjectProcedure) -> forEachValue
+    366:367:java.lang.Object get(java.lang.Object) -> get
+    200:202:int hashCode() -> hashCode
+    434:434:java.util.Set keySet() -> keySet
+    161:162:java.lang.Object put(java.lang.Object,java.lang.Object) -> put
+    496:501:void putAll(java.util.Map) -> putAll
+    790:799:void readObject(java.io.ObjectInputStream) -> readObject
+    338:356:void rehash(int) -> rehash
+    397:403:java.lang.Object remove(java.lang.Object) -> remove
+    413:415:void removeAt(int) -> removeAt
+    296:311:boolean retainEntries(com.squareup.haha.trove.TObjectObjectProcedure) -> retainEntries
+    146:148:int setUp(int) -> setUp
+    322:329:void transformValues(com.squareup.haha.trove.TObjectFunction) -> transformValues
+    424:424:java.util.Collection values() -> values
+    777:784:void writeObject(java.io.ObjectOutputStream) -> writeObject
+com.squareup.haha.trove.THashMap$Entry -> com.squareup.haha.trove.THashMap$Entry:
+    746:750:void <init>(com.squareup.haha.trove.THashMap,java.lang.Object,java.lang.Object,int) -> <init>
+    754:754:java.lang.Object getKey() -> getKey
+    759:759:java.lang.Object getValue() -> getValue
+    764:765:java.lang.Object setValue(java.lang.Object) -> setValue
+com.squareup.haha.trove.THashMap$EntryView -> com.squareup.haha.trove.THashMap$EntryView:
+    546:547:void <init>(com.squareup.haha.trove.THashMap) -> <init>
+    545:1594:boolean containsElement(java.lang.Object) -> containsElement
+    562:562:java.util.Iterator iterator() -> iterator
+    545:545:boolean removeElement(java.lang.Object) -> removeElement
+com.squareup.haha.trove.THashMap$EntryView$EntryIterator -> com.squareup.haha.trove.THashMap$EntryView$EntryIterator:
+    550:552:void <init>(com.squareup.haha.trove.THashMap$EntryView,com.squareup.haha.trove.THashMap) -> <init>
+    549:549:java.lang.Object objectAtIndex(int) -> objectAtIndex
+com.squareup.haha.trove.THashMap$EqProcedure -> com.squareup.haha.trove.THashMap$EqProcedure:
+    225:227:void <init>(java.util.Map) -> <init>
+    231:232:boolean execute(java.lang.Object,java.lang.Object) -> execute
+com.squareup.haha.trove.THashMap$HashProcedure -> com.squareup.haha.trove.THashMap$HashProcedure:
+    208:209:void <init>(com.squareup.haha.trove.THashMap) -> <init>
+    217:218:boolean execute(java.lang.Object,java.lang.Object) -> execute
+com.squareup.haha.trove.THashMap$KeyView -> com.squareup.haha.trove.THashMap$KeyView:
+    722:723:void <init>(com.squareup.haha.trove.THashMap) -> <init>
+    737:737:boolean containsElement(java.lang.Object) -> containsElement
+    727:727:java.util.Iterator iterator() -> iterator
+    732:732:boolean removeElement(java.lang.Object) -> removeElement
+com.squareup.haha.trove.THashMap$MapBackedView -> com.squareup.haha.trove.THashMap$MapBackedView:
+    608:609:void <init>(com.squareup.haha.trove.THashMap) -> <init>
+    656:656:boolean add(java.lang.Object) -> add
+    701:701:boolean addAll(java.util.Collection) -> addAll
+    651:652:void clear() -> clear
+    620:620:boolean contains(java.lang.Object) -> contains
+    630:635:boolean containsAll(java.util.Collection) -> containsAll
+    696:696:boolean isEmpty() -> isEmpty
+    625:625:boolean remove(java.lang.Object) -> remove
+    640:646:boolean removeAll(java.util.Collection) -> removeAll
+    706:714:boolean retainAll(java.util.Collection) -> retainAll
+    661:661:int size() -> size
+    666:671:java.lang.Object[] toArray() -> toArray
+    676:691:java.lang.Object[] toArray(java.lang.Object[]) -> toArray
+com.squareup.haha.trove.THashMap$ValueView -> com.squareup.haha.trove.THashMap$ValueView:
+    507:507:void <init>(com.squareup.haha.trove.THashMap) -> <init>
+    520:520:boolean containsElement(java.lang.Object) -> containsElement
+    510:510:java.util.Iterator iterator() -> iterator
+    525:537:boolean removeElement(java.lang.Object) -> removeElement
+com.squareup.haha.trove.THashMap$ValueView$1 -> com.squareup.haha.trove.THashMap$ValueView$1:
+    510:510:void <init>(com.squareup.haha.trove.THashMap$ValueView,com.squareup.haha.trove.TObjectHash) -> <init>
+    513:513:java.lang.Object objectAtIndex(int) -> objectAtIndex
+com.squareup.haha.trove.THashSet -> com.squareup.haha.trove.THashSet:
+    47:48:void <init>() -> <init>
+    139:149:boolean add(java.lang.Object) -> add
+    313:323:boolean addAll(java.util.Collection) -> addAll
+    253:259:void clear() -> clear
+    297:302:boolean containsAll(java.util.Collection) -> containsAll
+    153:160:boolean equals(java.lang.Object) -> equals
+    164:166:int hashCode() -> hashCode
+    285:285:java.util.Iterator iterator() -> iterator
+    193:208:void rehash(int) -> rehash
+    269:274:boolean remove(java.lang.Object) -> remove
+    334:343:boolean removeAll(java.util.Collection) -> removeAll
+    355:365:boolean retainAll(java.util.Collection) -> retainAll
+    217:219:java.lang.Object[] toArray() -> toArray
+    230:245:java.lang.Object[] toArray(java.lang.Object[]) -> toArray
+com.squareup.haha.trove.THashSet$HashProcedure -> com.squareup.haha.trove.THashSet$HashProcedure:
+    172:173:void <init>(com.squareup.haha.trove.THashSet) -> <init>
+    181:182:boolean execute(java.lang.Object) -> execute
+com.squareup.haha.trove.TIntObjectHashMap -> com.squareup.haha.trove.TIntObjectHashMap:
+    47:49:void <init>() -> <init>
+    164:164:int capacity() -> capacity
+    263:271:void clear() -> clear
+    32:32:java.lang.Object clone() -> clone
+    665:665:int computeHashCode(int) -> computeHashCode
+    402:409:boolean equals(java.lang.Object) -> equals
+    578:585:boolean forEachEntry(com.squareup.haha.trove.TIntObjectProcedure) -> forEachEntry
+    246:247:java.lang.Object get(int) -> get
+    473:481:java.lang.Object[] getValues() -> getValues
+    413:415:int hashCode() -> hashCode
+    296:316:int index(int) -> index
+    328:378:int insertionIndex(int) -> insertionIndex
+    391:391:boolean isFree(java.lang.Object[],int) -> isFree
+    382:383:boolean isFull(java.lang.Object[],int) -> isFull
+    387:387:boolean isRemoved(java.lang.Object[],int) -> isRemoved
+    490:499:int[] keys() -> keys
+    194:212:java.lang.Object put(int,java.lang.Object) -> put
+    222:237:void rehash(int) -> rehash
+    463:465:void removeAt(int) -> removeAt
+    138:142:int setUp(int) -> setUp
+    251:251:java.lang.Object unwrapNull(java.lang.Object) -> unwrapNull
+com.squareup.haha.trove.TIntObjectHashMap$EqProcedure -> com.squareup.haha.trove.TIntObjectHashMap$EqProcedure:
+    438:440:void <init>(com.squareup.haha.trove.TIntObjectHashMap) -> <init>
+    444:445:boolean execute(int,java.lang.Object) -> execute
+com.squareup.haha.trove.TIntObjectHashMap$HashProcedure -> com.squareup.haha.trove.TIntObjectHashMap$HashProcedure:
+    421:422:void <init>(com.squareup.haha.trove.TIntObjectHashMap) -> <init>
+    430:431:boolean execute(int,java.lang.Object) -> execute
+com.squareup.haha.trove.TIterator -> com.squareup.haha.trove.TIterator:
+    44:48:void <init>(com.squareup.haha.trove.THash) -> <init>
+    57:57:boolean hasNext() -> hasNext
+    88:89:void moveToNextIndex() -> moveToNextIndex
+    67:68:void remove() -> remove
+com.squareup.haha.trove.TLongHash -> com.squareup.haha.trove.TLongHash:
+    42:44:void <init>() -> <init>
+    112:114:java.lang.Object clone() -> clone
+    259:259:int computeHashCode(long) -> computeHashCode
+    138:138:boolean contains(long) -> contains
+    149:156:boolean forEach(com.squareup.haha.trove.TLongProcedure) -> forEach
+    209:246:int insertionIndex(long) -> insertionIndex
+    166:168:void removeAt(int) -> removeAt
+    126:128:int setUp(int) -> setUp
+com.squareup.haha.trove.TLongHashSet -> com.squareup.haha.trove.TLongHashSet:
+    40:41:void <init>() -> <init>
+    137:148:boolean add(long) -> add
+    198:206:void clear() -> clear
+    216:223:boolean equals(java.lang.Object) -> equals
+    232:234:int hashCode() -> hashCode
+    158:173:void rehash(int) -> rehash
+com.squareup.haha.trove.TLongHashSet$1 -> com.squareup.haha.trove.TLongHashSet$1:
+    223:223:void <init>(com.squareup.haha.trove.TLongHashSet,com.squareup.haha.trove.TLongHashSet) -> <init>
+    226:226:boolean execute(long) -> execute
+com.squareup.haha.trove.TLongHashSet$HashProcedure -> com.squareup.haha.trove.TLongHashSet$HashProcedure:
+    240:241:void <init>(com.squareup.haha.trove.TLongHashSet) -> <init>
+    249:250:boolean execute(long) -> execute
+com.squareup.haha.trove.TLongObjectHashMap -> com.squareup.haha.trove.TLongObjectHashMap:
+    47:49:void <init>() -> <init>
+    164:164:int capacity() -> capacity
+    263:271:void clear() -> clear
+    32:32:java.lang.Object clone() -> clone
+    665:665:int computeHashCode(long) -> computeHashCode
+    402:409:boolean equals(java.lang.Object) -> equals
+    578:585:boolean forEachEntry(com.squareup.haha.trove.TLongObjectProcedure) -> forEachEntry
+    560:566:boolean forEachValue(com.squareup.haha.trove.TObjectProcedure) -> forEachValue
+    246:247:java.lang.Object get(long) -> get
+    473:481:java.lang.Object[] getValues() -> getValues
+    413:415:int hashCode() -> hashCode
+    296:316:int index(long) -> index
+    328:378:int insertionIndex(long) -> insertionIndex
+    391:391:boolean isFree(java.lang.Object[],int) -> isFree
+    382:383:boolean isFull(java.lang.Object[],int) -> isFull
+    387:387:boolean isRemoved(java.lang.Object[],int) -> isRemoved
+    194:212:java.lang.Object put(long,java.lang.Object) -> put
+    222:237:void rehash(int) -> rehash
+    463:465:void removeAt(int) -> removeAt
+    138:142:int setUp(int) -> setUp
+    251:251:java.lang.Object unwrapNull(java.lang.Object) -> unwrapNull
+com.squareup.haha.trove.TLongObjectHashMap$EqProcedure -> com.squareup.haha.trove.TLongObjectHashMap$EqProcedure:
+    438:440:void <init>(com.squareup.haha.trove.TLongObjectHashMap) -> <init>
+    444:445:boolean execute(long,java.lang.Object) -> execute
+com.squareup.haha.trove.TLongObjectHashMap$HashProcedure -> com.squareup.haha.trove.TLongObjectHashMap$HashProcedure:
+    421:422:void <init>(com.squareup.haha.trove.TLongObjectHashMap) -> <init>
+    430:431:boolean execute(long,java.lang.Object) -> execute
+com.squareup.haha.trove.TObjectCanonicalHashingStrategy -> com.squareup.haha.trove.TObjectCanonicalHashingStrategy:
+    6:6:void <init>() -> <init>
+    9:9:int computeHashCode(java.lang.Object) -> computeHashCode
+    14:14:boolean equals(java.lang.Object,java.lang.Object) -> equals
+com.squareup.haha.trove.TObjectHash -> com.squareup.haha.trove.TObjectHash:
+    36:39:void <clinit>() -> <clinit>
+    45:47:void <init>() -> <init>
+    55:57:void <init>(com.squareup.haha.trove.TObjectHashingStrategy) -> <init>
+    67:69:void <init>(int) -> <init>
+    81:83:void <init>(int,com.squareup.haha.trove.TObjectHashingStrategy) -> <init>
+    94:96:void <init>(int,float) -> <init>
+    109:111:void <init>(int,float,com.squareup.haha.trove.TObjectHashingStrategy) -> <init>
+    125:125:int capacity() -> capacity
+    29:29:java.lang.Object clone() -> clone
+    118:120:com.squareup.haha.trove.TObjectHash clone() -> clone
+    287:287:int computeHashCode(java.lang.Object) -> computeHashCode
+    173:173:boolean contains(java.lang.Object) -> contains
+    302:302:boolean equals(java.lang.Object,java.lang.Object) -> equals
+    155:163:boolean forEach(com.squareup.haha.trove.TObjectProcedure) -> forEach
+    184:205:int index(java.lang.Object) -> index
+    219:274:int insertionIndex(java.lang.Object) -> insertionIndex
+    130:132:void removeAt(int) -> removeAt
+    142:144:int setUp(int) -> setUp
+    318:318:void throwObjectContractViolation(java.lang.Object,java.lang.Object) -> throwObjectContractViolation
+com.squareup.haha.trove.TObjectHash$NULL -> com.squareup.haha.trove.TObjectHash$NULL:
+    38:38:void <init>() -> <init>
+com.squareup.haha.trove.TObjectHashIterator -> com.squareup.haha.trove.TObjectHashIterator:
+    34:36:void <init>(com.squareup.haha.trove.TObjectHash) -> <init>
+    40:40:java.lang.Object objectAtIndex(int) -> objectAtIndex
+com.squareup.haha.trove.TObjectHashingStrategy -> com.squareup.haha.trove.TObjectHashingStrategy:
+    43:44:void <clinit>() -> <clinit>
+com.squareup.haha.trove.TObjectIdentityHashingStrategy -> com.squareup.haha.trove.TObjectIdentityHashingStrategy:
+    17:17:void <init>() -> <init>
+    26:26:int computeHashCode(java.lang.Object) -> computeHashCode
+    38:38:boolean equals(java.lang.Object,java.lang.Object) -> equals
+com.squareup.haha.trove.TPrimitiveHash -> com.squareup.haha.trove.TPrimitiveHash:
+    57:58:void <init>() -> <init>
+    99:99:int capacity() -> capacity
+    86:88:java.lang.Object clone() -> clone
+    109:111:void removeAt(int) -> removeAt
+    122:124:int setUp(int) -> setUp
+com.squareup.haha.trove.ToObjectArrayProcedure -> com.squareup.haha.trove.ToObjectArrayProcedure:
+    34:36:void <init>(java.lang.Object[]) -> <init>
+    40:41:boolean execute(java.lang.Object) -> execute
+com.squareup.leakcanary.AbstractAnalysisResultService -> com.squareup.leakcanary.AbstractAnalysisResultService:
+    42:43:void <init>() -> <init>
+    46:52:void onHandleIntent(android.content.Intent) -> onHandleIntent
+    31:33:void sendResultToListener(android.content.Context,java.lang.String,com.squareup.leakcanary.HeapDump,com.squareup.leakcanary.AnalysisResult) -> sendResultToListener
+com.squareup.leakcanary.ActivityRefWatcher -> com.squareup.leakcanary.ActivityRefWatcher:
+    68:71:void <init>(android.app.Application,com.squareup.leakcanary.RefWatcher) -> <init>
+    33:34:void install(android.app.Application,com.squareup.leakcanary.RefWatcher) -> install
+    29:30:void installOnIcsPlus(android.app.Application,com.squareup.leakcanary.RefWatcher) -> installOnIcsPlus
+    74:75:void onActivityDestroyed(android.app.Activity) -> onActivityDestroyed
+    84:85:void stopWatchingActivities() -> stopWatchingActivities
+    79:81:void watchActivities() -> watchActivities
+com.squareup.leakcanary.ActivityRefWatcher$1 -> com.squareup.leakcanary.ActivityRefWatcher$1:
+    37:37:void <init>(com.squareup.leakcanary.ActivityRefWatcher) -> <init>
+    39:39:void onActivityCreated(android.app.Activity,android.os.Bundle) -> onActivityCreated
+    57:58:void onActivityDestroyed(android.app.Activity) -> onActivityDestroyed
+    48:48:void onActivityPaused(android.app.Activity) -> onActivityPaused
+    45:45:void onActivityResumed(android.app.Activity) -> onActivityResumed
+    54:54:void onActivitySaveInstanceState(android.app.Activity,android.os.Bundle) -> onActivitySaveInstanceState
+    42:42:void onActivityStarted(android.app.Activity) -> onActivityStarted
+    51:51:void onActivityStopped(android.app.Activity) -> onActivityStopped
+com.squareup.leakcanary.AnalysisResult -> com.squareup.leakcanary.AnalysisResult:
+    70:78:void <init>(boolean,boolean,java.lang.String,com.squareup.leakcanary.LeakTrace,java.lang.Throwable,long,long) -> <init>
+    33:33:com.squareup.leakcanary.AnalysisResult failure(java.lang.Throwable,long) -> failure
+    28:28:com.squareup.leakcanary.AnalysisResult leakDetected(boolean,java.lang.String,com.squareup.leakcanary.LeakTrace,long,long) -> leakDetected
+    23:23:com.squareup.leakcanary.AnalysisResult noLeak(long) -> noLeak
+com.squareup.leakcanary.AndroidDebuggerControl -> com.squareup.leakcanary.AndroidDebuggerControl:
+    20:20:void <init>() -> <init>
+    22:22:boolean isDebuggerAttached() -> isDebuggerAttached
+com.squareup.leakcanary.AndroidExcludedRefs -> com.squareup.leakcanary.AndroidExcludedRefs:
+    61:56:void <clinit>() -> <clinit>
+    57:57:void <init>(java.lang.String,int,com.squareup.leakcanary.AndroidExcludedRefs$1) -> <init>
+    57:57:void <init>(java.lang.String,int,boolean,com.squareup.leakcanary.AndroidExcludedRefs$1) -> <init>
+    562:563:void <init>(java.lang.String,int) -> <init>
+    565:567:void <init>(java.lang.String,int,boolean) -> <init>
+    533:533:com.squareup.leakcanary.ExcludedRefs$Builder createAndroidDefaults() -> createAndroidDefaults
+    545:545:com.squareup.leakcanary.ExcludedRefs$Builder createAppDefaults() -> createAppDefaults
+    549:556:com.squareup.leakcanary.ExcludedRefs$Builder createBuilder(java.util.EnumSet) -> createBuilder
+    56:56:com.squareup.leakcanary.AndroidExcludedRefs valueOf(java.lang.String) -> valueOf
+    56:56:com.squareup.leakcanary.AndroidExcludedRefs[] values() -> values
+com.squareup.leakcanary.AndroidExcludedRefs$1 -> com.squareup.leakcanary.AndroidExcludedRefs$1:
+    61:61:void <init>(java.lang.String,int,boolean) -> <init>
+    63:67:void add(com.squareup.leakcanary.ExcludedRefs$Builder) -> add
+com.squareup.leakcanary.AndroidExcludedRefs$10 -> com.squareup.leakcanary.AndroidExcludedRefs$10:
+    191:191:void <init>(java.lang.String,int,boolean) -> <init>
+    193:201:void add(com.squareup.leakcanary.ExcludedRefs$Builder) -> add
+com.squareup.leakcanary.AndroidExcludedRefs$11 -> com.squareup.leakcanary.AndroidExcludedRefs$11:
+    204:204:void <init>(java.lang.String,int,boolean) -> <init>
+    206:211:void add(com.squareup.leakcanary.ExcludedRefs$Builder) -> add
+com.squareup.leakcanary.AndroidExcludedRefs$12 -> com.squareup.leakcanary.AndroidExcludedRefs$12:
+    214:214:void <init>(java.lang.String,int,boolean) -> <init>
+    216:226:void add(com.squareup.leakcanary.ExcludedRefs$Builder) -> add
+com.squareup.leakcanary.AndroidExcludedRefs$13 -> com.squareup.leakcanary.AndroidExcludedRefs$13:
+    229:229:void <init>(java.lang.String,int,boolean) -> <init>
+    231:237:void add(com.squareup.leakcanary.ExcludedRefs$Builder) -> add
+com.squareup.leakcanary.AndroidExcludedRefs$14 -> com.squareup.leakcanary.AndroidExcludedRefs$14:
+    240:240:void <init>(java.lang.String,int,boolean) -> <init>
+    242:251:void add(com.squareup.leakcanary.ExcludedRefs$Builder) -> add
+com.squareup.leakcanary.AndroidExcludedRefs$15 -> com.squareup.leakcanary.AndroidExcludedRefs$15:
+    254:254:void <init>(java.lang.String,int,boolean) -> <init>
+    256:262:void add(com.squareup.leakcanary.ExcludedRefs$Builder) -> add
+com.squareup.leakcanary.AndroidExcludedRefs$16 -> com.squareup.leakcanary.AndroidExcludedRefs$16:
+    265:265:void <init>(java.lang.String,int,boolean) -> <init>
+    267:276:void add(com.squareup.leakcanary.ExcludedRefs$Builder) -> add
+com.squareup.leakcanary.AndroidExcludedRefs$17 -> com.squareup.leakcanary.AndroidExcludedRefs$17:
+    279:279:void <init>(java.lang.String,int,boolean) -> <init>
+    281:291:void add(com.squareup.leakcanary.ExcludedRefs$Builder) -> add
+com.squareup.leakcanary.AndroidExcludedRefs$18 -> com.squareup.leakcanary.AndroidExcludedRefs$18:
+    294:294:void <init>(java.lang.String,int,boolean) -> <init>
+    296:309:void add(com.squareup.leakcanary.ExcludedRefs$Builder) -> add
+com.squareup.leakcanary.AndroidExcludedRefs$19 -> com.squareup.leakcanary.AndroidExcludedRefs$19:
+    314:314:void <init>(java.lang.String,int,boolean) -> <init>
+    316:319:void add(com.squareup.leakcanary.ExcludedRefs$Builder) -> add
+com.squareup.leakcanary.AndroidExcludedRefs$2 -> com.squareup.leakcanary.AndroidExcludedRefs$2:
+    70:70:void <init>(java.lang.String,int,boolean) -> <init>
+    72:88:void add(com.squareup.leakcanary.ExcludedRefs$Builder) -> add
+com.squareup.leakcanary.AndroidExcludedRefs$20 -> com.squareup.leakcanary.AndroidExcludedRefs$20:
+    322:322:void <init>(java.lang.String,int,boolean) -> <init>
+    325:332:void add(com.squareup.leakcanary.ExcludedRefs$Builder) -> add
+com.squareup.leakcanary.AndroidExcludedRefs$21 -> com.squareup.leakcanary.AndroidExcludedRefs$21:
+    335:335:void <init>(java.lang.String,int,boolean) -> <init>
+    337:340:void add(com.squareup.leakcanary.ExcludedRefs$Builder) -> add
+com.squareup.leakcanary.AndroidExcludedRefs$22 -> com.squareup.leakcanary.AndroidExcludedRefs$22:
+    343:343:void <init>(java.lang.String,int,boolean) -> <init>
+    345:348:void add(com.squareup.leakcanary.ExcludedRefs$Builder) -> add
+com.squareup.leakcanary.AndroidExcludedRefs$23 -> com.squareup.leakcanary.AndroidExcludedRefs$23:
+    351:351:void <init>(java.lang.String,int,boolean) -> <init>
+    354:360:void add(com.squareup.leakcanary.ExcludedRefs$Builder) -> add
+com.squareup.leakcanary.AndroidExcludedRefs$24 -> com.squareup.leakcanary.AndroidExcludedRefs$24:
+    363:363:void <init>(java.lang.String,int,boolean) -> <init>
+    366:370:void add(com.squareup.leakcanary.ExcludedRefs$Builder) -> add
+com.squareup.leakcanary.AndroidExcludedRefs$25 -> com.squareup.leakcanary.AndroidExcludedRefs$25:
+    373:373:void <init>(java.lang.String,int,boolean) -> <init>
+    376:378:void add(com.squareup.leakcanary.ExcludedRefs$Builder) -> add
+com.squareup.leakcanary.AndroidExcludedRefs$26 -> com.squareup.leakcanary.AndroidExcludedRefs$26:
+    381:381:void <init>(java.lang.String,int,boolean) -> <init>
+    384:387:void add(com.squareup.leakcanary.ExcludedRefs$Builder) -> add
+com.squareup.leakcanary.AndroidExcludedRefs$27 -> com.squareup.leakcanary.AndroidExcludedRefs$27:
+    390:390:void <init>(java.lang.String,int,boolean) -> <init>
+    392:394:void add(com.squareup.leakcanary.ExcludedRefs$Builder) -> add
+com.squareup.leakcanary.AndroidExcludedRefs$28 -> com.squareup.leakcanary.AndroidExcludedRefs$28:
+    397:397:void <init>(java.lang.String,int,boolean) -> <init>
+    402:403:void add(com.squareup.leakcanary.ExcludedRefs$Builder) -> add
+com.squareup.leakcanary.AndroidExcludedRefs$29 -> com.squareup.leakcanary.AndroidExcludedRefs$29:
+    406:406:void <init>(java.lang.String,int,boolean) -> <init>
+    408:412:void add(com.squareup.leakcanary.ExcludedRefs$Builder) -> add
+com.squareup.leakcanary.AndroidExcludedRefs$3 -> com.squareup.leakcanary.AndroidExcludedRefs$3:
+    91:91:void <init>(java.lang.String,int,boolean) -> <init>
+    93:103:void add(com.squareup.leakcanary.ExcludedRefs$Builder) -> add
+com.squareup.leakcanary.AndroidExcludedRefs$30 -> com.squareup.leakcanary.AndroidExcludedRefs$30:
+    415:415:void <init>(java.lang.String,int,boolean) -> <init>
+    418:421:void add(com.squareup.leakcanary.ExcludedRefs$Builder) -> add
+com.squareup.leakcanary.AndroidExcludedRefs$31 -> com.squareup.leakcanary.AndroidExcludedRefs$31:
+    424:424:void <init>(java.lang.String,int,boolean) -> <init>
+    426:430:void add(com.squareup.leakcanary.ExcludedRefs$Builder) -> add
+com.squareup.leakcanary.AndroidExcludedRefs$32 -> com.squareup.leakcanary.AndroidExcludedRefs$32:
+    433:433:void <init>(java.lang.String,int,boolean) -> <init>
+    435:440:void add(com.squareup.leakcanary.ExcludedRefs$Builder) -> add
+com.squareup.leakcanary.AndroidExcludedRefs$33 -> com.squareup.leakcanary.AndroidExcludedRefs$33:
+    443:443:void <init>(java.lang.String,int,boolean) -> <init>
+    445:451:void add(com.squareup.leakcanary.ExcludedRefs$Builder) -> add
+com.squareup.leakcanary.AndroidExcludedRefs$34 -> com.squareup.leakcanary.AndroidExcludedRefs$34:
+    454:454:void <init>(java.lang.String,int,boolean) -> <init>
+    457:461:void add(com.squareup.leakcanary.ExcludedRefs$Builder) -> add
+com.squareup.leakcanary.AndroidExcludedRefs$35 -> com.squareup.leakcanary.AndroidExcludedRefs$35:
+    464:464:void <init>(java.lang.String,int,boolean) -> <init>
+    466:470:void add(com.squareup.leakcanary.ExcludedRefs$Builder) -> add
+com.squareup.leakcanary.AndroidExcludedRefs$36 -> com.squareup.leakcanary.AndroidExcludedRefs$36:
+    473:473:void <init>(java.lang.String,int,boolean) -> <init>
+    475:480:void add(com.squareup.leakcanary.ExcludedRefs$Builder) -> add
+com.squareup.leakcanary.AndroidExcludedRefs$37 -> com.squareup.leakcanary.AndroidExcludedRefs$37:
+    485:485:void <init>(java.lang.String,int) -> <init>
+    487:492:void add(com.squareup.leakcanary.ExcludedRefs$Builder) -> add
+com.squareup.leakcanary.AndroidExcludedRefs$38 -> com.squareup.leakcanary.AndroidExcludedRefs$38:
+    495:495:void <init>(java.lang.String,int) -> <init>
+    499:500:void add(com.squareup.leakcanary.ExcludedRefs$Builder) -> add
+com.squareup.leakcanary.AndroidExcludedRefs$39 -> com.squareup.leakcanary.AndroidExcludedRefs$39:
+    503:503:void <init>(java.lang.String,int) -> <init>
+    508:509:void add(com.squareup.leakcanary.ExcludedRefs$Builder) -> add
+com.squareup.leakcanary.AndroidExcludedRefs$4 -> com.squareup.leakcanary.AndroidExcludedRefs$4:
+    106:106:void <init>(java.lang.String,int,boolean) -> <init>
+    108:119:void add(com.squareup.leakcanary.ExcludedRefs$Builder) -> add
+com.squareup.leakcanary.AndroidExcludedRefs$40 -> com.squareup.leakcanary.AndroidExcludedRefs$40:
+    512:512:void <init>(java.lang.String,int) -> <init>
+    514:515:void add(com.squareup.leakcanary.ExcludedRefs$Builder) -> add
+com.squareup.leakcanary.AndroidExcludedRefs$41 -> com.squareup.leakcanary.AndroidExcludedRefs$41:
+    518:518:void <init>(java.lang.String,int) -> <init>
+    524:526:void add(com.squareup.leakcanary.ExcludedRefs$Builder) -> add
+com.squareup.leakcanary.AndroidExcludedRefs$5 -> com.squareup.leakcanary.AndroidExcludedRefs$5:
+    122:122:void <init>(java.lang.String,int,boolean) -> <init>
+    124:143:void add(com.squareup.leakcanary.ExcludedRefs$Builder) -> add
+com.squareup.leakcanary.AndroidExcludedRefs$6 -> com.squareup.leakcanary.AndroidExcludedRefs$6:
+    146:146:void <init>(java.lang.String,int,boolean) -> <init>
+    148:158:void add(com.squareup.leakcanary.ExcludedRefs$Builder) -> add
+com.squareup.leakcanary.AndroidExcludedRefs$7 -> com.squareup.leakcanary.AndroidExcludedRefs$7:
+    161:161:void <init>(java.lang.String,int,boolean) -> <init>
+    163:169:void add(com.squareup.leakcanary.ExcludedRefs$Builder) -> add
+com.squareup.leakcanary.AndroidExcludedRefs$8 -> com.squareup.leakcanary.AndroidExcludedRefs$8:
+    172:172:void <init>(java.lang.String,int,boolean) -> <init>
+    174:179:void add(com.squareup.leakcanary.ExcludedRefs$Builder) -> add
+com.squareup.leakcanary.AndroidExcludedRefs$9 -> com.squareup.leakcanary.AndroidExcludedRefs$9:
+    182:182:void <init>(java.lang.String,int,boolean) -> <init>
+    184:188:void add(com.squareup.leakcanary.ExcludedRefs$Builder) -> add
+com.squareup.leakcanary.AndroidHeapDumper -> com.squareup.leakcanary.AndroidHeapDumper:
+    37:41:void <init>(android.content.Context,com.squareup.leakcanary.LeakDirectoryProvider) -> <init>
+    93:98:void cancelToast(android.widget.Toast) -> cancelToast
+    46:68:java.io.File dumpHeap() -> dumpHeap
+    73:90:void showToast(com.squareup.leakcanary.internal.FutureResult) -> showToast
+com.squareup.leakcanary.AndroidHeapDumper$1 -> com.squareup.leakcanary.AndroidHeapDumper$1:
+    73:73:void <init>(com.squareup.leakcanary.AndroidHeapDumper,com.squareup.leakcanary.internal.FutureResult) -> <init>
+    75:88:void run() -> run
+com.squareup.leakcanary.AndroidHeapDumper$1$1 -> com.squareup.leakcanary.AndroidHeapDumper$1$1:
+    82:82:void <init>(com.squareup.leakcanary.AndroidHeapDumper$1,android.widget.Toast) -> <init>
+    84:85:boolean queueIdle() -> queueIdle
+com.squareup.leakcanary.AndroidHeapDumper$2 -> com.squareup.leakcanary.AndroidHeapDumper$2:
+    93:93:void <init>(com.squareup.leakcanary.AndroidHeapDumper,android.widget.Toast) -> <init>
+    95:96:void run() -> run
+com.squareup.leakcanary.AndroidRefWatcherBuilder -> com.squareup.leakcanary.AndroidRefWatcherBuilder:
+    13:13:void <clinit>() -> <clinit>
+    17:19:void <init>(android.content.Context) -> <init>
+    57:62:com.squareup.leakcanary.RefWatcher buildAndInstall() -> buildAndInstall
+    75:75:com.squareup.leakcanary.DebuggerControl defaultDebuggerControl() -> defaultDebuggerControl
+    83:83:com.squareup.leakcanary.ExcludedRefs defaultExcludedRefs() -> defaultExcludedRefs
+    79:79:com.squareup.leakcanary.HeapDump$Listener defaultHeapDumpListener() -> defaultHeapDumpListener
+    70:71:com.squareup.leakcanary.HeapDumper defaultHeapDumper() -> defaultHeapDumper
+    87:87:com.squareup.leakcanary.WatchExecutor defaultWatchExecutor() -> defaultWatchExecutor
+    66:66:boolean isDisabled() -> isDisabled
+    27:27:com.squareup.leakcanary.AndroidRefWatcherBuilder listenerServiceClass(java.lang.Class) -> listenerServiceClass
+    47:50:com.squareup.leakcanary.AndroidRefWatcherBuilder maxStoredHeapDumps(int) -> maxStoredHeapDumps
+    36:36:com.squareup.leakcanary.AndroidRefWatcherBuilder watchDelay(long,java.util.concurrent.TimeUnit) -> watchDelay
+com.squareup.leakcanary.AndroidWatchExecutor -> com.squareup.leakcanary.AndroidWatchExecutor:
+    39:46:void <init>(long) -> <init>
+    49:54:void execute(com.squareup.leakcanary.Retryable) -> execute
+    75:85:void postToBackgroundWithDelay(com.squareup.leakcanary.Retryable,int) -> postToBackgroundWithDelay
+    57:62:void postWaitForIdle(com.squareup.leakcanary.Retryable,int) -> postWaitForIdle
+    66:72:void waitForIdle(com.squareup.leakcanary.Retryable,int) -> waitForIdle
+com.squareup.leakcanary.AndroidWatchExecutor$1 -> com.squareup.leakcanary.AndroidWatchExecutor$1:
+    57:57:void <init>(com.squareup.leakcanary.AndroidWatchExecutor,com.squareup.leakcanary.Retryable,int) -> <init>
+    59:60:void run() -> run
+com.squareup.leakcanary.AndroidWatchExecutor$2 -> com.squareup.leakcanary.AndroidWatchExecutor$2:
+    66:66:void <init>(com.squareup.leakcanary.AndroidWatchExecutor,com.squareup.leakcanary.Retryable,int) -> <init>
+    68:69:boolean queueIdle() -> queueIdle
+com.squareup.leakcanary.AndroidWatchExecutor$3 -> com.squareup.leakcanary.AndroidWatchExecutor$3:
+    77:77:void <init>(com.squareup.leakcanary.AndroidWatchExecutor,com.squareup.leakcanary.Retryable,int) -> <init>
+    79:83:void run() -> run
+com.squareup.leakcanary.BuildConfig -> com.squareup.leakcanary.BuildConfig:
+    6:6:void <init>() -> <init>
+com.squareup.leakcanary.CanaryLog -> com.squareup.leakcanary.CanaryLog:
+    7:7:void <clinit>() -> <clinit>
+    57:58:void <init>() -> <init>
+    41:46:void d(java.lang.String,java.lang.Object[]) -> d
+    50:55:void d(java.lang.Throwable,java.lang.String,java.lang.Object[]) -> d
+    36:37:void setLogger(com.squareup.leakcanary.CanaryLog$Logger) -> setLogger
+com.squareup.leakcanary.CanaryLog$DefaultLogger -> com.squareup.leakcanary.CanaryLog$DefaultLogger:
+    16:16:void <init>() -> <init>
+    19:28:void d(java.lang.String,java.lang.Object[]) -> d
+    31:32:void d(java.lang.Throwable,java.lang.String,java.lang.Object[]) -> d
+com.squareup.leakcanary.DebuggerControl -> com.squareup.leakcanary.DebuggerControl:
+    23:23:void <clinit>() -> <clinit>
+com.squareup.leakcanary.DebuggerControl$1 -> com.squareup.leakcanary.DebuggerControl$1:
+    23:23:void <init>() -> <init>
+    25:25:boolean isDebuggerAttached() -> isDebuggerAttached
+com.squareup.leakcanary.DefaultLeakDirectoryProvider -> com.squareup.leakcanary.DefaultLeakDirectoryProvider:
+    57:58:void <init>(android.content.Context) -> <init>
+    60:62:void <init>(android.content.Context,int) -> <init>
+    179:180:java.io.File appStorageDirectory() -> appStorageDirectory
+    189:210:void cleanupOldHeapDumps() -> cleanupOldHeapDumps
+    133:144:void clearLeakDirectory() -> clearLeakDirectory
+    184:185:boolean directoryWritableAfterMkdirs(java.io.File) -> directoryWritableAfterMkdirs
+    174:175:java.io.File externalStorageDirectory() -> externalStorageDirectory
+    147:156:boolean hasStoragePermission() -> hasStoragePermission
+    69:83:java.util.List listFiles(java.io.FilenameFilter) -> listFiles
+    87:129:java.io.File newHeapDumpFile() -> newHeapDumpFile
+    160:171:void requestWritePermissionNotification() -> requestWritePermissionNotification
+com.squareup.leakcanary.DefaultLeakDirectoryProvider$1 -> com.squareup.leakcanary.DefaultLeakDirectoryProvider$1:
+    87:87:void <init>(com.squareup.leakcanary.DefaultLeakDirectoryProvider) -> <init>
+    89:89:boolean accept(java.io.File,java.lang.String) -> accept
+com.squareup.leakcanary.DefaultLeakDirectoryProvider$2 -> com.squareup.leakcanary.DefaultLeakDirectoryProvider$2:
+    133:133:void <init>(com.squareup.leakcanary.DefaultLeakDirectoryProvider) -> <init>
+    135:135:boolean accept(java.io.File,java.lang.String) -> accept
+com.squareup.leakcanary.DefaultLeakDirectoryProvider$3 -> com.squareup.leakcanary.DefaultLeakDirectoryProvider$3:
+    189:189:void <init>(com.squareup.leakcanary.DefaultLeakDirectoryProvider) -> <init>
+    191:191:boolean accept(java.io.File,java.lang.String) -> accept
+com.squareup.leakcanary.DefaultLeakDirectoryProvider$4 -> com.squareup.leakcanary.DefaultLeakDirectoryProvider$4:
+    198:198:void <init>(com.squareup.leakcanary.DefaultLeakDirectoryProvider) -> <init>
+    198:198:int compare(java.lang.Object,java.lang.Object) -> compare
+    200:200:int compare(java.io.File,java.io.File) -> compare
+com.squareup.leakcanary.DisplayLeakService -> com.squareup.leakcanary.DisplayLeakService:
+    41:41:void <init>() -> <init>
+    132:132:void afterDefaultHandling(com.squareup.leakcanary.HeapDump,com.squareup.leakcanary.AnalysisResult,java.lang.String) -> afterDefaultHandling
+    44:86:void onHeapAnalyzed(com.squareup.leakcanary.HeapDump,com.squareup.leakcanary.AnalysisResult) -> onHeapAnalyzed
+    112:121:com.squareup.leakcanary.HeapDump renameHeapdump(com.squareup.leakcanary.HeapDump) -> renameHeapdump
+    89:105:boolean saveResult(com.squareup.leakcanary.HeapDump,com.squareup.leakcanary.AnalysisResult) -> saveResult
+com.squareup.leakcanary.ExcludedRefs -> com.squareup.leakcanary.ExcludedRefs:
+    44:49:void <init>(com.squareup.leakcanary.ExcludedRefs$BuilderWithParams) -> <init>
+    36:36:com.squareup.leakcanary.ExcludedRefs$Builder builder() -> builder
+    69:92:java.lang.String toString() -> toString
+    61:65:java.util.Map unmodifiableRefMap(java.util.Map) -> unmodifiableRefMap
+    53:57:java.util.Map unmodifiableRefStringMap(java.util.Map) -> unmodifiableRefStringMap
+com.squareup.leakcanary.ExcludedRefs$BuilderWithParams -> com.squareup.leakcanary.ExcludedRefs$BuilderWithParams:
+    129:130:void <init>() -> <init>
+    118:118:java.util.Map access$000(com.squareup.leakcanary.ExcludedRefs$BuilderWithParams) -> access$000
+    118:118:java.util.Map access$100(com.squareup.leakcanary.ExcludedRefs$BuilderWithParams) -> access$100
+    118:118:java.util.Map access$200(com.squareup.leakcanary.ExcludedRefs$BuilderWithParams) -> access$200
+    118:118:java.util.Map access$300(com.squareup.leakcanary.ExcludedRefs$BuilderWithParams) -> access$300
+    184:185:com.squareup.leakcanary.ExcludedRefs$BuilderWithParams alwaysExclude() -> alwaysExclude
+    189:189:com.squareup.leakcanary.ExcludedRefs build() -> build
+    167:170:com.squareup.leakcanary.ExcludedRefs$BuilderWithParams clazz(java.lang.String) -> clazz
+    133:142:com.squareup.leakcanary.ExcludedRefs$BuilderWithParams instanceField(java.lang.String,java.lang.String) -> instanceField
+    174:175:com.squareup.leakcanary.ExcludedRefs$BuilderWithParams named(java.lang.String) -> named
+    179:180:com.squareup.leakcanary.ExcludedRefs$BuilderWithParams reason(java.lang.String) -> reason
+    146:155:com.squareup.leakcanary.ExcludedRefs$BuilderWithParams staticField(java.lang.String,java.lang.String) -> staticField
+    159:162:com.squareup.leakcanary.ExcludedRefs$BuilderWithParams thread(java.lang.String) -> thread
+com.squareup.leakcanary.ExcludedRefs$ParamsBuilder -> com.squareup.leakcanary.ExcludedRefs$ParamsBuilder:
+    101:103:void <init>(java.lang.String) -> <init>
+com.squareup.leakcanary.Exclusion -> com.squareup.leakcanary.Exclusion:
+    11:16:void <init>(com.squareup.leakcanary.ExcludedRefs$ParamsBuilder) -> <init>
+com.squareup.leakcanary.GcTrigger -> com.squareup.leakcanary.GcTrigger:
+    24:24:void <clinit>() -> <clinit>
+com.squareup.leakcanary.GcTrigger$1 -> com.squareup.leakcanary.GcTrigger$1:
+    24:24:void <init>() -> <init>
+    40:42:void enqueueReferences() -> enqueueReferences
+    31:34:void runGc() -> runGc
+com.squareup.leakcanary.HahaHelper -> com.squareup.leakcanary.HahaHelper:
+    37:37:void <clinit>() -> <clinit>
+    182:183:void <init>() -> <init>
+    79:127:java.lang.String asString(java.lang.Object) -> asString
+    158:159:java.util.List classInstanceValues(com.squareup.haha.perflib.Instance) -> classInstanceValues
+    66:75:boolean extendsThread(com.squareup.haha.perflib.ClassObj) -> extendsThread
+    43:43:java.lang.String fieldToString(java.util.Map$Entry) -> fieldToString
+    47:47:java.lang.String fieldToString(com.squareup.haha.perflib.ClassInstance$FieldValue) -> fieldToString
+    51:51:java.lang.String fieldToString(com.squareup.haha.perflib.Field,java.lang.Object) -> fieldToString
+    164:169:java.lang.Object fieldValue(java.util.List,java.lang.String) -> fieldValue
+    173:179:boolean hasField(java.util.List,java.lang.String) -> hasField
+    154:154:boolean isByteArray(java.lang.Object) -> isByteArray
+    150:150:boolean isCharArray(java.lang.Object) -> isCharArray
+    139:146:boolean isPrimitiveOrWrapperArray(java.lang.Object) -> isPrimitiveOrWrapperArray
+    132:135:boolean isPrimitiveWrapper(java.lang.Object) -> isPrimitiveWrapper
+    55:62:java.lang.String threadName(com.squareup.haha.perflib.Instance) -> threadName
+com.squareup.leakcanary.HeapAnalyzer -> com.squareup.leakcanary.HeapAnalyzer:
+    65:67:void <init>(com.squareup.leakcanary.ExcludedRefs) -> <init>
+    273:329:com.squareup.leakcanary.LeakTraceElement buildLeakElement(com.squareup.leakcanary.LeakNode) -> buildLeakElement
+    259:269:com.squareup.leakcanary.LeakTrace buildLeakTrace(com.squareup.leakcanary.LeakNode) -> buildLeakTrace
+    104:126:com.squareup.leakcanary.AnalysisResult checkForLeak(java.io.File,java.lang.String) -> checkForLeak
+    214:234:long computeIgnoredBitmapRetainedSize(com.squareup.haha.perflib.Snapshot,com.squareup.haha.perflib.Instance) -> computeIgnoredBitmapRetainedSize
+    135:152:void deduplicateGcRoots(com.squareup.haha.perflib.Snapshot) -> deduplicateGcRoots
+    334:361:java.util.List describeFields(com.squareup.haha.perflib.Instance) -> describeFields
+    176:200:com.squareup.leakcanary.AnalysisResult findLeakTrace(long,com.squareup.haha.perflib.Snapshot,com.squareup.haha.perflib.Instance) -> findLeakTrace
+    159:169:com.squareup.haha.perflib.Instance findLeakingReference(java.lang.String,com.squareup.haha.perflib.Snapshot) -> findLeakingReference
+    70:71:java.util.List findTrackedReferences(java.io.File) -> findTrackedReferences
+    155:155:java.lang.String generateRootKey(com.squareup.haha.perflib.RootObj) -> generateRootKey
+    366:376:java.lang.String getClassName(com.squareup.haha.perflib.Instance) -> getClassName
+    238:255:boolean isIgnoredDominator(com.squareup.haha.perflib.Instance,com.squareup.haha.perflib.Instance) -> isIgnoredDominator
+    380:380:long since(long) -> since
+com.squareup.leakcanary.HeapAnalyzer$1 -> com.squareup.leakcanary.HeapAnalyzer$1:
+    147:147:void <init>(com.squareup.leakcanary.HeapAnalyzer,java.util.Collection,com.squareup.haha.trove.THashMap) -> <init>
+    147:147:boolean execute(java.lang.Object) -> execute
+    149:149:boolean execute(java.lang.String) -> execute
+com.squareup.leakcanary.HeapDump -> com.squareup.leakcanary.HeapDump:
+    62:70:void <init>(java.io.File,java.lang.String,java.lang.String,com.squareup.leakcanary.ExcludedRefs,long,long,long) -> <init>
+com.squareup.leakcanary.HeapDump$Listener -> com.squareup.leakcanary.HeapDump$Listener:
+    28:28:void <clinit>() -> <clinit>
+com.squareup.leakcanary.HeapDump$Listener$1 -> com.squareup.leakcanary.HeapDump$Listener$1:
+    28:28:void <init>() -> <init>
+    30:30:void analyze(com.squareup.leakcanary.HeapDump) -> analyze
+com.squareup.leakcanary.HeapDumper -> com.squareup.leakcanary.HeapDumper:
+    22:28:void <clinit>() -> <clinit>
+com.squareup.leakcanary.HeapDumper$1 -> com.squareup.leakcanary.HeapDumper$1:
+    22:22:void <init>() -> <init>
+    24:24:java.io.File dumpHeap() -> dumpHeap
+com.squareup.leakcanary.KeyedWeakReference -> com.squareup.leakcanary.KeyedWeakReference:
+    30:33:void <init>(java.lang.Object,java.lang.String,java.lang.String,java.lang.ref.ReferenceQueue) -> <init>
+com.squareup.leakcanary.LeakCanary -> com.squareup.leakcanary.LeakCanary:
+    148:149:void <init>() -> <init>
+    51:52:void enableDisplayLeakActivity(android.content.Context) -> enableDisplayLeakActivity
+    40:40:com.squareup.leakcanary.RefWatcher install(android.app.Application) -> install
+    145:145:boolean isInAnalyzerProcess(android.content.Context) -> isInAnalyzerProcess
+    67:73:java.lang.String leakInfo(android.content.Context,com.squareup.leakcanary.HeapDump,com.squareup.leakcanary.AnalysisResult,boolean) -> leakInfo
+    47:47:com.squareup.leakcanary.AndroidRefWatcherBuilder refWatcher(android.content.Context) -> refWatcher
+    61:62:void setDisplayLeakActivityDirectoryProvider(com.squareup.leakcanary.LeakDirectoryProvider) -> setDisplayLeakActivityDirectoryProvider
+com.squareup.leakcanary.LeakNode -> com.squareup.leakcanary.LeakNode:
+    29:35:void <init>(com.squareup.leakcanary.Exclusion,com.squareup.haha.perflib.Instance,com.squareup.leakcanary.LeakNode,java.lang.String,com.squareup.leakcanary.LeakTraceElement$Type) -> <init>
+com.squareup.leakcanary.LeakTrace -> com.squareup.leakcanary.LeakTrace:
+    32:34:void <init>(java.util.List) -> <init>
+    54:58:java.lang.String toDetailedString() -> toDetailedString
+    37:50:java.lang.String toString() -> toString
+com.squareup.leakcanary.LeakTraceElement -> com.squareup.leakcanary.LeakTraceElement:
+    58:66:void <init>(java.lang.String,com.squareup.leakcanary.LeakTraceElement$Type,com.squareup.leakcanary.LeakTraceElement$Holder,java.lang.String,java.lang.String,com.squareup.leakcanary.Exclusion,java.util.List) -> <init>
+    99:111:java.lang.String toDetailedString() -> toDetailedString
+    69:95:java.lang.String toString() -> toString
+com.squareup.leakcanary.LeakTraceElement$Holder -> com.squareup.leakcanary.LeakTraceElement$Holder:
+    37:36:void <clinit>() -> <clinit>
+    36:36:void <init>(java.lang.String,int) -> <init>
+    36:36:com.squareup.leakcanary.LeakTraceElement$Holder valueOf(java.lang.String) -> valueOf
+    36:36:com.squareup.leakcanary.LeakTraceElement$Holder[] values() -> values
+com.squareup.leakcanary.LeakTraceElement$Type -> com.squareup.leakcanary.LeakTraceElement$Type:
+    33:32:void <clinit>() -> <clinit>
+    32:32:void <init>(java.lang.String,int) -> <init>
+    32:32:com.squareup.leakcanary.LeakTraceElement$Type valueOf(java.lang.String) -> valueOf
+    32:32:com.squareup.leakcanary.LeakTraceElement$Type[] values() -> values
+com.squareup.leakcanary.Preconditions -> com.squareup.leakcanary.Preconditions:
+    32:33:void <init>() -> <init>
+    26:27:java.lang.Object checkNotNull(java.lang.Object,java.lang.String) -> checkNotNull
+com.squareup.leakcanary.R -> com.squareup.leakcanary.R:
+    10:10:void <init>() -> <init>
+com.squareup.leakcanary.R$drawable -> com.squareup.leakcanary.R$drawable:
+    13:13:void <init>() -> <init>
+com.squareup.leakcanary.R$id -> com.squareup.leakcanary.R$id:
+    20:20:void <init>() -> <init>
+com.squareup.leakcanary.R$layout -> com.squareup.leakcanary.R$layout:
+    31:31:void <init>() -> <init>
+com.squareup.leakcanary.R$string -> com.squareup.leakcanary.R$string:
+    40:40:void <init>() -> <init>
+com.squareup.leakcanary.R$style -> com.squareup.leakcanary.R$style:
+    68:68:void <init>() -> <init>
+com.squareup.leakcanary.RefWatcher -> com.squareup.leakcanary.RefWatcher:
+    38:38:void <clinit>() -> <clinit>
+    50:59:void <init>(com.squareup.leakcanary.WatchExecutor,com.squareup.leakcanary.DebuggerControl,com.squareup.leakcanary.GcTrigger,com.squareup.leakcanary.HeapDumper,com.squareup.leakcanary.HeapDump$Listener,com.squareup.leakcanary.ExcludedRefs) -> <init>
+    102:130:com.squareup.leakcanary.Retryable$Result ensureGone(com.squareup.leakcanary.KeyedWeakReference,long) -> ensureGone
+    93:98:void ensureGoneAsync(long,com.squareup.leakcanary.KeyedWeakReference) -> ensureGoneAsync
+    134:134:boolean gone(com.squareup.leakcanary.KeyedWeakReference) -> gone
+    141:144:void removeWeaklyReachableReferences() -> removeWeaklyReachableReferences
+    67:68:void watch(java.lang.Object) -> watch
+    78:90:void watch(java.lang.Object,java.lang.String) -> watch
+com.squareup.leakcanary.RefWatcher$1 -> com.squareup.leakcanary.RefWatcher$1:
+    93:93:void <init>(com.squareup.leakcanary.RefWatcher,com.squareup.leakcanary.KeyedWeakReference,long) -> <init>
+    95:95:com.squareup.leakcanary.Retryable$Result run() -> run
+com.squareup.leakcanary.RefWatcherBuilder -> com.squareup.leakcanary.RefWatcherBuilder:
+    7:7:void <init>() -> <init>
+    54:88:com.squareup.leakcanary.RefWatcher build() -> build
+    36:37:com.squareup.leakcanary.RefWatcherBuilder debuggerControl(com.squareup.leakcanary.DebuggerControl) -> debuggerControl
+    101:101:com.squareup.leakcanary.DebuggerControl defaultDebuggerControl() -> defaultDebuggerControl
+    105:105:com.squareup.leakcanary.ExcludedRefs defaultExcludedRefs() -> defaultExcludedRefs
+    97:97:com.squareup.leakcanary.GcTrigger defaultGcTrigger() -> defaultGcTrigger
+    113:113:com.squareup.leakcanary.HeapDump$Listener defaultHeapDumpListener() -> defaultHeapDumpListener
+    109:109:com.squareup.leakcanary.HeapDumper defaultHeapDumper() -> defaultHeapDumper
+    117:117:com.squareup.leakcanary.WatchExecutor defaultWatchExecutor() -> defaultWatchExecutor
+    24:25:com.squareup.leakcanary.RefWatcherBuilder excludedRefs(com.squareup.leakcanary.ExcludedRefs) -> excludedRefs
+    48:49:com.squareup.leakcanary.RefWatcherBuilder gcTrigger(com.squareup.leakcanary.GcTrigger) -> gcTrigger
+    18:19:com.squareup.leakcanary.RefWatcherBuilder heapDumpListener(com.squareup.leakcanary.HeapDump$Listener) -> heapDumpListener
+    30:31:com.squareup.leakcanary.RefWatcherBuilder heapDumper(com.squareup.leakcanary.HeapDumper) -> heapDumper
+    93:93:boolean isDisabled() -> isDisabled
+    122:122:com.squareup.leakcanary.RefWatcherBuilder self() -> self
+    42:43:com.squareup.leakcanary.RefWatcherBuilder watchExecutor(com.squareup.leakcanary.WatchExecutor) -> watchExecutor
+com.squareup.leakcanary.Retryable$Result -> com.squareup.leakcanary.Retryable$Result:
+    7:6:void <clinit>() -> <clinit>
+    6:6:void <init>(java.lang.String,int) -> <init>
+    6:6:com.squareup.leakcanary.Retryable$Result valueOf(java.lang.String) -> valueOf
+    6:6:com.squareup.leakcanary.Retryable$Result[] values() -> values
+com.squareup.leakcanary.ServiceHeapDumpListener -> com.squareup.leakcanary.ServiceHeapDumpListener:
+    30:35:void <init>(android.content.Context,java.lang.Class) -> <init>
+    38:40:void analyze(com.squareup.leakcanary.HeapDump) -> analyze
+com.squareup.leakcanary.ShortestPathFinder -> com.squareup.leakcanary.ShortestPathFinder:
+    59:66:void <init>(com.squareup.leakcanary.ExcludedRefs) -> <init>
+    175:175:boolean checkSeen(com.squareup.leakcanary.LeakNode) -> checkSeen
+    124:129:void clearState() -> clearState
+    284:288:void enqueue(com.squareup.leakcanary.Exclusion,com.squareup.leakcanary.LeakNode,com.squareup.haha.perflib.Instance,java.lang.String,com.squareup.leakcanary.LeakTraceElement$Type) -> enqueue
+    132:172:void enqueueGcRoots(com.squareup.haha.perflib.Snapshot) -> enqueueGcRoots
+    79:93:com.squareup.leakcanary.ShortestPathFinder$Result findPath(com.squareup.haha.perflib.Snapshot,com.squareup.haha.perflib.Instance) -> findPath
+    315:315:boolean isString(com.squareup.haha.perflib.Instance) -> isString
+    271:280:void visitArrayInstance(com.squareup.leakcanary.LeakNode) -> visitArrayInstance
+    228:268:void visitClassInstance(com.squareup.leakcanary.LeakNode) -> visitClassInstance
+    198:225:void visitClassObj(com.squareup.leakcanary.LeakNode) -> visitClassObj
+    179:195:void visitRootObj(com.squareup.leakcanary.LeakNode) -> visitRootObj
+com.squareup.leakcanary.ShortestPathFinder$1 -> com.squareup.leakcanary.ShortestPathFinder$1:
+    133:133:void <clinit>() -> <clinit>
+com.squareup.leakcanary.ShortestPathFinder$Result -> com.squareup.leakcanary.ShortestPathFinder$Result:
+    72:75:void <init>(com.squareup.leakcanary.LeakNode,boolean) -> <init>
+com.squareup.leakcanary.TrackedReference -> com.squareup.leakcanary.TrackedReference:
+    25:30:void <init>(java.lang.String,java.lang.String,java.lang.String,java.util.List) -> <init>
+com.squareup.leakcanary.WatchExecutor -> com.squareup.leakcanary.WatchExecutor:
+    8:8:void <clinit>() -> <clinit>
+com.squareup.leakcanary.WatchExecutor$1 -> com.squareup.leakcanary.WatchExecutor$1:
+    8:8:void <init>() -> <init>
+    10:10:void execute(com.squareup.leakcanary.Retryable) -> execute
+com.squareup.leakcanary.analyzer.BuildConfig -> com.squareup.leakcanary.analyzer.BuildConfig:
+    6:6:void <init>() -> <init>
+com.squareup.leakcanary.analyzer.R -> com.squareup.leakcanary.analyzer.R:
+    10:10:void <init>() -> <init>
+com.squareup.leakcanary.internal.DisplayLeakActivity -> com.squareup.leakcanary.internal.DisplayLeakActivity:
+    72:72:void <clinit>() -> <clinit>
+    70:70:void <init>() -> <init>
+    1:1:void ajc$preClinit() -> ajc$preClinit
+    506:510:java.lang.String classSimpleName(java.lang.String) -> classSimpleName
+    77:77:android.app.PendingIntent createPendingIntent(android.content.Context) -> createPendingIntent
+    81:84:android.app.PendingIntent createPendingIntent(android.content.Context,java.lang.String) -> createPendingIntent
+    238:241:void deleteAllLeaks() -> deleteAllLeaks
+    221:235:void deleteVisibleLeak() -> deleteVisibleLeak
+    352:360:com.squareup.leakcanary.internal.DisplayLeakActivity$Leak getVisibleLeak() -> getVisibleLeak
+    92:96:com.squareup.leakcanary.LeakDirectoryProvider leakDirectoryProvider(android.content.Context) -> leakDirectoryProvider
+    193:199:void onBackPressed() -> onBackPressed
+    109:129:void onCreate(android.os.Bundle) -> onCreate
+    161:181:boolean onCreateOptionsMenu(android.view.Menu) -> onCreateOptionsMenu
+    156:158:void onDestroy() -> onDestroy
+    185:189:boolean onOptionsItemSelected(android.view.MenuItem) -> onOptionsItemSelected
+    141:143:void onResume() -> onResume
+    132:132:java.lang.Object onRetainNonConfigurationInstance() -> onRetainNonConfigurationInstance
+    136:138:void onSaveInstanceState(android.os.Bundle) -> onSaveInstanceState
+    88:89:void setLeakDirectoryProvider(com.squareup.leakcanary.LeakDirectoryProvider) -> setLeakDirectoryProvider
+    149:153:void setTheme(int) -> setTheme
+    211:218:void shareHeapDump() -> shareHeapDump
+    202:208:void shareLeak() -> shareLeak
+    244:349:void updateUi() -> updateUi
+com.squareup.leakcanary.internal.DisplayLeakActivity$1 -> com.squareup.leakcanary.internal.DisplayLeakActivity$1:
+    164:164:void <init>(com.squareup.leakcanary.internal.DisplayLeakActivity) -> <init>
+    166:167:boolean onMenuItemClick(android.view.MenuItem) -> onMenuItemClick
+com.squareup.leakcanary.internal.DisplayLeakActivity$2 -> com.squareup.leakcanary.internal.DisplayLeakActivity$2:
+    172:172:void <init>(com.squareup.leakcanary.internal.DisplayLeakActivity) -> <init>
+    174:175:boolean onMenuItemClick(android.view.MenuItem) -> onMenuItemClick
+com.squareup.leakcanary.internal.DisplayLeakActivity$3 -> com.squareup.leakcanary.internal.DisplayLeakActivity$3:
+    279:279:void <init>(com.squareup.leakcanary.internal.DisplayLeakActivity) -> <init>
+    281:282:void onClick(android.view.View) -> onClick
+com.squareup.leakcanary.internal.DisplayLeakActivity$4 -> com.squareup.leakcanary.internal.DisplayLeakActivity$4:
+    292:292:void <init>(com.squareup.leakcanary.internal.DisplayLeakActivity,com.squareup.leakcanary.internal.DisplayLeakAdapter) -> <init>
+    295:296:void onItemClick(android.widget.AdapterView,android.view.View,int,long) -> onItemClick
+com.squareup.leakcanary.internal.DisplayLeakActivity$5 -> com.squareup.leakcanary.internal.DisplayLeakActivity$5:
+    302:302:void <init>(com.squareup.leakcanary.internal.DisplayLeakActivity) -> <init>
+    304:305:void onClick(android.view.View) -> onClick
+com.squareup.leakcanary.internal.DisplayLeakActivity$6 -> com.squareup.leakcanary.internal.DisplayLeakActivity$6:
+    320:320:void <init>(com.squareup.leakcanary.internal.DisplayLeakActivity) -> <init>
+    323:325:void onItemClick(android.widget.AdapterView,android.view.View,int,long) -> onItemClick
+com.squareup.leakcanary.internal.DisplayLeakActivity$7 -> com.squareup.leakcanary.internal.DisplayLeakActivity$7:
+    331:331:void <init>(com.squareup.leakcanary.internal.DisplayLeakActivity) -> <init>
+    333:344:void onClick(android.view.View) -> onClick
+com.squareup.leakcanary.internal.DisplayLeakActivity$7$1 -> com.squareup.leakcanary.internal.DisplayLeakActivity$7$1:
+    337:337:void <init>(com.squareup.leakcanary.internal.DisplayLeakActivity$7) -> <init>
+    339:340:void onClick(android.content.DialogInterface,int) -> onClick
+com.squareup.leakcanary.internal.DisplayLeakActivity$Leak -> com.squareup.leakcanary.internal.DisplayLeakActivity$Leak:
+    417:421:void <init>(com.squareup.leakcanary.HeapDump,com.squareup.leakcanary.AnalysisResult,java.io.File) -> <init>
+com.squareup.leakcanary.internal.DisplayLeakActivity$LeakListAdapter -> com.squareup.leakcanary.internal.DisplayLeakActivity$LeakListAdapter:
+    363:363:void <init>(com.squareup.leakcanary.internal.DisplayLeakActivity) -> <init>
+    366:366:int getCount() -> getCount
+    363:363:java.lang.Object getItem(int) -> getItem
+    370:370:com.squareup.leakcanary.internal.DisplayLeakActivity$Leak getItem(int) -> getItem
+    374:374:long getItemId(int) -> getItemId
+    378:408:android.view.View getView(int,android.view.View,android.view.ViewGroup) -> getView
+com.squareup.leakcanary.internal.DisplayLeakActivity$LoadLeaks -> com.squareup.leakcanary.internal.DisplayLeakActivity$LoadLeaks:
+    426:428:void <clinit>() -> <clinit>
+    447:451:void <init>(com.squareup.leakcanary.internal.DisplayLeakActivity,com.squareup.leakcanary.LeakDirectoryProvider) -> <init>
+    437:441:void forgetActivity() -> forgetActivity
+    431:434:void load(com.squareup.leakcanary.internal.DisplayLeakActivity,com.squareup.leakcanary.LeakDirectoryProvider) -> load
+    454:502:void run() -> run
+com.squareup.leakcanary.internal.DisplayLeakActivity$LoadLeaks$1 -> com.squareup.leakcanary.internal.DisplayLeakActivity$LoadLeaks$1:
+    455:455:void <init>(com.squareup.leakcanary.internal.DisplayLeakActivity$LoadLeaks) -> <init>
+    457:457:boolean accept(java.io.File,java.lang.String) -> accept
+com.squareup.leakcanary.internal.DisplayLeakActivity$LoadLeaks$2 -> com.squareup.leakcanary.internal.DisplayLeakActivity$LoadLeaks$2:
+    487:487:void <init>(com.squareup.leakcanary.internal.DisplayLeakActivity$LoadLeaks) -> <init>
+    487:487:int compare(java.lang.Object,java.lang.Object) -> compare
+    489:489:int compare(com.squareup.leakcanary.internal.DisplayLeakActivity$Leak,com.squareup.leakcanary.internal.DisplayLeakActivity$Leak) -> compare
+com.squareup.leakcanary.internal.DisplayLeakActivity$LoadLeaks$3 -> com.squareup.leakcanary.internal.DisplayLeakActivity$LoadLeaks$3:
+    493:493:void <init>(com.squareup.leakcanary.internal.DisplayLeakActivity$LoadLeaks,java.util.List) -> <init>
+    495:500:void run() -> run
+com.squareup.leakcanary.internal.DisplayLeakAdapter -> com.squareup.leakcanary.internal.DisplayLeakAdapter:
+    37:46:void <init>() -> <init>
+    91:153:java.lang.String elementToHtmlString(com.squareup.leakcanary.LeakTraceElement,boolean,boolean) -> elementToHtmlString
+    201:201:android.view.View findById(android.view.View,int) -> findById
+    174:174:int getCount() -> getCount
+    37:37:java.lang.Object getItem(int) -> getItem
+    178:181:com.squareup.leakcanary.LeakTraceElement getItem(int) -> getItem
+    196:196:long getItemId(int) -> getItemId
+    189:192:int getItemViewType(int) -> getItemViewType
+    49:87:android.view.View getView(int,android.view.View,android.view.ViewGroup) -> getView
+    185:185:int getViewTypeCount() -> getViewTypeCount
+    169:171:void toggleRow(int) -> toggleRow
+    157:166:void update(com.squareup.leakcanary.LeakTrace,java.lang.String,java.lang.String) -> update
+com.squareup.leakcanary.internal.DisplayLeakConnectorView -> com.squareup.leakcanary.internal.DisplayLeakConnectorView:
+    30:41:void <clinit>() -> <clinit>
+    51:54:void <init>(android.content.Context,android.util.AttributeSet) -> <init>
+    57:102:void onDraw(android.graphics.Canvas) -> onDraw
+    105:113:void setType(com.squareup.leakcanary.internal.DisplayLeakConnectorView$Type) -> setType
+com.squareup.leakcanary.internal.DisplayLeakConnectorView$1 -> com.squareup.leakcanary.internal.DisplayLeakConnectorView$1:
+    79:79:void <clinit>() -> <clinit>
+com.squareup.leakcanary.internal.DisplayLeakConnectorView$Type -> com.squareup.leakcanary.internal.DisplayLeakConnectorView$Type:
+    44:43:void <clinit>() -> <clinit>
+    43:43:void <init>(java.lang.String,int) -> <init>
+    43:43:com.squareup.leakcanary.internal.DisplayLeakConnectorView$Type valueOf(java.lang.String) -> valueOf
+    43:43:com.squareup.leakcanary.internal.DisplayLeakConnectorView$Type[] values() -> values
+com.squareup.leakcanary.internal.FutureResult -> com.squareup.leakcanary.internal.FutureResult:
+    27:30:void <init>() -> <init>
+    41:42:java.lang.Object get() -> get
+    48:50:void set(java.lang.Object) -> set
+    34:36:boolean wait(long,java.util.concurrent.TimeUnit) -> wait
+com.squareup.leakcanary.internal.HeapAnalyzerService -> com.squareup.leakcanary.internal.HeapAnalyzerService:
+    45:46:void <init>() -> <init>
+    49:60:void onHandleIntent(android.content.Intent) -> onHandleIntent
+    38:42:void runAnalysis(android.content.Context,com.squareup.leakcanary.HeapDump,java.lang.Class) -> runAnalysis
+com.squareup.leakcanary.internal.LeakCanaryInternals -> com.squareup.leakcanary.internal.LeakCanaryInternals:
+    55:55:void <clinit>() -> <clinit>
+    181:182:void <init>() -> <init>
+    65:69:java.lang.String classSimpleName(java.lang.String) -> classSimpleName
+    60:61:void executeOnFileIoThread(java.lang.Runnable) -> executeOnFileIoThread
+    93:99:boolean isInServiceProcess(android.content.Context,java.lang.Class) -> isInServiceProcess
+    178:178:java.util.concurrent.Executor newSingleThreadExecutor(java.lang.String) -> newSingleThreadExecutor
+    75:81:void setEnabled(android.content.Context,java.lang.Class,boolean) -> setEnabled
+    85:90:void setEnabledBlocking(android.content.Context,java.lang.Class,boolean) -> setEnabledBlocking
+    168:175:void setupNotificationChannel(java.lang.String,android.app.NotificationManager,android.app.Notification$Builder) -> setupNotificationChannel
+    142:163:void showNotification(android.content.Context,java.lang.CharSequence,java.lang.CharSequence,android.app.PendingIntent,int) -> showNotification
+com.squareup.leakcanary.internal.LeakCanaryInternals$1 -> com.squareup.leakcanary.internal.LeakCanaryInternals$1:
+    76:76:void <init>(android.content.Context,java.lang.Class,boolean) -> <init>
+    78:79:void run() -> run
+com.squareup.leakcanary.internal.LeakCanarySingleThreadFactory -> com.squareup.leakcanary.internal.LeakCanarySingleThreadFactory:
+    27:29:void <init>(java.lang.String) -> <init>
+    32:32:java.lang.Thread newThread(java.lang.Runnable) -> newThread
+com.squareup.leakcanary.internal.LeakCanaryUi -> com.squareup.leakcanary.internal.LeakCanaryUi:
+    29:29:void <clinit>() -> <clinit>
+    49:50:void <init>() -> <init>
+    45:46:float dpToPixel(float,android.content.res.Resources) -> dpToPixel
+com.squareup.leakcanary.internal.MoreDetailsView -> com.squareup.leakcanary.internal.MoreDetailsView:
+    26:30:void <clinit>() -> <clinit>
+    33:37:void <init>(android.content.Context,android.util.AttributeSet) -> <init>
+    42:53:void onDraw(android.graphics.Canvas) -> onDraw
+    56:60:void setOpened(boolean) -> setOpened
+com.squareup.leakcanary.internal.RequestStoragePermissionActivity -> com.squareup.leakcanary.internal.RequestStoragePermissionActivity:
+    37:37:void <init>() -> <init>
+    40:43:android.app.PendingIntent createPendingIntent(android.content.Context) -> createPendingIntent
+    72:74:void finish() -> finish
+    77:77:boolean hasStoragePermission() -> hasStoragePermission
+    47:59:void onCreate(android.os.Bundle) -> onCreate
+    63:68:void onRequestPermissionsResult(int,java.lang.String[],int[]) -> onRequestPermissionsResult
 com.wiseco.baselibrary.R$anim -> com.wiseco.baselibrary.R$anim:
     13:13:void <init>() -> <init>
 com.wiseco.baselibrary.R$attr -> com.wiseco.baselibrary.R$attr:
@@ -13694,47 +15465,51 @@ com.wiseco.baselibrary.R$dimen -> com.wiseco.baselibrary.R$dimen:
 com.wiseco.baselibrary.R$drawable -> com.wiseco.baselibrary.R$drawable:
     535:535:void <init>() -> <init>
 com.wiseco.baselibrary.R$id -> com.wiseco.baselibrary.R$id:
-    641:641:void <init>() -> <init>
+    644:644:void <init>() -> <init>
 com.wiseco.baselibrary.R$integer -> com.wiseco.baselibrary.R$integer:
-    754:754:void <init>() -> <init>
+    764:764:void <init>() -> <init>
 com.wiseco.baselibrary.R$layout -> com.wiseco.baselibrary.R$layout:
-    763:763:void <init>() -> <init>
+    773:773:void <init>() -> <init>
 com.wiseco.baselibrary.R$string -> com.wiseco.baselibrary.R$string:
-    805:805:void <init>() -> <init>
+    820:820:void <init>() -> <init>
 com.wiseco.baselibrary.R$style -> com.wiseco.baselibrary.R$style:
-    856:856:void <init>() -> <init>
+    895:895:void <init>() -> <init>
 com.wiseco.baselibrary.R$styleable -> com.wiseco.baselibrary.R$styleable:
-    1210:1671:void <clinit>() -> <clinit>
-    1208:1208:void <init>() -> <init>
+    1251:1712:void <clinit>() -> <clinit>
+    1249:1249:void <init>() -> <init>
 com.wiseco.wisecotech.BuildConfig -> b.e.a.a:
     boolean DEBUG -> a
     7:7:void <clinit>() -> <clinit>
 com.wiseco.wisecotech.MainActivity -> com.wiseco.wisecotech.MainActivity:
     7:7:void <init>() -> <init>
     16:17:void initView(android.os.Bundle) -> a
-    11:11:void initData() -> q
-    20:20:int layoutId() -> s
+    11:11:void initData() -> r
+    20:20:int layoutId() -> t
 com.wiseco.wisecotech.MainApplication -> com.wiseco.wisecotech.MainApplication:
     kotlin.properties.ReadWriteProperty application$delegate -> b
     com.squareup.leakcanary.RefWatcher refWatcher -> d
     kotlin.properties.ReadWriteProperty context$delegate -> a
     com.wiseco.wisecotech.MainApplication$Companion Companion -> c
-    22:23:void <clinit>() -> <clinit>
-    18:18:void <init>() -> <init>
-    18:18:kotlin.properties.ReadWriteProperty access$getApplication$cp() -> a
-    18:18:com.squareup.leakcanary.RefWatcher access$getRefWatcher$p(com.wiseco.wisecotech.MainApplication) -> a
-    18:18:kotlin.properties.ReadWriteProperty access$getContext$cp() -> b
-    35:45:void onCreate() -> onCreate
+    19:20:void <clinit>() -> <clinit>
+    14:14:void <init>() -> <init>
+    14:14:kotlin.properties.ReadWriteProperty access$getApplication$cp() -> a
+    14:14:com.squareup.leakcanary.RefWatcher access$getRefWatcher$p(com.wiseco.wisecotech.MainApplication) -> a
+    14:14:kotlin.properties.ReadWriteProperty access$getContext$cp() -> b
+    44:48:void initFragmentation() -> c
+    54:65:void initLoger() -> d
+    31:37:void onCreate() -> onCreate
 com.wiseco.wisecotech.MainApplication$Companion -> com.wiseco.wisecotech.MainApplication$a:
     kotlin.reflect.KProperty[] $$delegatedProperties -> a
-    20:20:void <init>() -> <init>
-    20:20:void <init>(kotlin.jvm.internal.DefaultConstructorMarker) -> <init>
+    17:17:void <init>() -> <init>
+    17:17:void <init>(kotlin.jvm.internal.DefaultConstructorMarker) -> <init>
     android.app.Application getApplication() -> a
     void setApplication(android.app.Application) -> a
-    20:20:void access$setApplication$p(com.wiseco.wisecotech.MainApplication$Companion,android.app.Application) -> a
-    28:28:com.squareup.leakcanary.RefWatcher getRefWatcher(android.content.Context) -> a
+    24:24:com.squareup.leakcanary.RefWatcher getRefWatcher(android.content.Context) -> a
     android.content.Context getContext() -> b
     void setContext(android.content.Context) -> b
+com.wiseco.wisecotech.MainApplication$initLoger$1 -> b.e.a.b:
+    60:60:void <init>(com.orhanobut.logger.PrettyFormatStrategy,com.orhanobut.logger.FormatStrategy) -> <init>
+    62:62:boolean isLoggable(int,java.lang.String) -> a
 com.wiseco.wisecotech.MyAppGlideModule -> com.wiseco.wisecotech.MyAppGlideModule:
     19:19:void <init>() -> <init>
 com.wiseco.wisecotech.R$anim -> com.wiseco.wisecotech.R$anim:
@@ -13746,24 +15521,39 @@ com.wiseco.wisecotech.R$bool -> com.wiseco.wisecotech.R$bool:
 com.wiseco.wisecotech.R$color -> com.wiseco.wisecotech.R$color:
     2615:2615:void <init>() -> <init>
 com.wiseco.wisecotech.R$dimen -> com.wiseco.wisecotech.R$dimen:
-    2704:2704:void <init>() -> <init>
+    2705:2705:void <init>() -> <init>
 com.wiseco.wisecotech.R$drawable -> com.wiseco.wisecotech.R$drawable:
-    2820:2820:void <init>() -> <init>
+    2821:2821:void <init>() -> <init>
 com.wiseco.wisecotech.R$id -> com.wiseco.wisecotech.R$id:
-    2928:2928:void <init>() -> <init>
+    2932:2932:void <init>() -> <init>
 com.wiseco.wisecotech.R$integer -> com.wiseco.wisecotech.R$integer:
-    3122:3122:void <init>() -> <init>
+    3133:3133:void <init>() -> <init>
 com.wiseco.wisecotech.R$layout -> com.wiseco.wisecotech.R$layout:
-    3129:3129:void <init>() -> <init>
+    3140:3140:void <init>() -> <init>
 com.wiseco.wisecotech.R$mipmap -> com.wiseco.wisecotech.R$mipmap:
-    3177:3177:void <init>() -> <init>
+    3193:3193:void <init>() -> <init>
 com.wiseco.wisecotech.R$string -> com.wiseco.wisecotech.R$string:
-    3182:3182:void <init>() -> <init>
+    3198:3198:void <init>() -> <init>
 com.wiseco.wisecotech.R$style -> com.wiseco.wisecotech.R$style:
-    3234:3234:void <init>() -> <init>
+    3274:3274:void <init>() -> <init>
 com.wiseco.wisecotech.R$styleable -> com.wiseco.wisecotech.R$styleable:
-    3661:11118:void <clinit>() -> <clinit>
-    3589:3589:void <init>() -> <init>
+    3703:11160:void <clinit>() -> <clinit>
+    3631:3631:void <init>() -> <init>
+com.wiseco.wisecotech.aop.AnalyticPage -> b.e.a.a.a:
+    com.wiseco.wisecotech.aop.AnalyticPage ajc$perSingletonInstance -> b
+    java.lang.Throwable ajc$initFailureCause -> a
+    1:1:void <clinit>() -> <clinit>
+    15:15:void <init>() -> <init>
+    1:1:void ajc$postClinit() -> a
+    27:41:void aroundOnResume(org.aspectj.lang.JoinPoint) -> a
+    1:1:com.wiseco.wisecotech.aop.AnalyticPage aspectOf() -> b
+com.wiseco.wisecotech.aop.AopClickAspect -> b.e.a.a.b:
+    java.lang.Throwable ajc$initFailureCause -> a
+    com.wiseco.wisecotech.aop.AopClickAspect ajc$perSingletonInstance -> b
+    1:1:void <clinit>() -> <clinit>
+    15:15:void <init>() -> <init>
+    1:1:void ajc$postClinit() -> a
+    1:1:com.wiseco.wisecotech.aop.AopClickAspect aspectOf() -> b
 com.wiseco.wisecotech.base.BaseActivity -> com.wiseco.wisecotech.base.BaseActivity:
     22:22:void <init>() -> <init>
     43:43:void initView(android.os.Bundle) -> a
@@ -13772,42 +15562,60 @@ com.wiseco.wisecotech.base.BaseActivity -> com.wiseco.wisecotech.base.BaseActivi
     26:33:void onCreate(android.os.Bundle) -> onCreate
     58:60:void onDestroy() -> onDestroy
     72:74:void onRequestPermissionsResult(int,java.lang.String[],int[]) -> onRequestPermissionsResult
-    void initData() -> q
-    54:54:void initListener() -> r
-    int layoutId() -> s
-com.wiseco.wisecotech.base.BaseFragment -> b.e.a.a.a:
+    void initData() -> r
+    54:54:void initListener() -> s
+    int layoutId() -> t
+com.wiseco.wisecotech.base.BaseFragment -> b.e.a.b.a:
     26:26:void <init>() -> <init>
-    72:73:void onDestroy() -> R
+    73:74:void onDestroy() -> R
     void onDestroyView() -> T
     34:34:android.view.View onCreateView(android.view.LayoutInflater,android.view.ViewGroup,android.os.Bundle) -> a
-    38:39:void onAttach(android.content.Context) -> a
-    46:49:void onViewCreated(android.view.View,android.os.Bundle) -> a
-    113:129:void onPermissionsDenied(int,java.util.List) -> a
-    64:64:void initView(android.view.View,android.os.Bundle) -> b
-    102:103:void onPermissionsGranted(int,java.util.List) -> b
-    91:93:void onRequestPermissionsResult(int,java.lang.String[],int[]) -> onRequestPermissionsResult
+    39:42:void onAttach(android.content.Context) -> a
+    47:50:void onViewCreated(android.view.View,android.os.Bundle) -> a
+    114:130:void onPermissionsDenied(int,java.util.List) -> a
+    65:65:void initView(android.view.View,android.os.Bundle) -> b
+    103:104:void onPermissionsGranted(int,java.util.List) -> b
+    92:94:void onRequestPermissionsResult(int,java.lang.String[],int[]) -> onRequestPermissionsResult
     void _$_clearFindViewByIdCache() -> qa
     int getLayoutId() -> ra
-com.wiseco.wisecotech.ui.fragments.splash.SplashFragment -> b.e.a.b.a.a.a:
-    java.util.HashMap _$_findViewCache -> aa
-    10:10:void <init>() -> <init>
+com.wiseco.wisecotech.ui.fragments.splash.SplashFragment -> b.e.a.c.a.a.a:
+    org.aspectj.lang.JoinPoint$StaticPart ajc$tjp_0 -> aa
+    java.util.HashMap _$_findViewCache -> ba
+    1:1:void <clinit>() -> <clinit>
+    16:16:void <init>() -> <init>
     void onDestroyView() -> T
-    24:28:void initView(android.view.View,android.os.Bundle) -> b
+    33:33:void onClick_aroundBody1$advice(com.wiseco.wisecotech.ui.fragments.splash.SplashFragment,android.view.View,org.aspectj.lang.JoinPoint,com.wiseco.wisecotech.aop.AopClickAspect,org.aspectj.lang.ProceedingJoinPoint) -> a
+    19:24:void onClick_aroundBody0(com.wiseco.wisecotech.ui.fragments.splash.SplashFragment,android.view.View,org.aspectj.lang.JoinPoint) -> b
+    38:44:void initView(android.view.View,android.os.Bundle) -> b
     android.view.View _$_findCachedViewById(int) -> c
+    1:1:void onClick(android.view.View) -> onClick
     void _$_clearFindViewByIdCache() -> qa
-    19:19:int getLayoutId() -> ra
-    10:10:com.leifu.mvpkotlin.base.IBasePresenter createPresenter() -> sa
-    14:14:com.wiseco.wisecotech.ui.fragments.splash.SplashPresenter createPresenter() -> sa
-com.wiseco.wisecotech.ui.fragments.splash.SplashPresenter -> b.e.a.b.a.a.b:
+    33:33:int getLayoutId() -> ra
+    16:16:com.leifu.mvpkotlin.base.IBasePresenter createPresenter() -> sa
+    28:28:com.wiseco.wisecotech.ui.fragments.splash.SplashPresenter createPresenter() -> sa
+    1:1:void ajc$preClinit() -> ta
+com.wiseco.wisecotech.ui.fragments.splash.SplashPresenter -> b.e.a.c.a.a.b:
     5:5:void <init>() -> <init>
-com.wiseco.wisecotech.utils.OkgoHttpUtils -> b.e.a.c.a:
+com.wiseco.wisecotech.utils.AopClickUtil -> b.e.a.d.a:
+    com.wiseco.wisecotech.utils.AopClickUtil INSTANCE -> b
+    long mLastClickTime -> a
+    8:8:void <clinit>() -> <clinit>
+    8:8:void <init>() -> <init>
+    22:24:boolean isFastDoubleClick(long) -> a
+com.wiseco.wisecotech.utils.LoggerUtil -> b.e.a.d.b:
+    com.wiseco.wisecotech.utils.LoggerUtil$Companion Companion -> a
+com.wiseco.wisecotech.utils.LoggerUtil$Companion -> b.e.a.d.b$a:
+    12:12:void <init>() -> <init>
+    12:12:void <init>(kotlin.jvm.internal.DefaultConstructorMarker) -> <init>
+    18:19:void d(java.lang.String) -> a
+com.wiseco.wisecotech.utils.OkgoHttpUtils -> b.e.a.d.c:
     com.wiseco.wisecotech.utils.OkgoHttpUtils$Companion Companion -> a
-com.wiseco.wisecotech.utils.OkgoHttpUtils$Companion -> b.e.a.c.a$a:
+com.wiseco.wisecotech.utils.OkgoHttpUtils$Companion -> b.e.a.d.c$a:
     29:29:void <init>() -> <init>
     29:29:void <init>(kotlin.jvm.internal.DefaultConstructorMarker) -> <init>
-    32:79:void init() -> a
-    254:255:void cancelHttp(java.lang.String) -> a
-com.wiseco.wisecotech.utils.StatusBarUtil -> b.e.a.c.b:
+    35:81:void init() -> a
+    256:257:void cancelHttp(java.lang.String) -> a
+com.wiseco.wisecotech.utils.StatusBarUtil -> b.e.a.d.d:
     float DEFAULT_ALPHA -> b
     com.wiseco.wisecotech.utils.StatusBarUtil$Companion Companion -> d
     int MIN_API -> c
@@ -13816,7 +15624,7 @@ com.wiseco.wisecotech.utils.StatusBarUtil -> b.e.a.c.b:
     22:22:float access$getDEFAULT_ALPHA$cp() -> a
     22:22:int access$getDEFAULT_COLOR$cp() -> b
     22:22:int access$getMIN_API$cp() -> c
-com.wiseco.wisecotech.utils.StatusBarUtil$Companion -> b.e.a.c.b$a:
+com.wiseco.wisecotech.utils.StatusBarUtil$Companion -> b.e.a.d.d$a:
     25:25:void <init>() -> <init>
     25:25:void <init>(kotlin.jvm.internal.DefaultConstructorMarker) -> <init>
     32:34:boolean isFlyme4Later() -> a
@@ -13893,7 +15701,63 @@ kotlin.annotation.AnnotationTarget -> kotlin.annotation.AnnotationTarget:
     kotlin.annotation.AnnotationTarget ANNOTATION_CLASS -> b
     kotlin.annotation.AnnotationTarget CLASS -> a
     24:24:void <init>(java.lang.String,int) -> <init>
-kotlin.collections.IntIterator -> c.a.a:
+kotlin.collections.CollectionsKt__CollectionsJVMKt -> c.a.a:
+    19:19:java.util.List listOf(java.lang.Object) -> a
+kotlin.collections.CollectionsKt__CollectionsKt -> c.a.b:
+    69:69:java.util.List emptyList() -> a
+    220:224:java.util.List optimizeReadOnlyList(java.util.List) -> a
+kotlin.collections.CollectionsKt__IterablesKt -> c.a.c:
+kotlin.collections.CollectionsKt__IteratorsJVMKt -> c.a.d:
+kotlin.collections.CollectionsKt__IteratorsKt -> c.a.e:
+kotlin.collections.CollectionsKt__MutableCollectionsJVMKt -> c.a.f:
+kotlin.collections.CollectionsKt__MutableCollectionsKt -> c.a.g:
+kotlin.collections.CollectionsKt__ReversedViewsKt -> c.a.h:
+kotlin.collections.CollectionsKt___CollectionsJvmKt -> c.a.i:
+kotlin.collections.CollectionsKt___CollectionsKt -> c.a.j:
+    177:182:java.lang.Object first(java.lang.Iterable) -> a
+    777:777:java.util.List take(java.lang.Iterable,int) -> a
+    1153:1156:java.util.Collection toCollection(java.lang.Iterable,java.util.Collection) -> a
+    1193:1193:java.util.List toMutableList(java.util.Collection) -> a
+    193:194:java.lang.Object first(java.util.List) -> b
+    1170:1177:java.util.List toList(java.lang.Iterable) -> b
+    1184:1186:java.util.List toMutableList(java.lang.Iterable) -> c
+kotlin.collections.EmptyIterator -> c.a.k:
+    kotlin.collections.EmptyIterator INSTANCE -> a
+    13:13:void <clinit>() -> <clinit>
+    13:13:void <init>() -> <init>
+    14:14:boolean hasNext() -> hasNext
+    15:15:boolean hasPrevious() -> hasPrevious
+    13:13:java.lang.Object next() -> next
+    18:18:java.lang.Void next() -> next
+    16:16:int nextIndex() -> nextIndex
+    13:13:java.lang.Object previous() -> previous
+    19:19:java.lang.Void previous() -> previous
+    17:17:int previousIndex() -> previousIndex
+kotlin.collections.EmptyList -> kotlin.collections.EmptyList:
+    kotlin.collections.EmptyList INSTANCE -> a
+    22:22:void <clinit>() -> <clinit>
+    22:22:void <init>() -> <init>
+    29:29:int getSize() -> a
+    31:31:boolean contains(java.lang.Void) -> a
+    35:35:int indexOf(java.lang.Void) -> b
+    36:36:int lastIndexOf(java.lang.Void) -> c
+    22:22:boolean contains(java.lang.Object) -> contains
+    32:32:boolean containsAll(java.util.Collection) -> containsAll
+    25:25:boolean equals(java.lang.Object) -> equals
+    22:22:java.lang.Object get(int) -> get
+    34:34:java.lang.Void get(int) -> get
+    26:26:int hashCode() -> hashCode
+    22:22:int indexOf(java.lang.Object) -> indexOf
+    30:30:boolean isEmpty() -> isEmpty
+    38:38:java.util.Iterator iterator() -> iterator
+    22:22:int lastIndexOf(java.lang.Object) -> lastIndexOf
+    39:39:java.util.ListIterator listIterator() -> listIterator
+    41:41:java.util.ListIterator listIterator(int) -> listIterator
+    50:50:java.lang.Object readResolve() -> readResolve
+    22:22:int size() -> size
+    46:47:java.util.List subList(int,int) -> subList
+    27:27:java.lang.String toString() -> toString
+kotlin.collections.IntIterator -> c.a.l:
     35:35:void <init>() -> <init>
     35:35:java.lang.Object next() -> next
     36:36:java.lang.Integer next() -> next
@@ -13935,8 +15799,13 @@ kotlin.jvm.internal.ClassReference -> c.c.b.b:
     82:82:boolean equals(java.lang.Object) -> equals
     85:85:int hashCode() -> hashCode
     88:88:java.lang.String toString() -> toString
-kotlin.jvm.internal.DefaultConstructorMarker -> c.c.b.c:
-kotlin.jvm.internal.Intrinsics -> c.c.b.d:
+kotlin.jvm.internal.CollectionToArray -> c.c.b.c:
+    java.lang.Object[] EMPTY -> a
+    14:130:void <clinit>() -> <clinit>
+    19:90:java.lang.Object[] toArray(java.util.Collection) -> a
+    30:30:java.lang.Object[] toArray(java.util.Collection,java.lang.Object[]) -> a
+kotlin.jvm.internal.DefaultConstructorMarker -> c.c.b.d:
+kotlin.jvm.internal.Intrinsics -> c.c.b.e:
     17:18:void <init>() -> <init>
     37:37:void throwNpe() -> a
     77:78:void checkExpressionValueIsNotNull(java.lang.Object,java.lang.String) -> a
@@ -13963,12 +15832,12 @@ kotlin.jvm.internal.PropertyReference -> kotlin.jvm.internal.PropertyReference:
     42:53:boolean equals(java.lang.Object) -> equals
     58:58:int hashCode() -> hashCode
     63:68:java.lang.String toString() -> toString
-kotlin.jvm.internal.Reflection -> c.c.b.e:
+kotlin.jvm.internal.Reflection -> c.c.b.f:
     kotlin.jvm.internal.ReflectionFactory factory -> a
     22:35:void <clinit>() -> <clinit>
     50:50:kotlin.reflect.KClass getOrCreateKotlinClass(java.lang.Class) -> a
     98:98:kotlin.reflect.KMutableProperty1 mutableProperty1(kotlin.jvm.internal.MutablePropertyReference1) -> a
-kotlin.jvm.internal.ReflectionFactory -> c.c.b.f:
+kotlin.jvm.internal.ReflectionFactory -> c.c.b.g:
     11:11:void <init>() -> <init>
     27:27:kotlin.reflect.KClass getOrCreateKotlinClass(java.lang.Class) -> a
     66:66:kotlin.reflect.KMutableProperty1 mutableProperty1(kotlin.jvm.internal.MutablePropertyReference1) -> a
@@ -14045,6 +15914,7 @@ kotlin.text.Regex -> kotlin.text.Regex:
     85:85:void <init>(java.util.regex.Pattern) -> <init>
     89:89:void <init>(java.lang.String) -> <init>
     143:143:java.lang.String replace(java.lang.CharSequence,java.lang.String) -> a
+    188:188:java.util.List split(java.lang.CharSequence,int) -> a
     214:214:java.lang.String toString() -> toString
     223:223:java.lang.Object writeReplace() -> writeReplace
 kotlin.text.Regex$Companion -> kotlin.text.Regex$a:
@@ -14084,6 +15954,232 @@ kotlinx.android.extensions.CacheImplementation -> kotlinx.android.extensions.Cac
 kotlinx.android.extensions.CacheImplementation$Companion -> kotlinx.android.extensions.CacheImplementation$a:
     31:31:void <init>() -> <init>
     31:31:void <init>(kotlin.jvm.internal.DefaultConstructorMarker) -> <init>
+me.jessyan.autosize.ActivityLifecycleCallbacksImpl -> me.jessyan.autosize.ActivityLifecycleCallbacksImpl:
+    44:47:void <init>(me.jessyan.autosize.AutoAdaptStrategy) -> <init>
+    51:61:void onActivityCreated(android.app.Activity,android.os.Bundle) -> onActivityCreated
+    93:93:void onActivityDestroyed(android.app.Activity) -> onActivityDestroyed
+    78:78:void onActivityPaused(android.app.Activity) -> onActivityPaused
+    73:73:void onActivityResumed(android.app.Activity) -> onActivityResumed
+    88:88:void onActivitySaveInstanceState(android.app.Activity,android.os.Bundle) -> onActivitySaveInstanceState
+    65:68:void onActivityStarted(android.app.Activity) -> onActivityStarted
+    83:83:void onActivityStopped(android.app.Activity) -> onActivityStopped
+    101:103:void setAutoAdaptStrategy(me.jessyan.autosize.AutoAdaptStrategy) -> setAutoAdaptStrategy
+me.jessyan.autosize.AutoSize -> me.jessyan.autosize.AutoSize:
+    53:53:void <clinit>() -> <clinit>
+    55:56:void <init>() -> <init>
+    147:198:void autoConvertDensity(android.app.Activity,float,boolean) -> autoConvertDensity
+    131:132:void autoConvertDensityBaseOnHeight(android.app.Activity,float) -> autoConvertDensityBaseOnHeight
+    121:122:void autoConvertDensityBaseOnWidth(android.app.Activity,float) -> autoConvertDensityBaseOnWidth
+    79:91:void autoConvertDensityOfCustomAdapt(android.app.Activity,me.jessyan.autosize.internal.CustomAdapt) -> autoConvertDensityOfCustomAdapt
+    100:112:void autoConvertDensityOfExternalAdaptInfo(android.app.Activity,me.jessyan.autosize.external.ExternalAdaptInfo) -> autoConvertDensityOfExternalAdaptInfo
+    65:70:void autoConvertDensityOfGlobal(android.app.Activity) -> autoConvertDensityOfGlobal
+    206:220:void cancelAdapt(android.app.Activity) -> cancelAdapt
+    302:309:android.util.DisplayMetrics getMetricsOnMiui(android.content.res.Resources) -> getMetricsOnMiui
+    229:230:void initCompatMultiProcess(android.content.Context) -> initCompatMultiProcess
+    243:259:void setDensity(android.app.Activity,float,int,float,float) -> setDensity
+    271:292:void setDensity(android.util.DisplayMetrics,float,int,float,float) -> setDensity
+me.jessyan.autosize.AutoSize$1 -> me.jessyan.autosize.AutoSize$1:
+    207:207:void <clinit>() -> <clinit>
+me.jessyan.autosize.AutoSizeCompat -> me.jessyan.autosize.AutoSizeCompat:
+    41:41:void <clinit>() -> <clinit>
+    43:44:void <init>() -> <init>
+    135:181:void autoConvertDensity(android.content.res.Resources,float,boolean) -> autoConvertDensity
+    119:120:void autoConvertDensityBaseOnHeight(android.content.res.Resources,float) -> autoConvertDensityBaseOnHeight
+    109:110:void autoConvertDensityBaseOnWidth(android.content.res.Resources,float) -> autoConvertDensityBaseOnWidth
+    67:79:void autoConvertDensityOfCustomAdapt(android.content.res.Resources,me.jessyan.autosize.internal.CustomAdapt) -> autoConvertDensityOfCustomAdapt
+    88:100:void autoConvertDensityOfExternalAdaptInfo(android.content.res.Resources,me.jessyan.autosize.external.ExternalAdaptInfo) -> autoConvertDensityOfExternalAdaptInfo
+    53:58:void autoConvertDensityOfGlobal(android.content.res.Resources) -> autoConvertDensityOfGlobal
+    189:203:void cancelAdapt(android.content.res.Resources) -> cancelAdapt
+    275:282:android.util.DisplayMetrics getMetricsOnMiui(android.content.res.Resources) -> getMetricsOnMiui
+    216:232:void setDensity(android.content.res.Resources,float,int,float,float) -> setDensity
+    244:265:void setDensity(android.util.DisplayMetrics,float,int,float,float) -> setDensity
+me.jessyan.autosize.AutoSizeCompat$1 -> me.jessyan.autosize.AutoSizeCompat$1:
+    190:190:void <clinit>() -> <clinit>
+me.jessyan.autosize.AutoSizeConfig -> me.jessyan.autosize.AutoSizeConfig:
+    159:160:void <init>() -> <init>
+    46:46:float access$000(me.jessyan.autosize.AutoSizeConfig) -> access$000
+    46:46:float access$002(me.jessyan.autosize.AutoSizeConfig,float) -> access$002
+    46:46:boolean access$102(me.jessyan.autosize.AutoSizeConfig,boolean) -> access$102
+    46:46:int access$202(me.jessyan.autosize.AutoSizeConfig,int) -> access$202
+    46:46:int access$302(me.jessyan.autosize.AutoSizeConfig,int) -> access$302
+    46:46:int access$402(me.jessyan.autosize.AutoSizeConfig,int) -> access$402
+    46:46:int access$502(me.jessyan.autosize.AutoSizeConfig,int) -> access$502
+    163:164:android.app.Application getApplication() -> getApplication
+    442:443:int getDesignHeightInDp() -> getDesignHeightInDp
+    432:433:int getDesignWidthInDp() -> getDesignWidthInDp
+    369:369:me.jessyan.autosize.external.ExternalAdaptManager getExternalAdaptManager() -> getExternalAdaptManager
+    452:452:float getInitDensity() -> getInitDensity
+    461:461:int getInitDensityDpi() -> getInitDensityDpi
+    470:470:float getInitScaledDensity() -> getInitScaledDensity
+    479:479:float getInitXdpi() -> getInitXdpi
+    149:156:me.jessyan.autosize.AutoSizeConfig getInstance() -> getInstance
+    609:630:void getMetaData(android.content.Context) -> getMetaData
+    387:387:me.jessyan.autosize.onAdaptListener getOnAdaptListener() -> getOnAdaptListener
+    423:423:int getScreenHeight() -> getScreenHeight
+    414:414:int getScreenWidth() -> getScreenWidth
+    506:506:java.lang.reflect.Field getTmpMetricsField() -> getTmpMetricsField
+    378:378:me.jessyan.autosize.unit.UnitsManager getUnitsManager() -> getUnitsManager
+    174:174:me.jessyan.autosize.AutoSizeConfig init(android.app.Application) -> init
+    186:186:me.jessyan.autosize.AutoSizeConfig init(android.app.Application,boolean) -> init
+    197:248:me.jessyan.autosize.AutoSizeConfig init(android.app.Application,boolean,me.jessyan.autosize.AutoAdaptStrategy) -> init
+    396:396:boolean isBaseOnWidth() -> isBaseOnWidth
+    351:351:boolean isCustomFragment() -> isCustomFragment
+    526:526:boolean isExcludeFontScale() -> isExcludeFontScale
+    497:497:boolean isMiui() -> isMiui
+    360:360:boolean isStop() -> isStop
+    405:405:boolean isUseDeviceSize() -> isUseDeviceSize
+    488:488:boolean isVertical() -> isVertical
+    256:262:void restart() -> restart
+    286:289:me.jessyan.autosize.AutoSizeConfig setAutoAdaptStrategy(me.jessyan.autosize.AutoAdaptStrategy) -> setAutoAdaptStrategy
+    310:311:me.jessyan.autosize.AutoSizeConfig setBaseOnWidth(boolean) -> setBaseOnWidth
+    341:342:me.jessyan.autosize.AutoSizeConfig setCustomFragment(boolean) -> setCustomFragment
+    579:581:me.jessyan.autosize.AutoSizeConfig setDesignHeightInDp(int) -> setDesignHeightInDp
+    568:570:me.jessyan.autosize.AutoSizeConfig setDesignWidthInDp(int) -> setDesignWidthInDp
+    536:537:me.jessyan.autosize.AutoSizeConfig setExcludeFontScale(boolean) -> setExcludeFontScale
+    331:332:me.jessyan.autosize.AutoSizeConfig setLog(boolean) -> setLog
+    298:300:me.jessyan.autosize.AutoSizeConfig setOnAdaptListener(me.jessyan.autosize.onAdaptListener) -> setOnAdaptListener
+    557:559:me.jessyan.autosize.AutoSizeConfig setScreenHeight(int) -> setScreenHeight
+    546:548:me.jessyan.autosize.AutoSizeConfig setScreenWidth(int) -> setScreenWidth
+    590:592:me.jessyan.autosize.AutoSizeConfig setStatusBarHeight(int) -> setStatusBarHeight
+    321:322:me.jessyan.autosize.AutoSizeConfig setUseDeviceSize(boolean) -> setUseDeviceSize
+    515:516:me.jessyan.autosize.AutoSizeConfig setVertical(boolean) -> setVertical
+    270:277:void stop(android.app.Activity) -> stop
+me.jessyan.autosize.AutoSizeConfig$1 -> me.jessyan.autosize.AutoSizeConfig$1:
+    215:215:void <init>(me.jessyan.autosize.AutoSizeConfig,android.app.Application) -> <init>
+    218:229:void onConfigurationChanged(android.content.res.Configuration) -> onConfigurationChanged
+    234:234:void onLowMemory() -> onLowMemory
+me.jessyan.autosize.AutoSizeConfig$2 -> me.jessyan.autosize.AutoSizeConfig$2:
+    609:609:void <init>(me.jessyan.autosize.AutoSizeConfig,android.content.Context) -> <init>
+    612:628:void run() -> run
+me.jessyan.autosize.BuildConfig -> me.jessyan.autosize.BuildConfig:
+    6:6:void <init>() -> <init>
+me.jessyan.autosize.DefaultAutoAdaptStrategy -> me.jessyan.autosize.DefaultAutoAdaptStrategy:
+    39:39:void <init>() -> <init>
+    44:75:void applyAdapt(java.lang.Object,android.app.Activity) -> applyAdapt
+me.jessyan.autosize.DisplayMetricsInfo -> me.jessyan.autosize.DisplayMetricsInfo:
+    96:96:void <clinit>() -> <clinit>
+    37:42:void <init>(float,int,float,float) -> <init>
+    89:94:void <init>(android.os.Parcel) -> <init>
+    78:78:int describeContents() -> describeContents
+    45:45:float getDensity() -> getDensity
+    53:53:int getDensityDpi() -> getDensityDpi
+    61:61:float getScaledDensity() -> getScaledDensity
+    69:69:float getXdpi() -> getXdpi
+    49:50:void setDensity(float) -> setDensity
+    57:58:void setDensityDpi(int) -> setDensityDpi
+    65:66:void setScaledDensity(float) -> setScaledDensity
+    73:74:void setXdpi(float) -> setXdpi
+    110:110:java.lang.String toString() -> toString
+    83:87:void writeToParcel(android.os.Parcel,int) -> writeToParcel
+me.jessyan.autosize.DisplayMetricsInfo$1 -> me.jessyan.autosize.DisplayMetricsInfo$1:
+    96:96:void <init>() -> <init>
+    96:96:java.lang.Object createFromParcel(android.os.Parcel) -> createFromParcel
+    99:99:me.jessyan.autosize.DisplayMetricsInfo createFromParcel(android.os.Parcel) -> createFromParcel
+    96:96:java.lang.Object[] newArray(int) -> newArray
+    104:104:me.jessyan.autosize.DisplayMetricsInfo[] newArray(int) -> newArray
+me.jessyan.autosize.FragmentLifecycleCallbacksImpl -> me.jessyan.autosize.FragmentLifecycleCallbacksImpl:
+    38:40:void <init>(me.jessyan.autosize.AutoAdaptStrategy) -> <init>
+    44:47:void onFragmentCreated(androidx.fragment.app.FragmentManager,androidx.fragment.app.Fragment,android.os.Bundle) -> onFragmentCreated
+    55:56:void setAutoAdaptStrategy(me.jessyan.autosize.AutoAdaptStrategy) -> setAutoAdaptStrategy
+me.jessyan.autosize.InitProvider -> me.jessyan.autosize.InitProvider:
+    32:32:void <init>() -> <init>
+    59:59:int delete(android.net.Uri,java.lang.String,java.lang.String[]) -> delete
+    49:49:java.lang.String getType(android.net.Uri) -> getType
+    54:54:android.net.Uri insert(android.net.Uri,android.content.ContentValues) -> insert
+    35:39:boolean onCreate() -> onCreate
+    44:44:android.database.Cursor query(android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String) -> query
+    64:64:int update(android.net.Uri,android.content.ContentValues,java.lang.String,java.lang.String[]) -> update
+me.jessyan.autosize.R -> me.jessyan.autosize.R:
+    10:10:void <init>() -> <init>
+me.jessyan.autosize.R$string -> me.jessyan.autosize.R$string:
+    13:13:void <init>() -> <init>
+me.jessyan.autosize.WrapperAutoAdaptStrategy -> me.jessyan.autosize.WrapperAutoAdaptStrategy:
+    32:34:void <init>(me.jessyan.autosize.AutoAdaptStrategy) -> <init>
+    38:48:void applyAdapt(java.lang.Object,android.app.Activity) -> applyAdapt
+me.jessyan.autosize.external.ExternalAdaptInfo -> me.jessyan.autosize.external.ExternalAdaptInfo:
+    89:89:void <clinit>() -> <clinit>
+    48:50:void <init>(boolean) -> <init>
+    52:55:void <init>(boolean,float) -> <init>
+    84:87:void <init>(android.os.Parcel) -> <init>
+    75:75:int describeContents() -> describeContents
+    66:66:float getSizeInDp() -> getSizeInDp
+    58:58:boolean isBaseOnWidth() -> isBaseOnWidth
+    62:63:void setBaseOnWidth(boolean) -> setBaseOnWidth
+    70:71:void setSizeInDp(float) -> setSizeInDp
+    103:103:java.lang.String toString() -> toString
+    80:82:void writeToParcel(android.os.Parcel,int) -> writeToParcel
+me.jessyan.autosize.external.ExternalAdaptInfo$1 -> me.jessyan.autosize.external.ExternalAdaptInfo$1:
+    89:89:void <init>() -> <init>
+    89:89:java.lang.Object createFromParcel(android.os.Parcel) -> createFromParcel
+    92:92:me.jessyan.autosize.external.ExternalAdaptInfo createFromParcel(android.os.Parcel) -> createFromParcel
+    89:89:java.lang.Object[] newArray(int) -> newArray
+    97:97:me.jessyan.autosize.external.ExternalAdaptInfo[] newArray(int) -> newArray
+me.jessyan.autosize.external.ExternalAdaptManager -> me.jessyan.autosize.external.ExternalAdaptManager:
+    41:41:void <init>() -> <init>
+    55:54:me.jessyan.autosize.external.ExternalAdaptManager addCancelAdaptOfActivity(java.lang.Class) -> addCancelAdaptOfActivity
+    85:84:me.jessyan.autosize.external.ExternalAdaptManager addExternalAdaptInfoOfActivity(java.lang.Class,me.jessyan.autosize.external.ExternalAdaptInfo) -> addExternalAdaptInfoOfActivity
+    117:116:me.jessyan.autosize.external.ExternalAdaptInfo getExternalAdaptInfoOfActivity(java.lang.Class) -> getExternalAdaptInfoOfActivity
+    103:102:boolean isCancelAdapt(java.lang.Class) -> isCancelAdapt
+    130:130:boolean isRun() -> isRun
+    139:140:me.jessyan.autosize.external.ExternalAdaptManager setRun(boolean) -> setRun
+me.jessyan.autosize.unit.Subunits -> me.jessyan.autosize.unit.Subunits:
+    34:30:void <clinit>() -> <clinit>
+    30:30:void <init>(java.lang.String,int) -> <init>
+    30:30:me.jessyan.autosize.unit.Subunits valueOf(java.lang.String) -> valueOf
+    30:30:me.jessyan.autosize.unit.Subunits[] values() -> values
+me.jessyan.autosize.unit.UnitsManager -> me.jessyan.autosize.unit.UnitsManager:
+    42:70:void <init>() -> <init>
+    115:115:float getDesignHeight() -> getDesignHeight
+    93:93:float getDesignWidth() -> getDesignWidth
+    175:175:me.jessyan.autosize.unit.Subunits getSupportSubunits() -> getSupportSubunits
+    137:137:boolean isSupportDP() -> isSupportDP
+    156:156:boolean isSupportSP() -> isSupportSP
+    126:128:me.jessyan.autosize.unit.UnitsManager setDesignHeight(float) -> setDesignHeight
+    82:84:me.jessyan.autosize.unit.UnitsManager setDesignSize(float,float) -> setDesignSize
+    104:106:me.jessyan.autosize.unit.UnitsManager setDesignWidth(float) -> setDesignWidth
+    146:147:me.jessyan.autosize.unit.UnitsManager setSupportDP(boolean) -> setSupportDP
+    165:166:me.jessyan.autosize.unit.UnitsManager setSupportSP(boolean) -> setSupportSP
+    186:188:me.jessyan.autosize.unit.UnitsManager setSupportSubunits(me.jessyan.autosize.unit.Subunits) -> setSupportSubunits
+me.jessyan.autosize.utils.AutoSizeUtils -> me.jessyan.autosize.utils.AutoSizeUtils:
+    32:33:void <init>() -> <init>
+    37:37:int dp2px(android.content.Context,float) -> dp2px
+    49:49:int in2px(android.content.Context,float) -> in2px
+    53:53:int mm2px(android.content.Context,float) -> mm2px
+    45:45:int pt2px(android.content.Context,float) -> pt2px
+    41:41:int sp2px(android.content.Context,float) -> sp2px
+me.jessyan.autosize.utils.LogUtils -> me.jessyan.autosize.utils.LogUtils:
+    31:32:void <init>() -> <init>
+    44:47:void d(java.lang.String) -> d
+    56:59:void e(java.lang.String) -> e
+    36:36:boolean isDebug() -> isDebug
+    40:41:void setDebug(boolean) -> setDebug
+    50:53:void w(java.lang.String) -> w
+me.jessyan.autosize.utils.Preconditions -> me.jessyan.autosize.utils.Preconditions:
+    27:28:void <init>() -> <init>
+    104:107:java.lang.String badElementIndex(int,int,java.lang.String) -> badElementIndex
+    126:129:java.lang.String badPositionIndex(int,int,java.lang.String) -> badPositionIndex
+    142:142:java.lang.String badPositionIndexes(int,int,int) -> badPositionIndexes
+    32:33:void checkArgument(boolean) -> checkArgument
+    38:39:void checkArgument(boolean,java.lang.Object) -> checkArgument
+    44:45:void checkArgument(boolean,java.lang.String,java.lang.Object[]) -> checkArgument
+    92:92:int checkElementIndex(int,int) -> checkElementIndex
+    96:99:int checkElementIndex(int,int,java.lang.String) -> checkElementIndex
+    68:69:java.lang.Object checkNotNull(java.lang.Object) -> checkNotNull
+    76:77:java.lang.Object checkNotNull(java.lang.Object,java.lang.Object) -> checkNotNull
+    84:85:java.lang.Object checkNotNull(java.lang.Object,java.lang.String,java.lang.Object[]) -> checkNotNull
+    114:114:int checkPositionIndex(int,int) -> checkPositionIndex
+    118:121:int checkPositionIndex(int,int,java.lang.String) -> checkPositionIndex
+    136:137:void checkPositionIndexes(int,int,int) -> checkPositionIndexes
+    50:51:void checkState(boolean) -> checkState
+    56:57:void checkState(boolean,java.lang.Object) -> checkState
+    62:63:void checkState(boolean,java.lang.String,java.lang.Object[]) -> checkState
+    146:175:java.lang.String format(java.lang.String,java.lang.Object[]) -> format
+me.jessyan.autosize.utils.ScreenUtils -> me.jessyan.autosize.utils.ScreenUtils:
+    36:37:void <init>() -> <init>
+    112:120:int getHeightOfNavigationBar(android.content.Context) -> getHeightOfNavigationBar
+    79:107:int[] getRawScreenSize(android.content.Context) -> getRawScreenSize
+    60:69:int[] getScreenSize(android.content.Context) -> getScreenSize
+    41:50:int getStatusBarHeight() -> getStatusBarHeight
 me.yokeyword.fragmentation.Fragmentation -> d.a.a.a:
     boolean debug -> b
     int mode -> c
@@ -14117,7 +16213,7 @@ me.yokeyword.fragmentation.R$id -> me.yokeyword.fragmentation.R$id:
 me.yokeyword.fragmentation.R$string -> me.yokeyword.fragmentation.R$string:
     41:41:void <init>() -> <init>
 me.yokeyword.fragmentation.SupportActivity -> me.yokeyword.fragmentation.SupportActivity:
-    me.yokeyword.fragmentation.SupportActivityDelegate mDelegate -> p
+    me.yokeyword.fragmentation.SupportActivityDelegate mDelegate -> q
     19:20:void <init>() -> <init>
     126:127:void loadRootFragment(int,me.yokeyword.fragmentation.ISupportFragment) -> a
     76:77:void onBackPressedSupport() -> c
@@ -16751,12 +18847,130 @@ okio.Util -> okio.Util:
     35:38:short reverseBytesShort(short) -> reverseBytesShort
     65:65:void sneakyRethrow(java.lang.Throwable) -> sneakyRethrow
     70:70:void sneakyThrow2(java.lang.Throwable) -> sneakyThrow2
+org.aspectj.lang.JoinPoint -> e.a.a.a:
+org.aspectj.lang.JoinPoint$StaticPart -> e.a.a.a$a:
+org.aspectj.lang.NoAspectBoundException -> org.aspectj.lang.NoAspectBoundException:
+    java.lang.Throwable cause -> a
+    24:27:void <init>(java.lang.String,java.lang.Throwable) -> <init>
+    32:32:java.lang.Throwable getCause() -> getCause
+org.aspectj.lang.ProceedingJoinPoint -> e.a.a.b:
+org.aspectj.lang.Signature -> e.a.a.c:
+org.aspectj.lang.reflect.CodeSignature -> e.a.a.a.a:
+org.aspectj.lang.reflect.MemberSignature -> e.a.a.a.b:
+org.aspectj.lang.reflect.MethodSignature -> e.a.a.a.c:
+org.aspectj.lang.reflect.SourceLocation -> e.a.a.a.d:
+org.aspectj.runtime.reflect.CodeSignatureImpl -> e.a.b.a.a:
+    java.lang.Class[] parameterTypes -> i
+    java.lang.Class[] exceptionTypes -> j
+    27:31:void <init>(int,java.lang.String,java.lang.Class,java.lang.Class[],java.lang.String[],java.lang.Class[]) -> <init>
+    45:46:java.lang.Class[] getExceptionTypes() -> f
+    37:38:java.lang.Class[] getParameterTypes() -> g
+org.aspectj.runtime.reflect.Factory -> e.a.b.a.b:
+    java.util.Hashtable prims -> a
+    java.lang.Object[] NO_ARGS -> b
+    int count -> f
+    java.lang.String filename -> e
+    java.lang.Class lexicalClass -> c
+    java.lang.ClassLoader lookupClassLoader -> d
+    43:259:void <clinit>() -> <clinit>
+    83:89:void <init>(java.lang.String,java.lang.Class) -> <init>
+    60:79:java.lang.Class makeClass(java.lang.String,java.lang.ClassLoader) -> a
+    224:224:org.aspectj.lang.JoinPoint$StaticPart makeSJP(java.lang.String,org.aspectj.lang.Signature,int) -> a
+    262:262:org.aspectj.lang.JoinPoint makeJP(org.aspectj.lang.JoinPoint$StaticPart,java.lang.Object,java.lang.Object) -> a
+    266:266:org.aspectj.lang.JoinPoint makeJP(org.aspectj.lang.JoinPoint$StaticPart,java.lang.Object,java.lang.Object,java.lang.Object) -> a
+    285:286:org.aspectj.lang.reflect.MethodSignature makeMethodSig(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String) -> a
+    291:316:org.aspectj.lang.reflect.MethodSignature makeMethodSig(java.lang.String,java.lang.String,java.lang.Class,java.lang.String,java.lang.String,java.lang.String,java.lang.String) -> a
+    526:526:org.aspectj.lang.reflect.SourceLocation makeSourceLoc(int,int) -> a
+org.aspectj.runtime.reflect.JoinPointImpl -> e.a.b.a.c:
+    org.aspectj.lang.JoinPoint$StaticPart staticPart -> b
+    java.lang.Object _this -> a
+    87:92:void <init>(org.aspectj.lang.JoinPoint$StaticPart,java.lang.Object,java.lang.Object,java.lang.Object[]) -> <init>
+    120:120:org.aspectj.lang.Signature getSignature() -> a
+    95:95:java.lang.Object getThis() -> b
+    128:128:java.lang.String toString() -> toString
+org.aspectj.runtime.reflect.JoinPointImpl$StaticPartImpl -> e.a.b.a.c$a:
+    java.lang.String kind -> a
+    org.aspectj.lang.Signature signature -> b
+    31:36:void <init>(int,java.lang.String,org.aspectj.lang.Signature,org.aspectj.lang.reflect.SourceLocation) -> <init>
+    43:43:java.lang.String getKind() -> a
+    55:60:java.lang.String toString(org.aspectj.runtime.reflect.StringMaker) -> a
+    47:47:org.aspectj.lang.Signature getSignature() -> b
+    64:64:java.lang.String toString() -> toString
+org.aspectj.runtime.reflect.MemberSignatureImpl -> e.a.b.a.d:
+    22:23:void <init>(int,java.lang.String,java.lang.Class) -> <init>
+org.aspectj.runtime.reflect.MethodSignatureImpl -> e.a.b.a.e:
+    java.lang.reflect.Method method -> k
+    java.lang.Class returnType -> l
+    28:30:void <init>(int,java.lang.String,java.lang.Class,java.lang.Class[],java.lang.String[],java.lang.Class[],java.lang.Class) -> <init>
+    44:55:java.lang.String createToString(org.aspectj.runtime.reflect.StringMaker) -> a
+    88:112:java.lang.reflect.Method search(java.lang.Class,java.lang.String,java.lang.Class[],java.util.Set) -> a
+    64:75:java.lang.reflect.Method getMethod() -> h
+    38:40:java.lang.Class getReturnType() -> i
+org.aspectj.runtime.reflect.SignatureImpl -> e.a.b.a.f:
+    java.lang.String stringRep -> g
+    java.lang.Class declaringType -> e
+    java.lang.ClassLoader lookupClassLoader -> h
+    org.aspectj.runtime.reflect.SignatureImpl$Cache stringCache -> f
+    boolean useCache -> a
+    int modifiers -> b
+    java.lang.String name -> c
+    java.lang.String declaringTypeName -> d
+    23:168:void <clinit>() -> <clinit>
+    31:35:void <init>(int,java.lang.String,java.lang.Class) -> <init>
+    java.lang.String createToString(org.aspectj.runtime.reflect.StringMaker) -> a
+    75:76:java.lang.Class getDeclaringType() -> a
+    156:157:int extractInt(int) -> a
+    41:59:java.lang.String toString(org.aspectj.runtime.reflect.StringMaker) -> b
+    79:82:java.lang.String getDeclaringTypeName() -> b
+    142:152:java.lang.String extractString(int) -> b
+    129:130:java.lang.ClassLoader getLookupClassLoader() -> c
+    161:162:java.lang.Class extractType(int) -> c
+    67:68:int getModifiers() -> d
+    181:186:java.lang.Class[] extractTypes(int) -> d
+    71:72:java.lang.String getName() -> e
+    62:62:java.lang.String toString() -> toString
+org.aspectj.runtime.reflect.SignatureImpl$Cache -> e.a.b.a.f$a:
+org.aspectj.runtime.reflect.SignatureImpl$CacheImpl -> e.a.b.a.f$b:
+    java.lang.ref.SoftReference toStringCacheRef -> a
+    212:214:void <init>() -> <init>
+    217:221:java.lang.String get(int) -> a
+    225:230:void set(int,java.lang.String) -> a
+    233:233:java.lang.String[] array() -> a
+    237:239:java.lang.String[] makeCache() -> b
+org.aspectj.runtime.reflect.SourceLocationImpl -> e.a.b.a.g:
+    java.lang.String fileName -> a
+    int line -> b
+    24:28:void <init>(java.lang.Class,java.lang.String,int) -> <init>
+    31:31:java.lang.String getFileName() -> a
+    32:32:int getLine() -> b
+    36:36:java.lang.String toString() -> toString
+org.aspectj.runtime.reflect.StringMaker -> e.a.b.a.h:
+    int cacheOffset -> i
+    org.aspectj.runtime.reflect.StringMaker longStringMaker -> c
+    boolean includeArgs -> e
+    boolean includeThrows -> f
+    boolean includeModifiers -> g
+    boolean shortPrimaryTypeNames -> h
+    org.aspectj.runtime.reflect.StringMaker shortStringMaker -> a
+    org.aspectj.runtime.reflect.StringMaker middleStringMaker -> b
+    boolean shortTypeNames -> d
+    33:69:void <clinit>() -> <clinit>
+    19:28:void <init>() -> <init>
+    72:74:java.lang.String makeKindName(java.lang.String) -> a
+    78:81:java.lang.String makeModifiersString(int) -> a
+    91:99:java.lang.String makeTypeName(java.lang.Class,java.lang.String,boolean) -> a
+    104:104:java.lang.String makeTypeName(java.lang.Class) -> a
+    108:108:java.lang.String makePrimaryTypeName(java.lang.Class,java.lang.String) -> a
+    119:132:void addSignature(java.lang.StringBuffer,java.lang.Class[]) -> a
+    85:87:java.lang.String stripPackageName(java.lang.String) -> b
+    135:135:void addThrows(java.lang.StringBuffer,java.lang.Class[]) -> b
+    112:116:void addTypeNames(java.lang.StringBuffer,java.lang.Class[]) -> c
 org.greenrobot.eventbus.ThreadMode -> org.greenrobot.eventbus.ThreadMode:
     32:25:void <clinit>() -> <clinit>
     25:25:void <init>(java.lang.String,int) -> <init>
     25:25:org.greenrobot.eventbus.ThreadMode valueOf(java.lang.String) -> valueOf
     25:25:org.greenrobot.eventbus.ThreadMode[] values() -> values
-org.greenrobot.eventbus.util.ErrorDialogFragmentFactory -> e.a.a.a.a:
+org.greenrobot.eventbus.util.ErrorDialogFragmentFactory -> e.b.a.a.a:
 org.greenrobot.eventbus.util.ErrorDialogFragments -> org.greenrobot.eventbus.util.ErrorDialogFragments:
     java.lang.Class EVENT_TYPE_ON_CLICK -> b
     int ERROR_DIALOG_ICON -> a
@@ -17302,8 +19516,8 @@ pub.devrel.easypermissions.AppSettingsDialog$Builder -> pub.devrel.easypermissio
     246:247:pub.devrel.easypermissions.AppSettingsDialog$Builder setPositiveButton(java.lang.String) -> b
     226:227:pub.devrel.easypermissions.AppSettingsDialog$Builder setRationale(java.lang.String) -> c
 pub.devrel.easypermissions.AppSettingsDialogHolderActivity -> pub.devrel.easypermissions.AppSettingsDialogHolderActivity:
-    androidx.appcompat.app.AlertDialog mDialog -> p
-    int mIntentFlags -> q
+    androidx.appcompat.app.AlertDialog mDialog -> q
+    int mIntentFlags -> r
     16:16:void <init>() -> <init>
     23:25:android.content.Intent createShowDialogIntent(android.content.Context,pub.devrel.easypermissions.AppSettingsDialog) -> a
     61:64:void onActivityResult(int,int,android.content.Intent) -> onActivityResult

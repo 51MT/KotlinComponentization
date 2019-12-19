@@ -1,9 +1,12 @@
+
+
 apply plugin: 'com.android.application'
 
 apply plugin: 'kotlin-android'
 
 apply plugin: 'kotlin-android-extensions'
 
+apply plugin: 'com.hujiang.android-aspectjx'
 android {
     compileSdkVersion 29
     buildToolsVersion "29.0.2"
@@ -16,6 +19,10 @@ android {
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         //flavor dimension 表示它的维度就是该版本号，这样维度就是都是统一的了
         flavorDimensions "versionCode"
+    }
+    compileOptions {
+        sourceCompatibility = '1.8'
+        targetCompatibility = '1.8'
     }
     buildTypes {
         release {
@@ -94,6 +101,7 @@ dependencies {
     implementation"org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
     implementation 'com.android.support:appcompat-v7:29.0.2'
     implementation 'androidx.core:core-ktx:1.1.0'
+    //所有依赖
     implementation project(path: ':baselibrary')
 
 }

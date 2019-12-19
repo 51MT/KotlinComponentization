@@ -2,20 +2,13 @@ package com.wiseco.wisecotech
 
 import android.app.Application
 import android.content.Context
-import com.lzy.okgo.OkGo
-import com.lzy.okgo.cookie.CookieJarImpl
-import com.lzy.okgo.cookie.store.DBCookieStore
-import com.lzy.okgo.https.HttpsUtils
-import com.lzy.okgo.interceptor.HttpLoggingInterceptor
 import com.orhanobut.logger.AndroidLogAdapter
 import com.orhanobut.logger.Logger
 import com.orhanobut.logger.PrettyFormatStrategy
 import com.squareup.leakcanary.RefWatcher
+import com.wiseco.wisecotech.utils.Constants
 import com.wiseco.wisecotech.utils.OkgoHttpUtils
 import me.yokeyword.fragmentation.Fragmentation
-import okhttp3.OkHttpClient
-import java.util.concurrent.TimeUnit
-import java.util.logging.Level
 import kotlin.properties.Delegates
 
 class MainApplication : Application() {
@@ -25,7 +18,7 @@ class MainApplication : Application() {
 
         var context: Context by Delegates.notNull()
         var application: Application by Delegates.notNull()
-        const val isLog = true//todo 统一设置是否打日志（上线时为false）
+
 
         fun getRefWatcher(context: Context): RefWatcher? {
             val myApplication = context.applicationContext as MainApplication
@@ -59,14 +52,14 @@ class MainApplication : Application() {
      */
     private fun initLoger() {
         val formatStrategy = PrettyFormatStrategy.newBuilder()
-            .showThreadInfo(false)  // 隐藏线程信息 默认：显示
-            .methodCount(0)         // 决定打印多少行（每一行代表一个方法）默认：2
-            .methodOffset(7)        // (Optional) Hides internal method calls up to offset. Default 5
-            .tag("hao_zz")   // (Optional) Global tag for every log. Default PRETTY_LOGGER
+            .showThreadInfo(true)  // 隐藏线程信息 默认：显示
+            .methodCount(3)         // 决定打印多少行（每一行代表一个方法）默认：2
+            .methodOffset(2)        // 设置调用堆栈的函数偏移值，默认是 0
+            .tag("TAG")   // (Optional) Global tag for every log. Default PRETTY_LOGGER
             .build()
         Logger.addLogAdapter(object : AndroidLogAdapter(formatStrategy) {
             override fun isLoggable(priority: Int, tag: String?): Boolean {
-                return isLog
+                return Constants.isLog
             }
         })
     }
