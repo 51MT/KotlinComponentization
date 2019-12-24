@@ -7,10 +7,12 @@ import android.graphics.Color
 import android.os.Build
 import android.os.Bundle
 import android.util.Log
+import android.view.View
 import android.view.WindowManager
 import android.widget.Toast
 import androidx.annotation.NonNull
 import com.wiseco.wisecotech.MainApplication
+import com.wiseco.wisecotech.utils.StatusBarUtil
 import me.yokeyword.fragmentation.SupportActivity
 import pub.devrel.easypermissions.AppSettingsDialog
 import pub.devrel.easypermissions.EasyPermissions
@@ -26,12 +28,34 @@ abstract class BaseActivity : SupportActivity(), EasyPermissions.PermissionCallb
         super.onCreate(savedInstanceState)
         mContext = this.applicationContext
         mActivity = this
+        initStatusColor(isTransparentBar())
         setContentView(layoutId())
         initView(savedInstanceState)
         initData()
         initListener()
     }
 
+    /**
+     * 是否设置沉浸式
+     */
+    abstract fun isTransparentBar(): Boolean
+    /**
+     * 设置沉浸式
+     */
+    private fun initStatusColor(isTransparentBar: Boolean) {
+        if (isTransparentBar) {
+            //设置沉浸式状态栏
+            StatusBarUtil.darkMode(this)
+        }
+    }
+
+    /**
+     * 设置沉浸式顶部view得padding 不被遮挡
+     */
+    protected fun setPaddingView(view:View) {
+        //设置顶部view不被状态栏覆盖
+         StatusBarUtil.setPaddingSmart(this, view)
+    }
     /**
      *  加载布局
      */

@@ -13,18 +13,17 @@ import android.widget.Toast
 import androidx.annotation.LayoutRes
 import androidx.annotation.NonNull
 import com.wiseco.wisecotech.MainApplication
-import com.wiseco.wisecotech.views.MultipleStatusView
 import me.yokeyword.fragmentation.ISupportFragment
 import me.yokeyword.fragmentation.SupportFragment
 import pub.devrel.easypermissions.AppSettingsDialog
 import pub.devrel.easypermissions.EasyPermissions
 
 /**
- * desc:
+ * desc:BaseFragment
+ *
  */
 
 abstract class BaseFragment : SupportFragment(), EasyPermissions.PermissionCallbacks {
-
 
 
     lateinit var mContext: Context
@@ -42,15 +41,21 @@ abstract class BaseFragment : SupportFragment(), EasyPermissions.PermissionCallb
     }
 
 
-
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         initView(view, savedInstanceState)
-
+        initData()
+        initListener()
     }
-
-
-
+    /**
+     * 初始化数据 首次加载调用
+     */
+    abstract fun initData()
+    /**
+     * 初始化监听事件 首次加载调用
+     */
+    open fun initListener() {
+    }
     /**
      * 加载布局
      */
@@ -60,14 +65,9 @@ abstract class BaseFragment : SupportFragment(), EasyPermissions.PermissionCallb
     /**
      * 初始化 ViewI
      */
-    open fun initView(view: View?, savedInstanceState: Bundle?){
+    open fun initView(view: View?, savedInstanceState: Bundle?) {
 
     }
-
-    /**
-     * 懒加载
-     */
-    abstract fun lazyLoad()
 
     override fun onDestroy() {
         super.onDestroy()
@@ -76,7 +76,7 @@ abstract class BaseFragment : SupportFragment(), EasyPermissions.PermissionCallb
             val inputMethodManager = activity!!.getSystemService(Activity.INPUT_METHOD_SERVICE) as InputMethodManager
             inputMethodManager.hideSoftInputFromWindow(view.windowToken, InputMethodManager.HIDE_NOT_ALWAYS)
         }
-        activity?.let { MainApplication.getRefWatcher(it)?.watch(activity) }
+        MainApplication.getRefWatcher(MainApplication.context)?.watch(this)
     }
 
 

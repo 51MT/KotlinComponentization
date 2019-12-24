@@ -25,6 +25,10 @@ abstract class BaseMvpFragment<in V : IBaseView, P : IBasePresenter<V>> : BaseFr
         mPresenter?.attachView(this as V)
     }
 
+    override fun initListener() {
+        super.initListener()
+        mLayoutStatusView?.setOnClickListener { startNetwork() }
+    }
     /**
      * 释放一些资源
      */
@@ -77,7 +81,10 @@ abstract class BaseMvpFragment<in V : IBaseView, P : IBasePresenter<V>> : BaseFr
         Toast.makeText(mContext, msg, Toast.LENGTH_LONG).show()
     }
 
-
+    /**
+     * 请求网络数据 视图被点击得时候请求
+     */
+    abstract fun startNetwork()
     /**
      * 创建Presenter
      */

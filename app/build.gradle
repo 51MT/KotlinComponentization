@@ -5,6 +5,7 @@ apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 
 apply plugin: 'kotlin-android-extensions'
+apply plugin:'kotlin-kapt'
 
 apply plugin: 'com.hujiang.android-aspectjx'
 android {
@@ -17,6 +18,7 @@ android {
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        multiDexEnabled true
         //flavor dimension 表示它的维度就是该版本号，这样维度就是都是统一的了
         flavorDimensions "versionCode"
     }
@@ -27,6 +29,8 @@ android {
     buildTypes {
         release {
             signingConfig signingConfigs.debug
+            buildConfigField "String", "CODE_PUSH_URL", "\"https://pkg.wisecofincloud.com\""//todo react native 服务器地址
+            buildConfigField "String", "CODE_PUSH_KEY", "\"gD1Z5QwETUFHlXI1cIlllIGngdQf4ksvOXqog\""
             minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
             //移除无用的resource文件
@@ -37,13 +41,28 @@ android {
         }
 
         debug {
-            // 显示Log
             signingConfig signingConfigs.debug
-            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
-            minifyEnabled true
+            buildConfigField "String", "CODE_PUSH_URL", "\"https://pkg.wisecofincloud.com\""
+            buildConfigField "String", "CODE_PUSH_KEY", "\"7sON4YLTxW1TEKas4T9UjVsqogeu4ksvOXqog\""
+            minifyEnabled false
             zipAlignEnabled false
             shrinkResources false
             debuggable true
+        }
+    }
+    signingConfigs {
+        debug {
+            v1SigningEnabled true
+            v2SigningEnabled true
+
+            storeFile file('debug.jks')
+            storePassword "123456"
+            keyAlias "android"
+            keyPassword "123456"
+        }
+        release {
+            v1SigningEnabled true
+            v2SigningEnabled true
         }
     }
     android.applicationVariants.all { variant ->
@@ -101,7 +120,15 @@ dependencies {
     implementation"org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
     implementation 'com.android.support:appcompat-v7:29.0.2'
     implementation 'androidx.core:core-ktx:1.1.0'
+    implementation 'com.android.support:design:29.0.0'
     //所有依赖
     implementation project(path: ':baselibrary')
-
+    //leakCanary
+    debugImplementation 'com.squareup.leakcanary:leakcanary-android:1.5.4'
+    releaseImplementation 'com.squareup.leakcanary:leakcanary-android-no-op:1.5.4'
+    //图片加载框架
+    kapt'com.github.bumptech.glide:compiler:4.9.0'
+    api("com.github.bumptech.glide:glide:4.9.0") {
+        force=true
+    }
 }

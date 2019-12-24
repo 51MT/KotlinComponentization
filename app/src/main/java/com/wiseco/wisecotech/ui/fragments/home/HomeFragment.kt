@@ -1,9 +1,11 @@
 package com.wiseco.wisecotech.ui.fragments.home
 
+import android.annotation.SuppressLint
 import android.os.Bundle
 import android.view.View
 import com.wiseco.wisecotech.R
 import com.wiseco.wisecotech.base.BaseFragment
+import com.wiseco.wisecotech.ui.fragments.main.MainTabFragment
 
 @Suppress("DEPRECATION")
 /**
@@ -11,25 +13,31 @@ import com.wiseco.wisecotech.base.BaseFragment
  */
 
 class HomeFragment : BaseFragment(){
-    override fun getLayoutId(): Int = R.layout.activity_main
-    private var mTitle: String? = null
     companion object {
-        fun getInstance(title: String): HomeFragment {
-            val fragment = HomeFragment()
-            val bundle = Bundle()
-            fragment.arguments = bundle
-            fragment.mTitle = title
-            return fragment
+        @SuppressLint("StaticFieldLeak")
+        private var instance: HomeFragment? = null
+            get() {
+                if (field==null)
+                {
+                    field= HomeFragment()
+                }
+                return field
+            }
+        @Synchronized
+        fun get(): HomeFragment {
+            return instance!!
         }
     }
+    override fun initData() {
+
+    }
+
+    override fun getLayoutId(): Int = R.layout.fragment_home
 
     override fun initView(view: View?, savedInstanceState: Bundle?) {
         super.initView(view, savedInstanceState)
     }
 
-    override fun lazyLoad() {
-
-    }
 
 
 }

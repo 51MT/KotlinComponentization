@@ -1,5 +1,4 @@
 apply plugin: 'com.android.library'
-
 android {
     compileSdkVersion 29
     buildToolsVersion "29.0.2"
@@ -25,13 +24,10 @@ android {
 }
 
 dependencies {
-    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    api fileTree(dir: 'libs', include: ['*.jar'])
 
     //事件传递
     api 'org.greenrobot:eventbus:3.1.1'
-    //leakCanary
-    debugApi 'com.squareup.leakcanary:leakcanary-android:1.5.4'
-    releaseApi 'com.squareup.leakcanary:leakcanary-android-no-op:1.5.4'
     //运行时权限
     api'pub.devrel:easypermissions:2.0.1'
     //framgnt管理框架
@@ -41,10 +37,7 @@ dependencies {
     //网络框架
     api 'com.lzy.net:okgo:3.0.4'
     //解析框架
-    api 'com.alibaba:fastjson:1.2.9'
-    //图片加载框架
-    api 'com.github.bumptech.glide:glide:4.9.0'
-    annotationProcessor 'com.github.bumptech.glide:compiler:4.9.0'
+    api 'com.alibaba:fastjson:1.2.50'
     //适配
     api 'me.jessyan:autosize:1.1.2'
     //日志打印

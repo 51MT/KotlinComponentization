@@ -3,4 +3,11 @@
     <string name="empty_view_hint">暂无数据</string>
     <string name="error_view_hint">加载失败</string>
     <string name="no_network_view_hint">网络异常</string>
+    <string name="http_erro">网络异常，请检查您的网络状态</string>
+    <string name="http_overtime">网络超时，请检查您的网络状态</string>
+    <string name="http_interrupt">网络中断，请检查您的网络状态</string>
+    <string name="http_unknown">未知错误</string>
+    <string name="http_connection_failed">网络连接失败</string>
+    <string name="splash_first_open">第一次打开应用，跳转到激活界面</string>
+    <string name="splash_no_first_open">不是第一次打开应，跳转到主界面</string>
 </resources>
